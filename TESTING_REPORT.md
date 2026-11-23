@@ -71,3 +71,15 @@ Kiểm tra CSS build: file `25j2o95fbopa_.css` có `--color-brand-700`, `.bg-rol
 
 Code, build, dữ liệu, route public và RLS public đạt yêu cầu kỹ thuật. Các phần cần môi trường
 bên ngoài (trình duyệt thật, tài khoản admin, Vercel) được ghi rõ là chưa kiểm, không đánh dấu PASS.
+
+## PHASE 2 — Nội dung 2026, tài liệu và archive (2026-11-23)
+
+- Trang chủ mới: hero KV thật, CountUp thống kê, tin tức editorial, template báo cáo viên,
+  thư mời, archive.
+- Tin tức: 3 tin thật (`news`), 3 tệp đính kèm (`news_attachments`), 3 chuyên mục.
+- Tài liệu: 6 `conference_documents` (3 template, 2 thư mời, 1 abstract).
+- Archive: 6 năm 2018–2025 trong `public/legacy` + metadata `legacy_sites`.
+- Migrations 0018–0021; DB hiện 36 bảng, 96 policy.
+- Chi tiết: `docs/` (SOURCE_CONTENT_AUDIT, HOMEPAGE_CONTENT_PLAN, NEWS_CONTENT_AUDIT,
+  CONFERENCE_ARCHIVE_PLAN, ASSET_MIGRATION_PLAN, DATABASE_UPDATE_PLAN, UI_UX_DESIGN_PLAN,
+  IMPLEMENTATION_REPORT, TESTING_REPORT, ASSET_MIGRATION_REPORT, SKILLS_USAGE_REPORT).

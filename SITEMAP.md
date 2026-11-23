@@ -68,3 +68,13 @@ Footer: Về VSOT · Hội nghị · Liên hệ + copyright.
 
 `/admin/**`, `/api/**`, `/vi/dang-nhap`, `/en/dang-nhap` bị chặn trong `robots.txt` và
 không có trong sitemap.
+
+## PHASE 2 additions
+
+```
+/[locale]/hoi-nghi/cac-nam-truoc       Kho lưu trữ hội nghị 2018–2025
+/[locale]/tin-tuc/[slug]               Tin + tệp đính kèm (PDF)
+/legacy/<year>/...                      Site archive tĩnh từng năm (link header đã trỏ site mới)
+```
+
+Tin tức có `news_attachments`; tài liệu hội nghị/template/thư mời có metadata trong DB.

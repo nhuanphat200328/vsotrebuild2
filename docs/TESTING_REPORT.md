@@ -89,3 +89,12 @@
   Preview/Production phải đặt đúng domain.
 - Trang archive là site tĩnh cũ, không responsive theo theme mới.
 - Admin chưa quản lý attachment/document/archive.
+
+## 8. Kiểm tra link (bổ sung)
+
+- Crawl 220 link nội bộ từ 9 trang chính: 1 lỗi duy nhất
+  `/archive/2023/chuong-trinh-vsot-2023.pdf` (404).
+- Đã copy PDF từ `2027 demo/public/archive/2023/` sang `public/archive/2023/`;
+  kiểm lại HEAD → 200 `application/pdf`.
+- Crawl sâu toàn bộ archive vượt thời gian CLI (tải ảnh lớn); các trang đại diện
+  2025/2023/2022/2021/2019/2018 đã kiểm 200.

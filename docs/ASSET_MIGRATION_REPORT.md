@@ -55,3 +55,6 @@ header-footer) để bản archive hiển thị đúng.
 - Tổng asset mới: ~84,6 MB.
 - Chưa vượt giới hạn file đơn của GitHub (file lớn nhất 15,2 MB PPTX).
 - Nếu cần giảm, chuyển media lớn sang Supabase Storage và chỉ giữ metadata.
+
+Bổ sung `public/archive/2023/chuong-trinh-vsot-2023.pdf` (625,2 KB) để sửa link 404
+trong trang archive 2023; kiểm HEAD 200.

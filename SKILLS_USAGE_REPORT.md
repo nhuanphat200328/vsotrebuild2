@@ -46,3 +46,8 @@ Các vấn đề phát hiện và đã sửa:
   và không tương thích template/stack đã chọn. Không tạo project .NET rỗng.
 - **Flutter Patterns:** không có yêu cầu ứng dụng di động; website responsive đáp ứng phạm vi.
 - **customize-opencode:** bị loại trừ theo yêu cầu dự án.
+
+## PHASE 2 — Content & archive
+
+Đã đọc lại 8 skill; chi tiết và bằng chứng mới nhất ở `docs/SKILLS_USAGE_REPORT.md`.
+Không dùng `customize-opencode`. Các skill không áp dụng trực tiếp (.NET, Flutter) được ghi lý do.

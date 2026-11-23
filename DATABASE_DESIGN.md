@@ -110,3 +110,11 @@ Kiểm chứng bằng anon key (2026-11-23):
 2. Dry-run `python scripts/apply_migrations.py`, chỉ `--apply` khi được duyệt.
 3. Không sửa migration đã áp dụng; không DROP dữ liệu hiện có.
 4. Cập nhật tài liệu này + `SYSTEM_ARCHITECTURE.md` khi schema đổi.
+
+## 15. PHASE 2 — Bổ sung nội dung 2026 & archive
+
+- `news_attachments`: tệp đính kèm tin tức (RLS public theo tin published, write cần `news.write`).
+- `conference_documents`: thêm `file_path`, `file_format`, `description_vi/en`.
+- `legacy_sites`: 6 dòng archive 2018–2025 (2020/2024 không có nguồn).
+- Migrations `0018`–`0021`; DB 36 bảng, 96 policy, 3 tin, 3 tệp, 6 tài liệu, 6 archive.
+- Tin không có ngày publish dùng `published_at = NULL`; policy cho phép đọc (0020).
