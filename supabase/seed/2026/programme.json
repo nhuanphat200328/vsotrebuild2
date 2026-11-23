@@ -1,0 +1,3929 @@
+{
+  "meta": {
+    "event": "VSOT 2026",
+    "title": "Hội nghị khoa học thường niên Hội ghép tạng Việt Nam lần XI",
+    "location": "TP. Đà Nẵng",
+    "week": "13/10 – 17/10/2026",
+    "sourceSheet": "CTKH VSOT 2026",
+    "generatedAt": "2026-10-14T13:02:11"
+  },
+  "rooms": [
+    {
+      "id": "danang",
+      "vi": "Hội trường Đà Nẵng",
+      "en": "Da Nang Hall",
+      "short": "Đà Nẵng"
+    },
+    {
+      "id": "hoian",
+      "vi": "Hội trường Hội An",
+      "en": "Hoi An Hall",
+      "short": "Hội An"
+    },
+    {
+      "id": "sontra",
+      "vi": "Hội trường Sơn Trà",
+      "en": "Son Tra Hall",
+      "short": "Sơn Trà"
+    },
+    {
+      "id": "mykhe",
+      "vi": "Hội trường Mỹ Khê",
+      "en": "My Khe Hall",
+      "short": "Mỹ Khê"
+    },
+    {
+      "id": "songhan",
+      "vi": "Hội trường Sông Hàn",
+      "en": "Song Han Hall",
+      "short": "Sông Hàn"
+    },
+    {
+      "id": "bana",
+      "vi": "Hội trường Bà Nà",
+      "en": "Ba Na Hall",
+      "short": "Bà Nà"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-10-13",
+      "kind": "precongress",
+      "sessions": [
+        {
+          "roomId": "danang",
+          "title": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG\nCME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleVi": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEn": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleViShort": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEnShort": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "07:30",
+          "end": "11:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-13-0"
+        },
+        {
+          "roomId": "danang",
+          "title": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG\nCME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleVi": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEn": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleViShort": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEnShort": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "13:00",
+          "end": "16:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-13-1"
+        }
+      ],
+      "label": "Thứ 3, 13/10/2026",
+      "labelShort": "T3 13/10",
+      "start": "07:30",
+      "end": "16:30"
+    },
+    {
+      "date": "2026-10-14",
+      "kind": "precongress",
+      "sessions": [
+        {
+          "roomId": "danang",
+          "title": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG\nCME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleVi": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEn": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleViShort": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEnShort": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "07:30",
+          "end": "11:20",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-14-0"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "CME2: ĐÀO TẠO ĐIỀU PHỐI VIÊN GHÉP MÔ, TẠNG\nCME 2: TRAINING COURSE FOR TISSUE AND ORGAN TRANSPLANT COORDINATORS",
+          "titleVi": "CME2: ĐÀO TẠO ĐIỀU PHỐI VIÊN GHÉP MÔ, TẠNG",
+          "titleEn": "CME 2: TRAINING COURSE FOR TISSUE AND ORGAN TRANSPLANT COORDINATORS",
+          "titleViShort": "CME2: ĐÀO TẠO ĐIỀU PHỐI VIÊN GHÉP MÔ, TẠNG",
+          "titleEnShort": "CME 2: TRAINING COURSE FOR TISSUE AND ORGAN TRANSPLANT COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "07:30",
+          "end": "11:20",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-14-1"
+        },
+        {
+          "roomId": "danang",
+          "title": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG\nCME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleVi": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEn": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleViShort": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEnShort": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "13:00",
+          "end": "18:05",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-14-2"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "CME2: ĐÀO TẠO ĐIỀU PHỐI VIÊN GHÉP MÔ, TẠNG\nCME 2: TRAINING COURSE FOR TISSUE AND ORGAN TRANSPLANT COORDINATORS",
+          "titleVi": "CME2: ĐÀO TẠO ĐIỀU PHỐI VIÊN GHÉP MÔ, TẠNG",
+          "titleEn": "CME 2: TRAINING COURSE FOR TISSUE AND ORGAN TRANSPLANT COORDINATORS",
+          "titleViShort": "CME2: ĐÀO TẠO ĐIỀU PHỐI VIÊN GHÉP MÔ, TẠNG",
+          "titleEnShort": "CME 2: TRAINING COURSE FOR TISSUE AND ORGAN TRANSPLANT COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "13:00",
+          "end": "18:05",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-14-3"
+        }
+      ],
+      "label": "Thứ 4, 14/10/2026",
+      "labelShort": "T4 14/10",
+      "start": "07:30",
+      "end": "18:05"
+    },
+    {
+      "date": "2026-10-15",
+      "kind": "precongress",
+      "sessions": [
+        {
+          "roomId": "danang",
+          "title": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG\nCME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleVi": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEn": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleViShort": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEnShort": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "07:30",
+          "end": "11:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-15-0"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "CME 3: ĐÀO TẠO CHẨN ĐOÁN CHẾT NÃO\nCME 3: BRAIN DEATH CERTIFICATION TRAINING",
+          "titleVi": "CME 3: ĐÀO TẠO CHẨN ĐOÁN CHẾT NÃO",
+          "titleEn": "CME 3: BRAIN DEATH CERTIFICATION TRAINING",
+          "titleViShort": "CME 3: ĐÀO TẠO CHẨN ĐOÁN CHẾT NÃO",
+          "titleEnShort": "CME 3: BRAIN DEATH CERTIFICATION TRAINING",
+          "type": "cme",
+          "category": "scientific",
+          "start": "07:30",
+          "end": "11:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-15-1"
+        },
+        {
+          "roomId": "danang",
+          "title": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG\nCME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleVi": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEn": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "titleViShort": "CME1: ĐÀO TẠO ĐIỀU PHỐI VIÊN HIẾN MÔ, TẠNG",
+          "titleEnShort": "CME 1: TRAINING COURSE FOR TISSUE AND ORGAN DONATION COORDINATORS",
+          "type": "cme",
+          "category": "scientific",
+          "start": "13:00",
+          "end": "16:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-15-2"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "CME 3: ĐÀO TẠO CHẨN ĐOÁN CHẾT NÃO\nCME 3: BRAIN DEATH CERTIFICATION TRAINING",
+          "titleVi": "CME 3: ĐÀO TẠO CHẨN ĐOÁN CHẾT NÃO",
+          "titleEn": "CME 3: BRAIN DEATH CERTIFICATION TRAINING",
+          "titleViShort": "CME 3: ĐÀO TẠO CHẨN ĐOÁN CHẾT NÃO",
+          "titleEnShort": "CME 3: BRAIN DEATH CERTIFICATION TRAINING",
+          "type": "cme",
+          "category": "scientific",
+          "start": "13:00",
+          "end": "16:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-15-3"
+        }
+      ],
+      "label": "Thứ 5, 15/10/2026",
+      "labelShort": "T5 15/10",
+      "start": "07:30",
+      "end": "16:30"
+    },
+    {
+      "date": "2026-10-16",
+      "kind": "scientific",
+      "sessions": [
+        {
+          "roomId": "danang",
+          "title": "Tiếp đón đại biểu - Welcome Delegates",
+          "titleVi": "Tiếp đón đại biểu",
+          "titleEn": "Welcome Delegates",
+          "titleViShort": "Tiếp đón đại biểu",
+          "titleEnShort": "Welcome Delegates",
+          "type": "welcome",
+          "category": "ceremony",
+          "start": "07:30",
+          "end": "08:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-0"
+        },
+        {
+          "roomId": "bana",
+          "title": "Phẫu thuật thị phạm ghép thận \nCME: Cập nhật kỹ thuật lấy thận, rửa - bảo quản và ghép thận\nLive Kidney Harvesting and transplantation \nCME:Updates on surgical issues in Kidney Harvesting, Flushing - Preservation, and Transplantation",
+          "titleVi": "Phẫu thuật thị phạm ghép thận\nCME: Cập nhật kỹ thuật lấy thận, rửa - bảo quản và ghép thận",
+          "titleEn": "Live Kidney Harvesting and transplantation\nCME:Updates on surgical issues in Kidney Harvesting, Flushing - Preservation, and Transplantation",
+          "titleViShort": "Phẫu thuật thị phạm ghép thận CME: Cập nhật kỹ thuật lấy thận, rửa - bảo quản và ghép thận",
+          "titleEnShort": "Live Kidney Harvesting and transplantation CME:Updates on surgical issues in Kidney Harvesting, Flushing - Preservation, and Transplantation",
+          "type": "cme",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "12:00",
+          "chairs": [
+            "PGS.TS. Thái Minh Sâm",
+            "TS.BS. Châu Quý Thuận",
+            "TS. Trần Ngọc Khánh",
+            "PGS.TS. Lê Nguyên Vũ"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "12:00",
+              "title": "Phụ trách chung: PGS. Thái Minh Sâm, PGS.TS Lê Anh Tuấn, PGS. Trương Hoàng Minh, PGS.TS Lê Nguyên Vũ\nKíp mổ:\nPhẫu thuật nội soi lấy thận để ghép:\nPGS.TS Lê Nguyên Vũ, BSCK2. Quách Đô La, BSCK2. Cao Văn Trí, BSCK2. Nguyễn Minh Tuấn, BSCK2. Thân Trọng Vũ\nRửa thận:\nBSCK1. Phan Phước An Bình, BSCK2. Nguyễn Duy Khánh\nPhẫu thuật ghép thận:\nPGS. Thái Minh Sâm, BSCK2. Nguyễn Minh Hải, TS.BS. Đặng Văn Thắng, ThS. Trần Trọng Lực",
+              "speaker": "",
+              "affiliation": "",
+              "type": "info",
+              "pid": "2026-10-16-1-0"
+            },
+            {
+              "start": "08:00",
+              "end": "08:30",
+              "title": "Phẫu thuật nội soi lấy thận từ người cho sống: kỹ thuật, kinh nghiệm và bài học thực tiễn",
+              "speaker": "TS. Trần Ngọc Khánh",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-16-1-1"
+            },
+            {
+              "start": "08:30",
+              "end": "09:00",
+              "title": "Phẫu thuật nội soi sau phúc mạc lấy thận để ghép từ người hiến sống: Kinh nghiệm của BV Chợ Rẫy",
+              "speaker": "TS. Châu Quý Thuận",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-1-2"
+            },
+            {
+              "start": "09:00",
+              "end": "09:30",
+              "title": "Cập nhật các kỹ thuật trong xử lý thận ghép có nhiều mạch máu",
+              "speaker": "PGS.TS. Lê Anh Tuấn",
+              "affiliation": "BV QY 103",
+              "type": "talk",
+              "pid": "2026-10-16-1-3"
+            },
+            {
+              "start": "09:30",
+              "end": "10:00",
+              "title": "Một số biến chứng trong ghép thận: kinh nghiệm tại Bệnh viện Việt Đức",
+              "speaker": "PGS.TS. Lê Nguyên Vũ",
+              "affiliation": "BV Hữu nghị Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-16-1-4"
+            },
+            {
+              "start": "10:00",
+              "end": "10:30",
+              "title": "Một số vấn đề lưu ý trong ghép thận",
+              "speaker": "PGS.TS. Thái Minh Sâm",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-1-5"
+            },
+            {
+              "start": "10:30",
+              "end": "11:00",
+              "title": "Phân tầng nguy cơ miễn dịch ở bệnh nhân ghép thận",
+              "speaker": "BS CK2. Đặng Ngọc Tuấn Anh",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-16-1-6"
+            },
+            {
+              "start": "11:00",
+              "end": "12:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-16-1-7"
+            }
+          ],
+          "sid": "2026-10-16-1"
+        },
+        {
+          "roomId": "danang",
+          "title": "CME: Cập nhật kiến thức trong điều phối ghép tạng \nCME: Updates on Organ Transplant coordination",
+          "titleVi": "CME: Cập nhật kiến thức trong điều phối ghép tạng",
+          "titleEn": "CME: Updates on Organ Transplant coordination",
+          "titleViShort": "CME: Cập nhật kiến thức trong điều phối ghép tạng",
+          "titleEnShort": "CME: Updates on Organ Transplant coordination",
+          "type": "cme",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "12:00",
+          "chairs": [
+            "TS.BS.Dư Thị Ngọc Thu",
+            "BSCK2. Nguyễn Văn Nhiều",
+            "ThS. Trần Thị Cẩm Tú"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:30",
+              "title": "Phát hiện người tiềm năng hiến mô-tạng",
+              "speaker": "BSCK2. Nguyễn Văn Nhiều",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-2-0"
+            },
+            {
+              "start": "08:30",
+              "end": "09:00",
+              "title": "Tiếp nhận, sàng lọc, đánh giá nguy cơ người hiến",
+              "speaker": "TS.BS Dư Thị Ngọc Thu",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-2-1"
+            },
+            {
+              "start": "09:00",
+              "end": "09:45",
+              "title": "Quản lý người hiến mô-tạng: Khó khăn và thuận lợi",
+              "speaker": "BS. Nguyễn Xuân Bách",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-2-2"
+            },
+            {
+              "start": "09:45",
+              "end": "10:00",
+              "title": "Vận động hiến mô, tạng từ người cho chết não tại Bệnh viện Trung ương Huế năm 2026: kết quả và kinh nghiệm thực tiễn",
+              "speaker": "ThS.BS. Trần Thị Cẩm Tú",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-16-2-3"
+            },
+            {
+              "start": "10:00",
+              "end": "10:45",
+              "title": "Những điểm cần lưu ý trong điện não đồ chẩn đoán chết não",
+              "speaker": "BSCK2. Phạm Xuân Lãnh",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-2-4"
+            },
+            {
+              "start": "10:45",
+              "end": "11:15",
+              "title": "Công tác xã hội và chương trình hiến ghép mô-tạng từ người hiến chết não hay chết tuần hoàn",
+              "speaker": "ThS.Lê Minh Hiển",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-2-5"
+            },
+            {
+              "start": "11:15",
+              "end": "11:30",
+              "title": "Hiệu quả tuyên truyền, vận động hiến mô, tạng tại Huế: thực tiễn và kinh nghiệm",
+              "speaker": "ThS. Lê Ngân Giang",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-16-2-6"
+            },
+            {
+              "start": "11:30",
+              "end": "12:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-16-2-7"
+            }
+          ],
+          "sid": "2026-10-16-2"
+        },
+        {
+          "roomId": "hoian",
+          "title": "CME: Cập nhật một số vấn đề nội khoa trong ghép thận\nCME: Updates on medical management in kidney transplantation",
+          "titleVi": "CME: Cập nhật một số vấn đề nội khoa trong ghép thận",
+          "titleEn": "CME: Updates on medical management in kidney transplantation",
+          "titleViShort": "CME: Cập nhật một số vấn đề nội khoa trong ghép thận",
+          "titleEnShort": "CME: Updates on medical management in kidney transplantation",
+          "type": "cme",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "12:00",
+          "chairs": [
+            "PGS.TS. Lê Việt Thắng",
+            "TS. Huỳnh Ngọc Phương Thảo",
+            "TS. Nguyễn Thế Cường",
+            "TS. Trương Quý Kiên",
+            "BSCK2. Đặng Ngọc Tuấn Anh"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:30",
+              "title": "Cơ sở khoa học sử dụng thuốc ức chế miễn dịch trong ghép thận",
+              "speaker": "PGS.TS. Lê Việt Thắng",
+              "affiliation": "Học Viện Quân Y",
+              "type": "talk",
+              "pid": "2026-10-16-3-0"
+            },
+            {
+              "start": "08:30",
+              "end": "09:00",
+              "title": "Hướng tới định liều chính xác trong điều trị ức chế miễn dịch dài hạn ở bênh nhân ghép thận: lợi ích, thách thức và các yêu cầu để triển khai trong thực hành lâm sàng",
+              "speaker": "TS.Nguyễn Thế Cường",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-16-3-1"
+            },
+            {
+              "start": "09:00",
+              "end": "09:30",
+              "title": "Quản lý nhiễm trùng sau ghép thận: Những nội dung cần chú ý",
+              "speaker": "BSCK2. Đặng Ngọc Tuấn Anh",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-16-3-2"
+            },
+            {
+              "start": "10:00",
+              "end": "10:30",
+              "title": "Hướng dẫn chẩn đoán và điều trị thải thận ghép",
+              "speaker": "TS. Trương Quý Kiên",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-16-3-3"
+            },
+            {
+              "start": "10:30",
+              "end": "11:00",
+              "title": "Bệnh thận tái phát sau ghép: chẩn đoán và điều trị",
+              "speaker": "TS. Huỳnh Ngọc Phương Thảo",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-16-3-4"
+            },
+            {
+              "start": "11:00",
+              "end": "12:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-16-3-5"
+            }
+          ],
+          "sid": "2026-10-16-3"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "CME: Cập nhật chăm sóc điều dưỡng trong ghép tạng\nCME: Updates on nursing care for organ transplantation",
+          "titleVi": "CME: Cập nhật chăm sóc điều dưỡng trong ghép tạng",
+          "titleEn": "CME: Updates on nursing care for organ transplantation",
+          "titleViShort": "CME: Cập nhật chăm sóc điều dưỡng trong ghép tạng",
+          "titleEnShort": "CME: Updates on nursing care for organ transplantation",
+          "type": "cme",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "12:00",
+          "chairs": [
+            "PGS.TS. Lê Anh Tuấn",
+            "TS. Nguyễn Trọng Hiền",
+            "TS. ĐD Võ Hữu Thuần",
+            "DD. Nguyễn Trường Anh",
+            "ThS. ĐD Nguyễn Thị Thu Hà",
+            "ĐDCKI. Lê Thị Hạnh Phước"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:20",
+              "title": "Chuẩn bị người bệnh trước ghép thận: từ thường quy đến ghép thận xuyên Việt",
+              "speaker": "CN.ĐD. Hoàng Thị Mỹ Xuân",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-16-4-0"
+            },
+            {
+              "start": "08:20",
+              "end": "08:40",
+              "title": "An toàn người bệnh trong sử dụng thuốc dẫn nhập miễn dịch ở ghép thận",
+              "speaker": "ĐDCKI. Lê Thị Hạnh Phước",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-4-1"
+            },
+            {
+              "start": "08:40",
+              "end": "09:00",
+              "title": "An toàn trong phòng mổ ghép tạng: nguy cơ và giải pháp",
+              "speaker": "ThS. ĐD Nguyễn Trường Anh",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-16-4-2"
+            },
+            {
+              "start": "09:00",
+              "end": "09:20",
+              "title": "Tối ưu hóa chăm sóc điều dưỡng trong hồi sức sau ghép thận",
+              "speaker": "ThS.ĐD. Nguyễn Quang Huy",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-4-3"
+            },
+            {
+              "start": "09:20",
+              "end": "09:40",
+              "title": "Theo dõi và xử trí các biến chứng giai đoạn sớm sau ghép thận: Góc nhìn từ điều dưỡng",
+              "speaker": "TS. ĐD Võ Hữu Thuần",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-16-4-4"
+            },
+            {
+              "start": "09:40",
+              "end": "10:00",
+              "title": "Tuân thủ dùng thuốc ức chế miễn dịch và các yếu tố liên quan ở người bệnh sau ghép thận",
+              "speaker": "CN.ĐD. Trần Thị Trang",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-16-4-5"
+            },
+            {
+              "start": "10:00",
+              "end": "10:20",
+              "title": "Tuân thủ điều trị thuốc và một số yếu tố liên quan ở người bệnh sau ghép gan tại Bệnh viện Trung ương Quân đội 108",
+              "speaker": "ThS.ĐD. Nguyễn Thị Vân Anh",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-16-4-6"
+            },
+            {
+              "start": "10:20",
+              "end": "10:40",
+              "title": "Kết quả điều trị và vai trò điều dưỡng trong chăm sóc người bệnh ghép tim từ người cho đa tạng chết não bài học kinh nghiệm 15 năm triển khai tại bệnh viện Hữu Nghị Việt Đức (2011-2026)",
+              "speaker": "ThS. ĐD Nguyễn Thị Thu Hà",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-16-4-7"
+            },
+            {
+              "start": "10:40",
+              "end": "11:00",
+              "title": "Vai trò của điều dưỡng trong phát hiện sớm và chăm sóc rò dưỡng chấp sau phẫu thuật lấy thận ở người hiến sống: Báo cáo ca lâm sàng và tổng quan y văn",
+              "speaker": "ĐD.CK1. Nguyễn Thị Hải Bắc",
+              "affiliation": "",
+              "type": "case",
+              "pid": "2026-10-16-4-8"
+            },
+            {
+              "start": "11:00",
+              "end": "12:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-16-4-9"
+            }
+          ],
+          "sid": "2026-10-16-4"
+        },
+        {
+          "roomId": "songhan",
+          "title": "CME: Kỹ thuật chia gan từ lý thuyết đến thực hành CME: Liver Splitting Techniques: From Theory to Practice",
+          "titleVi": "CME: Kỹ thuật chia gan từ lý thuyết đến thực hành",
+          "titleEn": "CME: Liver Splitting Techniques: From Theory to Practice",
+          "titleViShort": "CME: Kỹ thuật chia gan từ lý thuyết đến thực hành",
+          "titleEnShort": "CME: Liver Splitting Techniques: From Theory to Practice",
+          "type": "cme",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "12:00",
+          "chairs": [
+            "TS.BS Trần Công Duy Long",
+            "PGS.TS Vũ Văn Quang",
+            "TS. Ninh Việt Khải"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:30",
+              "title": "Lịch sử phát triển kỹ thuật chia gan trong ghép gan: lựa chọn người hiến, kỹ thuật chia gan",
+              "speaker": "TS. Ninh Việt Khải",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-16-5-0"
+            },
+            {
+              "start": "08:30",
+              "end": "08:50",
+              "title": "Video 1: Kỹ thuật chia gan",
+              "speaker": "",
+              "affiliation": "BV TWQĐ 108",
+              "type": "video",
+              "pid": "2026-10-16-5-1"
+            },
+            {
+              "start": "08:50",
+              "end": "09:10",
+              "title": "Video 2: Kỹ thuật chia gan",
+              "speaker": "",
+              "affiliation": "BV Hữu nghị Việt Đức",
+              "type": "video",
+              "pid": "2026-10-16-5-2"
+            },
+            {
+              "start": "09:10",
+              "end": "09:30",
+              "title": "Video 3: Kỹ thuật chia gan",
+              "speaker": "",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "video",
+              "pid": "2026-10-16-5-3"
+            },
+            {
+              "start": "09:30",
+              "end": "09:45",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-16-5-4"
+            }
+          ],
+          "sid": "2026-10-16-5"
+        },
+        {
+          "roomId": "sontra",
+          "title": "CME: Cập nhật một số vấn đề trong ghép tim và phổi\nCME: Updates on management and surgical issues in Heart  & Lung transplantation",
+          "titleVi": "CME: Cập nhật một số vấn đề trong ghép tim và phổi",
+          "titleEn": "CME: Updates on management and surgical issues in Heart  & Lung transplantation",
+          "titleViShort": "CME: Cập nhật một số vấn đề trong ghép tim và phổi",
+          "titleEnShort": "CME: Updates on management and surgical issues in Heart  & Lung transplantation",
+          "type": "cme",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "12:00",
+          "chairs": [
+            "GS.TS Nguyễn Hoàng Định",
+            "PGS.TS Phùng Duy Hồng Sơn",
+            "ThS.BS Nguyễn Đức Dũng"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:20",
+              "title": "Tim người hiến bé – đâu là giới hạn chống chỉ định ghép?",
+              "speaker": "PGS.TS. Phùng Duy Hồng Sơn",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-16-6-0"
+            },
+            {
+              "start": "08:20",
+              "end": "08:40",
+              "title": "Điều trị ngoại khoa suy tim giai đoạn cuối",
+              "speaker": "TS.BS Ngô Tuấn Anh",
+              "affiliation": "BV TƯQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-16-6-1"
+            },
+            {
+              "start": "08:40",
+              "end": "09:00",
+              "title": "Tổng quan về người hiến đa tạng tiềm năng",
+              "speaker": "BSCK2 Đặng Thế Uyên, ThS. Nguyễn Thành Luân",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-16-6-2"
+            },
+            {
+              "start": "09:00",
+              "end": "09:20",
+              "title": "Quản lý người bệnh chờ nhận tạng ghép từ người hiến chết não",
+              "speaker": "ThS. Trần Văn Hùng",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-16-6-3"
+            },
+            {
+              "start": "09:20",
+              "end": "09:40",
+              "title": "Ghép tim trong bệnh tim bẩm sinh: cập nhật các khuyến cáo mới nhất",
+              "speaker": "TS.BS Cao Đằng Khang",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-16-6-4"
+            },
+            {
+              "start": "09:40",
+              "end": "10:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-16-6-5"
+            }
+          ],
+          "sid": "2026-10-16-6"
+        },
+        {
+          "roomId": "hoian",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:30",
+          "end": "10:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-7"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Tea Break",
+          "titleVi": "Tea Break",
+          "titleEn": "",
+          "titleViShort": "Tea Break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:45",
+          "end": "10:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-8"
+        },
+        {
+          "roomId": "songhan",
+          "title": "DEBATE: insitu vs exsitu SLT \nInsitu: BV TWQĐ 108\nExsitu: BV ĐHYD TP.HCM",
+          "titleVi": "DEBATE: insitu vs exsitu SLT\nInsitu: BV TWQĐ 108\nExsitu: BV ĐHYD TP.HCM",
+          "titleEn": "",
+          "titleViShort": "DEBATE: insitu vs exsitu SLT\nInsitu: BV TWQĐ 108\nExsitu: BV ĐHYD TP.HCM",
+          "titleEnShort": "",
+          "type": "debate",
+          "category": "scientific",
+          "start": "10:00",
+          "end": "11:15",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-9"
+        },
+        {
+          "roomId": "sontra",
+          "title": "Ghép phổi và quản lý người bệnh sau ghép\nChủ toạ: PGS.TS Nguyễn Hữu Ước, TS.BS Nguyễn Thái An, PGS.TS Đỗ Kim Quế",
+          "titleVi": "Ghép phổi và quản lý người bệnh sau ghép",
+          "titleEn": "",
+          "titleViShort": "Ghép phổi và quản lý người bệnh sau ghép",
+          "titleEnShort": "",
+          "type": "cme",
+          "category": "scientific",
+          "start": "10:00",
+          "end": "12:00",
+          "chairs": [
+            "PGS.TS Nguyễn Hữu Ước",
+            "TS.BS Nguyễn Thái An",
+            "PGS.TS Đỗ Kim Quế"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "10:00",
+              "end": "10:20",
+              "title": "Tổng quan về Ghép phổi",
+              "speaker": "TS. Đinh Văn Lượng",
+              "affiliation": "BV Phổi TW",
+              "type": "talk",
+              "pid": "2026-10-16-10-0"
+            },
+            {
+              "start": "10:20",
+              "end": "10:40",
+              "title": "Rối loạn chức năng mảnh ghép sớm sau ghép tim: nhận diện và chiến lược điều trị",
+              "speaker": "ThS.BS Trần Thị Thanh Thuỷ",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-16-10-1"
+            },
+            {
+              "start": "10:40",
+              "end": "11:00",
+              "title": "Quản lý toàn diện người bệnh sau ghép tim",
+              "speaker": "ThS. Phạm Ngọc Đan",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-16-10-2"
+            },
+            {
+              "start": "11:00",
+              "end": "11:20",
+              "title": "Đặc điểm lâm sàng, cận lâm sàng và tình trạng huyết động của người bệnh sau ghép tim",
+              "speaker": "ThS. Nguyễn Kim Dần",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-16-10-3"
+            },
+            {
+              "start": "11:20",
+              "end": "11:40",
+              "title": "Vai trò của siêu âm tim trong chẩn đoán thải ghép tim cấp: báo cáo ca lâm sàng",
+              "speaker": "ThS. Trần Hữu Nghị",
+              "affiliation": "BV HN Việt Đức",
+              "type": "case",
+              "pid": "2026-10-16-10-4"
+            },
+            {
+              "start": "11:40",
+              "end": "12:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-16-10-5"
+            }
+          ],
+          "sid": "2026-10-16-10"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Tổng kết",
+          "titleVi": "Tổng kết",
+          "titleEn": "",
+          "titleViShort": "Tổng kết",
+          "titleEnShort": "",
+          "type": "closing",
+          "category": "ceremony",
+          "start": "11:15",
+          "end": "12:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-11"
+        },
+        {
+          "roomId": "danang",
+          "title": "KHAI MẠC HỘI NGHỊ\nOPENING CEREMONY\n1. Tuyên bố lý do, giới thiệu Đại biểu\n2. Phát biểu khai mạc Hội nghị (Chủ tịch VSOT) \n3. Phát biểu của đơn vị đăng cai tổ chức Hội nghị (GĐ BV Đà Nẵng)\n4. Tôn vinh các nhà khoa học có nhiều đóng góp cho ghép tạng Việt Nam\n5. Tặng hoa tri ân khách mời và cảm ơn nhà tài trợ  \n\n1. Welcome and Introduction of Distinguished Guests\n2. Opening Remarks by the President of the Vietnam Society of Organ Transplantation (VSOT)\n3. Welcome Address by the Host Organization – Director of Da Nang Hospital\n4. Recognition and Honoring of Distinguished Scientists for Outstanding Contributions to Organ Transplantation in Vietnam\n5. Presentation of Appreciation Bouquets to Distinguished Guests and Acknowledgment of Sponsors",
+          "titleVi": "KHAI MẠC HỘI NGHỊ\n1. Tuyên bố lý do, giới thiệu Đại biểu\n2. Phát biểu khai mạc Hội nghị (Chủ tịch VSOT)\n3. Phát biểu của đơn vị đăng cai tổ chức Hội nghị (GĐ BV Đà Nẵng)\n4. Tôn vinh các nhà khoa học có nhiều đóng góp cho ghép tạng Việt Nam\n5. Tặng hoa tri ân khách mời và cảm ơn nhà tài trợ\n1. Welcome and Introduction of Distinguished Guests\n2. Opening Remarks by the President of the Vietnam Society of Organ Transplantation (VSOT)\n3. Welcome Address by the Host Organization – Director of Da Nang Hospital\n4. Recognition and Honoring of Distinguished Scientists for Outstanding Contributions to Organ Transplantation in Vietnam\n5. Presentation of Appreciation Bouquets to Distinguished Guests and Acknowledgment of Sponsors",
+          "titleEn": "OPENING CEREMONY",
+          "titleViShort": "KHAI MẠC HỘI NGHỊ",
+          "titleEnShort": "OPENING CEREMONY",
+          "type": "opening",
+          "category": "ceremony",
+          "start": "13:30",
+          "end": "14:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-12"
+        },
+        {
+          "roomId": "danang",
+          "title": "PHIÊN TOÀN THỂ \nPlenary Session",
+          "titleVi": "PHIÊN TOÀN THỂ",
+          "titleEn": "Plenary Session",
+          "titleViShort": "PHIÊN TOÀN THỂ",
+          "titleEnShort": "Plenary Session",
+          "type": "plenary",
+          "category": "scientific",
+          "start": "14:00",
+          "end": "16:40",
+          "chairs": [
+            "GS.TS. Phạm Gia Khánh",
+            "GS.TS. Trần Ngọc Sinh",
+            "PGS.TS. Đồng Văn Hệ",
+            "TS. BS Lê Đức Nhân",
+            "Prof. Curie Ahn",
+            "Prof. Anantharaman Vathsala",
+            "Prof. Germaine Wong."
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "14:00",
+              "end": "14:20",
+              "title": "Kết quả ghép tạng Việt Nam năm 2025",
+              "speaker": "GS.TS. Phạm Gia Khánh",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-0"
+            },
+            {
+              "start": "14:20",
+              "end": "14:40",
+              "title": "Barriers of Deceased Organ Donation in Asia",
+              "speaker": "Prof. Curie Ahn",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-1"
+            },
+            {
+              "start": "14:40",
+              "end": "15:00",
+              "title": "Building a Lung Transplantation Center of Excellence: Lessons Learned from Severance Hospital",
+              "speaker": "Prof. Jin Gu Lee",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-2"
+            },
+            {
+              "start": "15:00",
+              "end": "15:20",
+              "title": "Success Factors for Long-Term Outcomes in Deceased Donor Kidney Transplantation: Experience from Thailand.",
+              "speaker": "Prof. Yingyos Avihingsanon",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-3"
+            },
+            {
+              "start": "15:20",
+              "end": "15:40",
+              "title": "Làm thế nào xây dựng hệ thống hiến ghép tạng bền vững tại Việt Nam",
+              "speaker": "PGS. TS. Đồng Văn Hệ",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-4"
+            },
+            {
+              "start": "15:40",
+              "end": "16:00",
+              "title": "Ghép thận với người hiến không yếu tố thương mại: Nhân 100 trường hợp tại Bệnh viện Đại học Y Dược TPHCM",
+              "speaker": "GS.TS. Trần Ngọc Sinh",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-5"
+            },
+            {
+              "start": "16:00",
+              "end": "16:20",
+              "title": "Update on the diagnosis and management of acute and chronic antibody mediated rejection",
+              "speaker": "Prof. Germaine Wong",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-6"
+            },
+            {
+              "start": "16:20",
+              "end": "16:40",
+              "title": "Second international consensus guidelines on BK polyomavirus (BKPYV) management in kidney transplantation",
+              "speaker": "Prof. Anantharaman Vathsala",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-16-13-7"
+            }
+          ],
+          "sid": "2026-10-16-13"
+        },
+        {
+          "roomId": "danang",
+          "title": "HỘI TRƯỜNG SƠN TRÀ\nHọp Ban chấp hành VSOT \nVSOT Executive Board Meeting",
+          "titleVi": "HỘI TRƯỜNG SƠN TRÀ\nHọp Ban chấp hành VSOT",
+          "titleEn": "VSOT Executive Board Meeting",
+          "titleViShort": "HỘI TRƯỜNG SƠN TRÀ Họp Ban chấp hành VSOT",
+          "titleEnShort": "VSOT Executive Board Meeting",
+          "type": "meeting",
+          "category": "administrative",
+          "start": "16:40",
+          "end": "17:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-14"
+        },
+        {
+          "roomId": "danang",
+          "title": "TIỆC CHÀO MỪNG\nGala Dinner\nNhà hàng For You Luxury - For You Luxury Restaurant",
+          "titleVi": "TIỆC CHÀO MỪNG\nNhà hàng For You Luxury - For You Luxury Restaurant",
+          "titleEn": "Gala Dinner",
+          "titleViShort": "TIỆC CHÀO MỪNG Nhà hàng For You Luxury - For You Luxury Restaurant",
+          "titleEnShort": "Gala Dinner",
+          "type": "gala",
+          "category": "social",
+          "start": "18:00",
+          "end": "21:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-16-15"
+        }
+      ],
+      "label": "Thứ 6, 16/10/2026",
+      "labelShort": "T6 16/10",
+      "start": "07:30",
+      "end": "21:00"
+    },
+    {
+      "date": "2026-10-17",
+      "kind": "scientific",
+      "sessions": [
+        {
+          "roomId": "danang",
+          "title": "Tiếp đón đại biểu - Welcome Delegates",
+          "titleVi": "Tiếp đón đại biểu",
+          "titleEn": "Welcome Delegates",
+          "titleViShort": "Tiếp đón đại biểu",
+          "titleEnShort": "Welcome Delegates",
+          "type": "welcome",
+          "category": "ceremony",
+          "start": "07:30",
+          "end": "08:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-0"
+        },
+        {
+          "roomId": "bana",
+          "title": "Ghép thận trẻ em\n Pediatric Kidney Transplantation",
+          "titleVi": "Ghép thận trẻ em",
+          "titleEn": "Pediatric Kidney Transplantation",
+          "titleViShort": "Ghép thận trẻ em",
+          "titleEnShort": "Pediatric Kidney Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "09:30",
+          "chairs": [
+            "ThS. Lê Anh Dũng",
+            "BSCK2. Nguyễn Đức Quang",
+            "TS. Hoàng Ngọc Thạch",
+            "TS. Thái Thiên Nam"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:10",
+              "title": "Vai trò của giải phẫu bệnh trong ghép thận nhi",
+              "speaker": "TS. Hoàng Ngọc Thạch",
+              "affiliation": "BV Nhi TW",
+              "type": "talk",
+              "pid": "2026-10-17-1-0"
+            },
+            {
+              "start": "08:10",
+              "end": "08:20",
+              "title": "Ức chế miễn dịch sau ghép thận ở trẻ em: cập nhật hướng dẫn điều trị châu Âu 2026",
+              "speaker": "BSCK2. Nguyễn Đức Quang",
+              "affiliation": "Bệnh viện Nhi đồng 1",
+              "type": "talk",
+              "pid": "2026-10-17-1-1"
+            },
+            {
+              "start": "08:20",
+              "end": "08:30",
+              "title": "Chuẩn bị di truyền trước ghép thận",
+              "speaker": "TS. Thái Thiên Nam",
+              "affiliation": "BV Nhi TW",
+              "type": "talk",
+              "pid": "2026-10-17-1-2"
+            },
+            {
+              "start": "08:30",
+              "end": "08:40",
+              "title": "Ghép thận ở bệnh nhi hội chứng Alport: Báo cáo ca bênh",
+              "speaker": "ThS. Lường Hữu Bảy",
+              "affiliation": "BV Nhi TW",
+              "type": "talk",
+              "pid": "2026-10-17-1-3"
+            },
+            {
+              "start": "08:40",
+              "end": "08:50",
+              "title": "Thiếu máu ở bệnh nhân ghép thận",
+              "speaker": "ThS. Võ Thị Tường Vy",
+              "affiliation": "BV Nhi Đồng 2",
+              "type": "talk",
+              "pid": "2026-10-17-1-4"
+            },
+            {
+              "start": "08:50",
+              "end": "09:00",
+              "title": "Đái tháo đường ở bệnh nhân ghép tạng",
+              "speaker": "BSCKI. Lê Triệu Khải",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-1-5"
+            },
+            {
+              "start": "09:00",
+              "end": "09:10",
+              "title": "Rối loạn chuyển hoá xương trước và sau ghép thận",
+              "speaker": "ThS. Nguyễn Văn Nhàn",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-1-6"
+            },
+            {
+              "start": "09:10",
+              "end": "09:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-1-7"
+            }
+          ],
+          "sid": "2026-10-17-1"
+        },
+        {
+          "roomId": "danang",
+          "title": "Ghép thận 1: Ghép thận-tụy\nKidney Transplantation 1: Pancreas–Kidney Transplantation",
+          "titleVi": "Ghép thận 1: Ghép thận-tụy",
+          "titleEn": "Kidney Transplantation 1: Pancreas–Kidney Transplantation",
+          "titleViShort": "Ghép thận 1: Ghép thận-tụy",
+          "titleEnShort": "Kidney Transplantation 1: Pancreas–Kidney Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "09:30",
+          "chairs": [
+            "Prof. Henry Pleass",
+            "Prof. Young-Hoon Kim",
+            "GS.TS. Trần Ngọc Sinh",
+            "PGS.TS. Thái Minh Sâm",
+            "TS.BS Ninh Việt Khải"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:20",
+              "title": "Pancreas Transplant Update in Australasia",
+              "speaker": "Prof. Henry Pleass",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-2-0"
+            },
+            {
+              "start": "08:20",
+              "end": "08:40",
+              "title": "Current Status of Pancreas Transplantation at Asan Medical Center: A Thirty-Year Single-Center Experience of 519 Consecutive Cases",
+              "speaker": "Prof. Young-Hoon Kim",
+              "affiliation": "",
+              "type": "case",
+              "pid": "2026-10-17-2-1"
+            },
+            {
+              "start": "08:40",
+              "end": "09:00",
+              "title": "ABO-incompatible kidney transplantation",
+              "speaker": "Young Hoon Kim, Prof. Young Hoon Kim",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-2-2"
+            },
+            {
+              "start": "09:00",
+              "end": "09:20",
+              "title": "The Kidney Protective Jacket – First-in-Use Clinical Study",
+              "speaker": "Prof. Henry Pleass",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-2-3"
+            },
+            {
+              "start": "09:20",
+              "end": "09:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-2-4"
+            }
+          ],
+          "sid": "2026-10-17-2"
+        },
+        {
+          "roomId": "hoian",
+          "title": "Nội khoa ghép thận 1: Quản lý bệnh nhân và sử dụng UCMD trong ghép thận\nMedical management in Kidney Transplantation 1: Patient Management and Immunosuppressive Therapy in Kidney Transplantation",
+          "titleVi": "Nội khoa ghép thận 1: Quản lý bệnh nhân và sử dụng UCMD trong ghép thận",
+          "titleEn": "Medical management in Kidney Transplantation 1: Patient Management and Immunosuppressive Therapy in Kidney Transplantation",
+          "titleViShort": "Nội khoa ghép thận 1: Quản lý bệnh nhân và sử dụng UCMD trong ghép thận",
+          "titleEnShort": "Medical management in Kidney Transplantation 1: Patient Management and Immunosuppressive Therapy in Kidney Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "09:30",
+          "chairs": [
+            "Prof. Germain Wong",
+            "Prof. Vincent Lee",
+            "GS.TS. Đỗ Tất Cường",
+            "PGS.TS. Hà Phan Hải An",
+            "PGS.TS. Phạm Quốc Toản"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:20",
+              "title": "Pregnancy and Solid Organ Transplantation - An Update",
+              "speaker": "Prof. Vincent Lee",
+              "affiliation": "Westmead Hospital",
+              "type": "talk",
+              "pid": "2026-10-17-3-0"
+            },
+            {
+              "start": "08:20",
+              "end": "08:40",
+              "title": "Tuân thủ điều trị ở bệnh nhân ghép thận: thách thức và giải pháp",
+              "speaker": "PGS.TS. Hà Phan Hải An",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-3-1"
+            },
+            {
+              "start": "08:40",
+              "end": "08:50",
+              "title": "Chiến lược ngừng hoặc giảm liều tối thiểu Corticoid sau ghép thận: Phân tầng nguy cơ miễn dịch và lựa chọn đối tượng",
+              "speaker": "TS. Trương Quý Kiên",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-3-2"
+            },
+            {
+              "start": "08:50",
+              "end": "09:00",
+              "title": "Cân bằng giữa lợi ích và nguy cơ ức chế miễn dịch ở nhóm bệnh nhân có nguy cơ dưới góc nhìn bác sĩ lâm sàng",
+              "speaker": "TS. Nguyễn Thế Cường",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-3-3"
+            },
+            {
+              "start": "09:00",
+              "end": "09:10",
+              "title": "Chiến lược tối ưu hóa điều trị và theo dõi người bệnh sau ghép thận",
+              "speaker": "BSCK2. Đặng Ngọc Tuấn Anh",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-3-4"
+            },
+            {
+              "start": "09:10",
+              "end": "09:20",
+              "title": "Từ TDM đến Giám sát đáp ứng miễn dịch: Bước tiến trong cá thể hoá điều trị bệnh nhân sau ghép thận",
+              "speaker": "TS. Huỳnh Ngọc Phương Thảo",
+              "affiliation": "BV ĐHYD TPHCM",
+              "type": "talk",
+              "pid": "2026-10-17-3-5"
+            },
+            {
+              "start": "09:20",
+              "end": "09:30",
+              "title": "Vai trò của tuân thủ điều trị trên bệnh nhân ghép từ lý thuyết đến thực tiễn lâm sàng",
+              "speaker": "ThS BSCK2. Nguyễn Thị Thuỷ",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-3-6"
+            },
+            {
+              "start": null,
+              "end": null,
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-3-7"
+            }
+          ],
+          "sid": "2026-10-17-3"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "Điều phối hiến tạng và Tổ chức đơn vị ghép tạng\nOrgan Coordination and Transplantation Center Organization",
+          "titleVi": "Điều phối hiến tạng và Tổ chức đơn vị ghép tạng",
+          "titleEn": "Organ Coordination and Transplantation Center Organization",
+          "titleViShort": "Điều phối hiến tạng và Tổ chức đơn vị ghép tạng",
+          "titleEnShort": "Organ Coordination and Transplantation Center Organization",
+          "type": "session",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "09:30",
+          "chairs": [
+            "Prof. Curie Ahn",
+            "TS. Dư Thị Ngọc Thu",
+            "PGS.TS. Phạm Gia Anh",
+            "TS.BS Lê Đức Nhân",
+            "ThS.BS. Trần Thị Cẩm Tú"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:20",
+              "title": "The Korean Experience in Organ Donation Coordination",
+              "speaker": "Prof. Curie Ahn",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-4-0"
+            },
+            {
+              "start": "08:20",
+              "end": "08:35",
+              "title": "Promotion of Deceased Organ Donation in Vietnam: Lessons from the Korean Experience",
+              "speaker": "Prof. In Sung Moon",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-4-1"
+            },
+            {
+              "start": "08:35",
+              "end": "08:45",
+              "title": "Ghép tạng tại Bệnh viện Đà Nẵng: Hiện tại và tương lai",
+              "speaker": "TS. Lê Đức Nhân",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-4-2"
+            },
+            {
+              "start": "08:45",
+              "end": "08:55",
+              "title": "Định hướng ghép tạng tại Bệnh viện Đa khoa Trung ương Cần Thơ",
+              "speaker": "BSCK2. Lê Hoàng Phúc",
+              "affiliation": "BV ĐKTW Cần Thơ",
+              "type": "talk",
+              "pid": "2026-10-17-4-3"
+            },
+            {
+              "start": "08:55",
+              "end": "09:05",
+              "title": "Mô hình điều phối và vai trò hậu cần phối hợp liên ngành trong công tác hiến, lấy và ghép mô, tạng từ người hiến chết não: Kinh nghiệm thực tiễn tại Bệnh viện Nhân dân 115",
+              "speaker": "ThS. Bùi Trọng Nguyễn",
+              "affiliation": "BV ND 115",
+              "type": "talk",
+              "pid": "2026-10-17-4-4"
+            },
+            {
+              "start": "09:05",
+              "end": "09:15",
+              "title": "Năng lực của nhân viên y tế trong quản lý người bệnh chết não tiềm năng hiến mô, tạng: Khoảng cách từ thái độ đến thực hành tại 05 bệnh viện đa khoa",
+              "speaker": "ThS. Nguyễn Ngọc Duy",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-4-5"
+            },
+            {
+              "start": "09:15",
+              "end": "09:25",
+              "title": "Hiệu quả mô hình phối hợp triển khai lấy đa mô tạng ở người hiến chết não và chuyển giao kỹ thuật ghép thận tại bệnh viện tuyến tỉnh",
+              "speaker": "Nguyễn Quang Toản",
+              "affiliation": "BV VNTĐ Uông Bí",
+              "type": "talk",
+              "pid": "2026-10-17-4-6"
+            },
+            {
+              "start": "09:25",
+              "end": "09:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-4-7"
+            }
+          ],
+          "sid": "2026-10-17-4"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Ghép gan 1: Tiến bộ trong kỹ thuật ghép gan 1\nLiver Transplantation 1: Advances in Liver Transplantation 1",
+          "titleVi": "Ghép gan 1: Tiến bộ trong kỹ thuật ghép gan 1",
+          "titleEn": "Liver Transplantation 1: Advances in Liver Transplantation 1",
+          "titleViShort": "Ghép gan 1: Tiến bộ trong kỹ thuật ghép gan 1",
+          "titleEnShort": "Liver Transplantation 1: Advances in Liver Transplantation 1",
+          "type": "session",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "09:30",
+          "chairs": [
+            "GS.TS. Lê Trung Hải",
+            "PGS.TS Nguyễn Tiến Quyết",
+            "PGS.TS Lê Văn Thành",
+            "BSCK2. Nguyễn Hoàng"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:20",
+              "title": "Phẫu thuật robot lấy mảnh ghép gan phải từ người hiến sống tại Việt Nam: từ ca đầu tiên đến loạt ca kinh nghiệm bước đầu",
+              "speaker": "PGS.TS. Lê Văn Thành",
+              "affiliation": "BV Vinmec",
+              "type": "talk",
+              "pid": "2026-10-17-5-0"
+            },
+            {
+              "start": "08:20",
+              "end": "08:40",
+              "title": "Ghép gan tim đồng thời cho bệnh lý amyloid và domino",
+              "speaker": "PGS.TS. Nguyễn Quang Nghĩa",
+              "affiliation": "BV Hữu nghị Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-5-1"
+            },
+            {
+              "start": "08:40",
+              "end": "08:50",
+              "title": "Kỹ thuật nối động mạch trong ghép gan",
+              "speaker": "GS.TS. Nguyễn Hoàng Định",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-5-2"
+            },
+            {
+              "start": "08:50",
+              "end": "09:00",
+              "title": "Tiếp cận và kiểm soát cuống gan trong phẫu thuật nội soi hoàn toàn lấy mảnh ghép gan phải từ người hiến sống",
+              "speaker": "PGS.TS. Vũ Văn Quang",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-5-3"
+            },
+            {
+              "start": "09:00",
+              "end": "09:10",
+              "title": "Kinh nghiệm qua trường hợp ghép gan với hai mảnh ghép (Dual Graft) đầu tiên tại Việt Nam",
+              "speaker": "BS Nguyễn Long Đức",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-5-4"
+            },
+            {
+              "start": "09:10",
+              "end": "09:20",
+              "title": "Ghép gan cho ung thư biểu mô tế bào gan: từ chiến lược trước mổ đến điều trị sau ghép",
+              "speaker": "Trần Đình Dũng",
+              "affiliation": "BV Hữu nghị Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-5-5"
+            },
+            {
+              "start": "09:20",
+              "end": "09:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-5-6"
+            }
+          ],
+          "sid": "2026-10-17-5"
+        },
+        {
+          "roomId": "sontra",
+          "title": "Ghép tim - phổi 1:\nKết quả các chương trình ghép tim tại Việt Nam\nHeart-Lung Transplantation 1:\nOutcomes of Heart Transplantation Programs in Vietnam",
+          "titleVi": "Ghép tim - phổi 1:\nKết quả các chương trình ghép tim tại Việt Nam",
+          "titleEn": "Heart-Lung Transplantation 1:\nOutcomes of Heart Transplantation Programs in Vietnam",
+          "titleViShort": "Ghép tim - phổi 1: Kết quả các chương trình ghép tim tại Việt Nam",
+          "titleEnShort": "Heart-Lung Transplantation 1: Outcomes of Heart Transplantation Programs in Vietnam",
+          "type": "session",
+          "category": "scientific",
+          "start": "08:00",
+          "end": "09:30",
+          "chairs": [
+            "PGS.TS Dương Đức Hùng",
+            "TS.BS Nguyễn Hoàng Bình"
+          ],
+          "discussants": [
+            "GS.TS.BS Nguyễn Hoàng Định",
+            "TS.BS Cao Đằng Khang",
+            "ThS.BS Trần Thị Thanh Thuỷ"
+          ],
+          "presentations": [
+            {
+              "start": "08:00",
+              "end": "08:10",
+              "title": "Ghép tim – gan đồng thời, ghép gan domino: Ca lâm sàng đầu tiên tại Việt Nam",
+              "speaker": "PGS.TS. Dương Đức Hùng – PGS.TS. Phùng Duy Hồng Sơn",
+              "affiliation": "BV HN Việt Đức",
+              "type": "case",
+              "pid": "2026-10-17-6-0"
+            },
+            {
+              "start": "08:10",
+              "end": "08:20",
+              "title": "Ghép tim tại BV Chợ Rẫy giai đoạn 2017 – 2026: kết quả 10 năm và kinh nghiệm thực tiễn",
+              "speaker": "TS.BS Nguyễn Thái An",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-6-1"
+            },
+            {
+              "start": "08:20",
+              "end": "08:30",
+              "title": "Phẫu thuật ghép tim tại BV TƯQĐ 108: kết quả sớm 14 ca đầu tiên",
+              "speaker": "TS.BS Ngô Tuấn Anh - ThS.BS Lê Hữu Công",
+              "affiliation": "BV TƯQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-6-2"
+            },
+            {
+              "start": "08:30",
+              "end": "08:40",
+              "title": "Phẫu thuật ghép tim tại Bệnh viện Trung ương Huế: Hành trình 15 năm từ ca ghép đầu tiên",
+              "speaker": "TS. Bùi Đức An Vinh - ThS.BS Nguyễn Đức Dũng",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-6-3"
+            },
+            {
+              "start": "08:40",
+              "end": "08:50",
+              "title": "Kết quả sớm 15 trường hợp ghép tim đầu tiên tại BV ĐHYD TP.HCM và nhận xét các yếu tố liên quan",
+              "speaker": "GS.TS. Nguyễn Hoàng Định",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-6-4"
+            },
+            {
+              "start": "08:50",
+              "end": "09:00",
+              "title": "Kết quả 1 năm ca ghép tim đầu tiên tại BV Thống Nhất",
+              "speaker": "PGS.TS Đỗ Kim Quế",
+              "affiliation": "BV Thống Nhất",
+              "type": "talk",
+              "pid": "2026-10-17-6-5"
+            },
+            {
+              "start": "09:00",
+              "end": "09:10",
+              "title": "Kết quả ghép tim trẻ em từ tim hiến người lớn",
+              "speaker": "TS.BS Nguyễn Tiến Quân",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-6-6"
+            },
+            {
+              "start": "09:10",
+              "end": "09:25",
+              "title": "Cập nhật sử dụng thuốc ức chế miễn dịch trong ghép tim",
+              "speaker": "ThS.BS Nguyễn Kim Dần",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-6-7"
+            },
+            {
+              "start": "09:25",
+              "end": "09:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-6-8"
+            }
+          ],
+          "sid": "2026-10-17-6"
+        },
+        {
+          "roomId": "bana",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:30",
+          "end": "09:45",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-7"
+        },
+        {
+          "roomId": "danang",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:30",
+          "end": "09:45",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-8"
+        },
+        {
+          "roomId": "hoian",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:30",
+          "end": "09:45",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-9"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:30",
+          "end": "09:45",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-10"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:30",
+          "end": "09:45",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-11"
+        },
+        {
+          "roomId": "sontra",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "09:30",
+          "end": "09:45",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-12"
+        },
+        {
+          "roomId": "bana",
+          "title": "Ghép gan trẻ em\nPediatric Liver Transplantation",
+          "titleVi": "Ghép gan trẻ em",
+          "titleEn": "Pediatric Liver Transplantation",
+          "titleViShort": "Ghép gan trẻ em",
+          "titleEnShort": "Pediatric Liver Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "09:45",
+          "end": "11:30",
+          "chairs": [
+            "PGS.TS Phạm Duy Hiền",
+            "PGS.TS Vũ Văn Quang",
+            "TS. Ninh Việt Khải"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "09:45",
+              "end": "09:55",
+              "title": "Biến chứng đường mật sau ghép gan ở trẻ em tại Bệnh viện Nhi Trung ương",
+              "speaker": "PGS.TS. Phạm Duy Hiền",
+              "affiliation": "BV Nhi Trung ương",
+              "type": "talk",
+              "pid": "2026-10-17-13-0"
+            },
+            {
+              "start": "09:55",
+              "end": "10:05",
+              "title": "Lịch sử phát triển kỹ thuật chia gan trong ghép gan: lựa chọn người hiến, kỹ thuật chia gan",
+              "speaker": "TS Ninh Việt Khải",
+              "affiliation": "BV Hữu nghị Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-13-1"
+            },
+            {
+              "start": "10:05",
+              "end": "10:15",
+              "title": "Ghép gan lại ở trẻ em do biến chứng động mạch gan",
+              "speaker": "TS. Đặng Quốc Việt / BS Trần Bình Dương",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-13-2"
+            },
+            {
+              "start": "10:15",
+              "end": "10:25",
+              "title": "Điều trị hồi sức sau ghép gan nhi tại Bệnh viện Vinmec Times City và một số biến chứng sớm sau ghép",
+              "speaker": "BS Lê Văn Bình",
+              "affiliation": "BV Vinmec",
+              "type": "talk",
+              "pid": "2026-10-17-13-3"
+            },
+            {
+              "start": "10:25",
+              "end": "10:35",
+              "title": "Các yếu tố từ người hiến và mảnh ghép ảnh hưởng đến kết quả ghép gan từ người hiến sống cho trẻ em",
+              "speaker": "Phan Hồng Long",
+              "affiliation": "BV Nhi Trung ương",
+              "type": "talk",
+              "pid": "2026-10-17-13-4"
+            },
+            {
+              "start": "10:35",
+              "end": "10:45",
+              "title": "Ghép gan cho trẻ dưới 10kg: kết quả từ chương trình tại BV Nhi Đồng 2",
+              "speaker": "ThS. Hồ Phi Duy",
+              "affiliation": "BV Nhi Đồng 2",
+              "type": "talk",
+              "pid": "2026-10-17-13-5"
+            },
+            {
+              "start": "10:45",
+              "end": "10:55",
+              "title": "Ghép gan cho trẻ cân nặng 4,1 kg mắc bệnh gan đồng miễn dịch thai kỳ (GALD)",
+              "speaker": "ThS. Trần Thị Thanh Thủy",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-13-6"
+            },
+            {
+              "start": "10:55",
+              "end": "11:05",
+              "title": "Ghép gan từ người hiến sống điều trị bệnh Wilson có biểu hiện thần kinh: báo cáo ba trường hợp tại Việt Nam",
+              "speaker": "Nguyễn Thế Duy",
+              "affiliation": "BV Vinmec",
+              "type": "talk",
+              "pid": "2026-10-17-13-7"
+            },
+            {
+              "start": "11:05",
+              "end": "11:15",
+              "title": "Kết quả phẫu thuật lấy mảnh ghép gan trái từ người hiến sống với ứng dụng kỹ thuật treo dây chằng Arantius - Kết quả bước đầu tại BV Nhi Đồng 2",
+              "speaker": "BS. Trịnh Nguyễn Hạ Vi",
+              "affiliation": "BV Nhi Đồng 2",
+              "type": "talk",
+              "pid": "2026-10-17-13-8"
+            },
+            {
+              "start": "11:15",
+              "end": "11:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-13-9"
+            }
+          ],
+          "sid": "2026-10-17-13"
+        },
+        {
+          "roomId": "danang",
+          "title": "Ghép thận 2: Tiến bộ trong lấy thận ghép\nKidney Transplantation 2: Surgical Issues in Kidney Harvesting",
+          "titleVi": "Ghép thận 2: Tiến bộ trong lấy thận ghép",
+          "titleEn": "Kidney Transplantation 2: Surgical Issues in Kidney Harvesting",
+          "titleViShort": "Ghép thận 2: Tiến bộ trong lấy thận ghép",
+          "titleEnShort": "Kidney Transplantation 2: Surgical Issues in Kidney Harvesting",
+          "type": "session",
+          "category": "scientific",
+          "start": "09:45",
+          "end": "11:30",
+          "chairs": [
+            "PGS.TS. Lê Nguyên Vũ",
+            "PGS.TS. Phạm Ngọc Hùng",
+            "TS. Nguyễn Việt Cường",
+            "TS. Thái Kinh Luân"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "09:45",
+              "end": "09:55",
+              "title": "Phân loại các dạng giải phẫu động mạch thận dựa trên 1.838 hình ảnh CLVT 256 dãy tại Bệnh viện Hữu nghị Việt Đức và ứng dụng trong lấy thận nội soi để ghép",
+              "speaker": "PGS.TS. Lê Nguyên Vũ",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-14-0"
+            },
+            {
+              "start": "09:55",
+              "end": "10:05",
+              "title": "Phẫu thuật nội soi có hỗ trợ Robot lấy thận ghép",
+              "speaker": "ThS. Phạm Đức Minh",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-14-1"
+            },
+            {
+              "start": "10:05",
+              "end": "10:15",
+              "title": "Đánh giá kết quả phẫu thuật Hybrid phối hợp nội soi xuyên phúc mạc và mở đường dưới sườn phải lấy thận trên người hiến sống có TM thận phải ngắn",
+              "speaker": "ThS. Phan Nguyễn Phương Thảo",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-14-2"
+            },
+            {
+              "start": "10:15",
+              "end": "10:25",
+              "title": "Đánh giá kết quả ứng dụng các thang điểm R.E.N.A.L., PADUA kết hợp dựng hình 3D cuống thận trong lập kế hoạch phẫu thuật lấy thận hiến sống bằng nội soi xuyên phúc mạc tại Bệnh viện Trung ương Huế",
+              "speaker": "BS. Nguyễn Hoàng Dương",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-14-3"
+            },
+            {
+              "start": "10:25",
+              "end": "10:35",
+              "title": "Kết quả bước đầu lấy thân ghép qua nội soi ổ bụng tại Bệnh viện đa khoa Trung Ương Cần Thơ",
+              "speaker": "BSCK2. Trương Minh Khoa",
+              "affiliation": "BV TW Cần Thơ",
+              "type": "talk",
+              "pid": "2026-10-17-14-4"
+            },
+            {
+              "start": "10:35",
+              "end": "10:45",
+              "title": "Kết quả phẫu thuật nội soi lấy thận để ghép từ người hiến sống có giải phẫu mạch máu thận hiến phức tạp tại bệnh viện Quân Y 175",
+              "speaker": "TS. Trần Hoài Nam",
+              "affiliation": "BV QY 175",
+              "type": "talk",
+              "pid": "2026-10-17-14-5"
+            },
+            {
+              "start": "10:45",
+              "end": "10:55",
+              "title": "Ứng dụng dựng hình 3D cấu trúc giải phẫu thận với hỗ trợ của AI trong phẫu thuật lấy thận để ghép tại BV Chợ Rẫy",
+              "speaker": "ThS.BS. Nguyễn Thành Tuân",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-14-6"
+            },
+            {
+              "start": "10:55",
+              "end": "11:05",
+              "title": "Ứng dụng công nghệ truyền dịch bảo quản lạnh (LifePort) trong ghép thận đầu tiên tại Việt Nam và các kỹ thuật rửa thận",
+              "speaker": "PGS.TS. Phạm Ngọc Hùng",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-14-7"
+            },
+            {
+              "start": "11:05",
+              "end": "11:15",
+              "title": "Nghiên cứu ứng dụng kỹ thuật rửa thận ngược dòng trong ghép thận từ người hiến sống",
+              "speaker": "BSCK2. Nguyễn Kim Tuấn",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-14-8"
+            },
+            {
+              "start": "11:15",
+              "end": "11:25",
+              "title": "Đặc điểm và các yếu tố liên quan đến chức năng thận ghép ở bệnh nhân ghép thận từ người hiến sống tại Bệnh viện Quân y 175",
+              "speaker": "BSCK2 Đặng Thanh Phương",
+              "affiliation": "Bệnh viện Quân y 175",
+              "type": "talk",
+              "pid": "2026-10-17-14-9"
+            },
+            {
+              "start": "11:25",
+              "end": "11:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-14-10"
+            }
+          ],
+          "sid": "2026-10-17-14"
+        },
+        {
+          "roomId": "hoian",
+          "title": "Nội khoa ghép thận 2 - Thảo luận ca lâm sàng\n(Thải ghép và Nhiễm trùng sau ghép)\nMedical management in Kidney Transplantation 2 - Debate session 1\n(Rejection and Infection after Kidney Transplantation)",
+          "titleVi": "Nội khoa ghép thận 2 - Thảo luận ca lâm sàng\n(Thải ghép và Nhiễm trùng sau ghép)",
+          "titleEn": "Medical management in Kidney Transplantation 2 - Debate session 1\n(Rejection and Infection after Kidney Transplantation)",
+          "titleViShort": "Nội khoa ghép thận 2 - Thảo luận ca lâm sàng (Thải ghép và Nhiễm trùng sau ghép)",
+          "titleEnShort": "Medical management in Kidney Transplantation 2 - Debate session 1 (Rejection and Infection after Kidney Transplantation)",
+          "type": "debate",
+          "category": "scientific",
+          "start": "09:45",
+          "end": "11:30",
+          "chairs": [
+            "Prof. Anantharaman Vathsala",
+            "Prof. Germain Wong",
+            "GS.TS. Trần Ngọc Sinh",
+            "PGS.TS. Hà Phan Hải An",
+            "PGS. Lê Việt Thắng"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "09:45",
+              "end": "10:05",
+              "title": "BK Polyomavirus (BKPyV) in Kidney Transplantation,  Experience at National University Hospital, Singapore",
+              "speaker": "Prof. Anantharaman Vathsala",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-15-0"
+            },
+            {
+              "start": "10:05",
+              "end": "10:20",
+              "title": "Case lâm sàng 1: Nhiễm BK virus và hẹp niệu quản gây thận ứ nước sau ghép thận",
+              "speaker": "BSCK2. Phạm Thị Lan Hương",
+              "affiliation": "BV Thống Nhất",
+              "type": "case",
+              "pid": "2026-10-17-15-1"
+            },
+            {
+              "start": "10:20",
+              "end": "10:35",
+              "title": "Case lâm sàng  2: Nhiễm CMV",
+              "speaker": "BSCK2. Võ Ngọc Anh Thơ",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "case",
+              "pid": "2026-10-17-15-2"
+            },
+            {
+              "start": "10:35",
+              "end": "10:50",
+              "title": "Case lâm sàng  3: Thải ghép cấp",
+              "speaker": "TS. Nguyễn Trọng Hiền",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "case",
+              "pid": "2026-10-17-15-3"
+            },
+            {
+              "start": "10:50",
+              "end": "11:00",
+              "title": "Vai trò của thuốc ức chế bổ thể C5 trong điều biến miễn dịch và điều trị thải ghép thận cấp",
+              "speaker": "TS. Trương Quý Kiên",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-15-4"
+            },
+            {
+              "start": "11:00",
+              "end": "11:10",
+              "title": "Đặc điểm bệnh thận BK virus tại Bệnh viện Đại học Y Dược TPHCM",
+              "speaker": "ThS.Trần Minh Hoàng",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-15-5"
+            },
+            {
+              "start": "11:10",
+              "end": "11:20",
+              "title": "Tình hình nhiễm BK virus sau ghép thận tại Bệnh viện Chợ Rẫy",
+              "speaker": "ThS. Lê Hữu Thuận",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-15-6"
+            },
+            {
+              "start": "11:20",
+              "end": "11:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-15-7"
+            }
+          ],
+          "sid": "2026-10-17-15"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "Lựa chọn người hiến tạng chết não - Thảo luận ca lâm sàng 2 \nDonor & Recipient Selection in Organ Transplantaion from DBD - Debate session 2",
+          "titleVi": "Lựa chọn người hiến tạng chết não - Thảo luận ca lâm sàng 2",
+          "titleEn": "Donor & Recipient Selection in Organ Transplantaion from DBD - Debate session 2",
+          "titleViShort": "Lựa chọn người hiến tạng chết não - Thảo luận ca lâm sàng 2",
+          "titleEnShort": "Donor & Recipient Selection in Organ Transplantaion from DBD - Debate session 2",
+          "type": "debate",
+          "category": "scientific",
+          "start": "09:45",
+          "end": "11:30",
+          "chairs": [
+            "Prof. Curie Ahn",
+            "Prof. Henry Pleass",
+            "Prof. Yingyos Avihingsanon",
+            "PGS.TS. Thái Minh Sâm",
+            "TS. Dư Thị Ngọc Thu",
+            "PGS.TS. Phạm Gia Anh"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "09:45",
+              "end": "10:00",
+              "title": "Case lâm sàng 1: Tiêu chuẩn lấy thận mở rộng từ người hiến chết não có tim ngừng đập ngoại viện - BV Nhân dân Gia Định",
+              "speaker": "BSCK2. Nguyễn Xuân Toàn",
+              "affiliation": "BV ND Gia Định",
+              "type": "case",
+              "pid": "2026-10-17-16-0"
+            },
+            {
+              "start": "10:00",
+              "end": "10:15",
+              "title": "Case lâm sàng 2: Tiêu chuẩn lấy thận mở rộng từ người hiến chết não - BV Thống Nhất",
+              "speaker": "PGS.TS. Đỗ Kim Quế",
+              "affiliation": "BV Thống Nhất",
+              "type": "case",
+              "pid": "2026-10-17-16-1"
+            },
+            {
+              "start": "10:15",
+              "end": "10:25",
+              "title": "Ghép thận từ người hiến chết não có AKI tại BV hữu nghị Việt Đức",
+              "speaker": "BSCKI. Hoàng Thị Điểm",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-16-2"
+            },
+            {
+              "start": "10:25",
+              "end": "10:35",
+              "title": "Kết cục ngắn hạn ghép thận từ người hiến chết não kèm tổn thương thận cấp trên nền bệnh thận IgA: 02 ca đầu tiên tại Bệnh viện Nhân dân 115",
+              "speaker": "BS.CK2. Lê Thị Hồng Vũ",
+              "affiliation": "BV ND 115",
+              "type": "talk",
+              "pid": "2026-10-17-16-3"
+            },
+            {
+              "start": "10:35",
+              "end": "10:45",
+              "title": "Đặc điểm logistics trong bảo quản và vận chuyển tạng từ người hiến chết não về ghép tại Bệnh viện TWQĐ 108",
+              "speaker": "BS. Lê Ánh Vân",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-16-4"
+            },
+            {
+              "start": "10:45",
+              "end": "10:55",
+              "title": "Ghép thận từ người hiến chết não bị FGFS: Nên hay không nên?",
+              "speaker": "BSCK2. Lê Thị Hồng Vũ",
+              "affiliation": "BV ND 115",
+              "type": "talk",
+              "pid": "2026-10-17-16-5"
+            },
+            {
+              "start": "10:55",
+              "end": "11:05",
+              "title": "So sánh kết quả sau ghép thận từ người hiến sống và người hiến chết não tại Bệnh viện Hữu nghị Việt Đức giai đoạn 2020–2025",
+              "speaker": "BS. Phạm Thanh Hải",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-16-6"
+            },
+            {
+              "start": "11:05",
+              "end": "11:15",
+              "title": "Kiến thức, thái độ về hiến tạng từ người chết não của nhân viên y tế tại Bệnh viện TWQĐ 108",
+              "speaker": "BS. Lê Ánh Vân",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-16-7"
+            },
+            {
+              "start": "11:15",
+              "end": "11:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-16-8"
+            }
+          ],
+          "sid": "2026-10-17-16"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Ghép gan 2: Tiến bộ trong kỹ thuật ghép gan 2\nLiver Transplantation 2: Advances in Liver Transplantation 2",
+          "titleVi": "Ghép gan 2: Tiến bộ trong kỹ thuật ghép gan 2",
+          "titleEn": "Liver Transplantation 2: Advances in Liver Transplantation 2",
+          "titleViShort": "Ghép gan 2: Tiến bộ trong kỹ thuật ghép gan 2",
+          "titleEnShort": "Liver Transplantation 2: Advances in Liver Transplantation 2",
+          "type": "session",
+          "category": "scientific",
+          "start": "09:45",
+          "end": "11:45",
+          "chairs": [
+            "PGS.TS Hoàng Mạnh An",
+            "PGS.TS Nguyễn Quang Nghĩa",
+            "TS Trần Công Duy Long"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "09:45",
+              "end": "09:55",
+              "title": "Phẫu thuật nội soi lấy mảnh ghép gan phải từ người hiến sống có biến đổi giải phẫu phức tạp mạch máu và đường mật",
+              "speaker": "PGS.TS. Vũ Văn Quang",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-17-0"
+            },
+            {
+              "start": "09:55",
+              "end": "10:05",
+              "title": "Phẫu thuật nội soi lấy mảnh ghép gan giảm thể tích cho trẻ em nhẹ cân",
+              "speaker": "ThS.BS Phan Phước Nghĩa",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-17-1"
+            },
+            {
+              "start": "10:05",
+              "end": "10:15",
+              "title": "Phẫu thuật nội soi lấy mảnh ghép gan cho người nhận gan trẻ em: kinh nghiệm bước đầu tại Bệnh viện Nhi Trung ương",
+              "speaker": "BS. Vũ Mạnh Hoàn",
+              "affiliation": "BV Nhi Trung ương",
+              "type": "talk",
+              "pid": "2026-10-17-17-2"
+            },
+            {
+              "start": "10:15",
+              "end": "10:25",
+              "title": "Kỹ Thuật tái tạo mạch máu cải biên trong ghép gan cho người hiến chết não: báo cáo hai trường hợp",
+              "speaker": "PGS.TS. Hồ Hữu Thiện",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-17-3"
+            },
+            {
+              "start": "10:25",
+              "end": "10:35",
+              "title": "Bước đầu triển khai ghép gan từ người hiến sống tại Bệnh viện Đà Nẵng: kinh nghiệm qua một số ca bệnh",
+              "speaker": "BSCK2. Lê Tự Dũng",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-17-4"
+            },
+            {
+              "start": "10:35",
+              "end": "10:45",
+              "title": "Tình hình triển khai ghép gan tại Bệnh viện Chợ Rẫy",
+              "speaker": "BSCK2. Nguyễn Thành Ngoan",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-17-5"
+            },
+            {
+              "start": "10:45",
+              "end": "10:55",
+              "title": "Kỹ thuật khâu nối đường mật hình chữ V: một phương pháp mới nhằm giảm hẹp đường mật sau ghép gan từ người hiến sống",
+              "speaker": "BS. Đào Đức Dũng",
+              "affiliation": "BV Vinmec",
+              "type": "talk",
+              "pid": "2026-10-17-17-6"
+            },
+            {
+              "start": "10:55",
+              "end": "11:05",
+              "title": "Bảo quản gan ghép: \"Thùng đá\" đã đến lúc nhường chỗ cho tưới máu máy?",
+              "speaker": "TS. Lê Trung Hiếu",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-17-7"
+            },
+            {
+              "start": "11:05",
+              "end": "11:15",
+              "title": "Kinh nghiệm nối động mạch gan trong ghép gan từ người hiến sống tại Bệnh viện TWQĐ 108",
+              "speaker": "TS Ngô Tuấn Anh",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-17-8"
+            },
+            {
+              "start": "11:15",
+              "end": "11:25",
+              "title": "Biến chứng mạch máu phức tạp sau ghép gan phải từ người hiến sống tại một trung tâm mới triển khai",
+              "speaker": "Nguyễn Văn Mạnh",
+              "affiliation": "BV Quân Y 175",
+              "type": "talk",
+              "pid": "2026-10-17-17-9"
+            },
+            {
+              "start": "11:25",
+              "end": "11:45",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-17-10"
+            }
+          ],
+          "sid": "2026-10-17-17"
+        },
+        {
+          "roomId": "sontra",
+          "title": "Ghép tim - phổi 2:\nGhép phổi, ghép mô – tạng lồng ngực và các vấn đề sau ghép tim\nHeart-Lung Transplantation 2:\nLung Transplantation, Thoracic Organ Transplantation, and Postoperative Issues following Heart Transplantation",
+          "titleVi": "Ghép tim - phổi 2:\nGhép phổi, ghép mô – tạng lồng ngực và các vấn đề sau ghép tim",
+          "titleEn": "Heart-Lung Transplantation 2:\nLung Transplantation, Thoracic Organ Transplantation, and Postoperative Issues following Heart Transplantation",
+          "titleViShort": "Ghép tim - phổi 2: Ghép phổi, ghép mô – tạng lồng ngực và các vấn đề sau ghép tim",
+          "titleEnShort": "Heart-Lung Transplantation 2: Lung Transplantation, Thoracic Organ Transplantation, and Postoperative Issues following Heart Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "09:45",
+          "end": "11:30",
+          "chairs": [
+            "PGS.TS Nguyễn Hữu Ước",
+            "TS.BS Đinh Văn Lượng",
+            "PGS.TS Đỗ Kim Quế"
+          ],
+          "discussants": [
+            "PGS.TS Phùng Duy Hồng Sơn",
+            "TS.BS Lê Phi Long",
+            "ThS.BS Nguyễn Đức Dũng",
+            "TS.BS Nguyễn Tiến Quân"
+          ],
+          "presentations": [
+            {
+              "start": "09:45",
+              "end": "09:55",
+              "title": "Lựa chọn bệnh nhân ghép phổi",
+              "speaker": "TS. Đinh Văn Lượng",
+              "affiliation": "BV Phổi TW",
+              "type": "talk",
+              "pid": "2026-10-17-18-0"
+            },
+            {
+              "start": "09:55",
+              "end": "10:05",
+              "title": "Kết quả ghép phổi tại Bệnh viện Phổi Trung ương",
+              "speaker": "TS. Đinh Văn Lượng",
+              "affiliation": "BV Phổi TW",
+              "type": "talk",
+              "pid": "2026-10-17-18-1"
+            },
+            {
+              "start": "10:05",
+              "end": "10:15",
+              "title": "Bước đầu xây dựng chương trình ghép phổi tại BV Chợ Rẫy: báo cáo kinh nghiệm ca ghép phổi sau 1 năm",
+              "speaker": "TS. Nguyễn Hoàng Bình",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-18-2"
+            },
+            {
+              "start": "10:15",
+              "end": "10:25",
+              "title": "Ghép khí quản bằng khí quản đồng loài bảo quản lạnh sâu: kết quả bước đầu",
+              "speaker": "PGS.TS. Phạm Hữu Lư",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-18-3"
+            },
+            {
+              "start": "10:25",
+              "end": "10:35",
+              "title": "Kết quả ghép tim cho người cao tuổi",
+              "speaker": "ThS.BSNT Hoàng Trọng Hải",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-18-4"
+            },
+            {
+              "start": "10:35",
+              "end": "10:45",
+              "title": "Đánh giá chức năng thất phải bằng siêu âm tim ở bệnh nhân sau ghép tim",
+              "speaker": "BS.CK2. Khổng Tiến Bình",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-18-5"
+            },
+            {
+              "start": "10:45",
+              "end": "10:55",
+              "title": "Hẹp miệng nối tĩnh mạch chủ dưới sau ghép tim: Báo cáo ca lâm sàng",
+              "speaker": "ThS. Đinh Thị Trang",
+              "affiliation": "BV HN Việt Đức",
+              "type": "case",
+              "pid": "2026-10-17-18-6"
+            },
+            {
+              "start": "10:55",
+              "end": "11:05",
+              "title": "Giả phình động mạch chủ lên tái phát do nhiễm Aspergillus sau ghép tim: Báo cáo ca lâm sàng",
+              "speaker": "ThS. Vũ Xuân Hiệp",
+              "affiliation": "BV HN Việt Đức",
+              "type": "case",
+              "pid": "2026-10-17-18-7"
+            },
+            {
+              "start": "11:05",
+              "end": "11:15",
+              "title": "Rối loạn chức năng mảnh ghép sớm nặng sau ghép tim liên quan tổn thương thiếu máu – tái tưới máu: Báo cáo một trường hợp ghép tim lại",
+              "speaker": "TS. Ngô Đình Trung",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-18-8"
+            },
+            {
+              "start": "11:15",
+              "end": "11:30",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-18-9"
+            }
+          ],
+          "sid": "2026-10-17-18"
+        },
+        {
+          "roomId": "danang",
+          "title": "SYMPOSIUM 1\nNOVARTIS",
+          "titleVi": "SYMPOSIUM 1",
+          "titleEn": "NOVARTIS",
+          "titleViShort": "SYMPOSIUM 1",
+          "titleEnShort": "NOVARTIS",
+          "type": "symposium",
+          "category": "scientific",
+          "start": "11:45",
+          "end": "13:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-19"
+        },
+        {
+          "roomId": "hoian",
+          "title": "SYMPOSIUM 2\nASTELLAS",
+          "titleVi": "SYMPOSIUM 2",
+          "titleEn": "ASTELLAS",
+          "titleViShort": "SYMPOSIUM 2",
+          "titleEnShort": "ASTELLAS",
+          "type": "symposium",
+          "category": "scientific",
+          "start": "11:45",
+          "end": "13:00",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-20"
+        },
+        {
+          "roomId": "bana",
+          "title": "Phiên tiếng anh giải thưởng VSOT-TSANZ cho nghiên cứu viên trẻ \nEnglish session: VSOT-TSANZ award for young investigator",
+          "titleVi": "Phiên tiếng anh giải thưởng VSOT-TSANZ cho nghiên cứu viên trẻ",
+          "titleEn": "English session: VSOT-TSANZ award for young investigator",
+          "titleViShort": "Phiên tiếng anh giải thưởng VSOT-TSANZ cho nghiên cứu viên trẻ",
+          "titleEnShort": "English session: VSOT-TSANZ award for young investigator",
+          "type": "session",
+          "category": "scientific",
+          "start": "13:30",
+          "end": "15:00",
+          "chairs": [
+            "PGS.TS. Phạm Ngọc Hùng",
+            "TS. Nguyễn Trọng Hiền",
+            "TS. Trương Quý Kiên"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "13:30",
+              "end": "13:40",
+              "title": "Right Ventricular Strain Assessed by Speckle-Tracking Echocardiography in Patients with End-Stage Kidney Disease Undergoing Kidney Transplantation",
+              "speaker": "Dr. Phuc Kham Hoang",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-21-0"
+            },
+            {
+              "start": "13:40",
+              "end": "13:50",
+              "title": "Early and Persistent Post-Transplant Proteinuria Due to Multiple Concomitant Etiologies: A Case Report",
+              "speaker": "Dr. Thi Trang Nguyen",
+              "affiliation": "",
+              "type": "case",
+              "pid": "2026-10-17-21-1"
+            },
+            {
+              "start": "13:50",
+              "end": "14:00",
+              "title": "Early Venous Thromboembolism Prophylaxis After Kidney Transplantation",
+              "speaker": "Dr. Huu Thien To",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-21-2"
+            },
+            {
+              "start": "14:00",
+              "end": "14:10",
+              "title": "Acute Rejection After Early Tacrolimus-to-Everolimus Conversion in a Kidney Transplant Recipient With Delayed Graft Function: A Case Report",
+              "speaker": "Dr. Van Hieu Nguyen",
+              "affiliation": "",
+              "type": "case",
+              "pid": "2026-10-17-21-3"
+            },
+            {
+              "start": "14:10",
+              "end": "14:20",
+              "title": "Kidney rejection after transpalntation in the first 2 weeks",
+              "speaker": "Dr. Huu Thuan Le",
+              "affiliation": "Cho Ray Hospital",
+              "type": "talk",
+              "pid": "2026-10-17-21-4"
+            },
+            {
+              "start": "14:20",
+              "end": "14:30",
+              "title": "BK Virus Post-Kidney Transplant: New Practice Versus Traditional Approach",
+              "speaker": "Dr. Le Quy Van Dinh",
+              "affiliation": "Cho Ray Hospital",
+              "type": "talk",
+              "pid": "2026-10-17-21-5"
+            },
+            {
+              "start": "14:30",
+              "end": "14:40",
+              "title": "A Less-appreciated Cause of Acute on Chronic Kidney Failure in a Diabetic Renal Recipient: Enteric Oxalate Nephropathy",
+              "speaker": "Dr Nguyen Thi Hoai An, Da Nang Hospital",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-21-6"
+            },
+            {
+              "start": "14:40",
+              "end": "15:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-21-7"
+            }
+          ],
+          "sid": "2026-10-17-21"
+        },
+        {
+          "roomId": "danang",
+          "title": "Ghép thận 3: Kết quả ghép thận\nKidney transplantation 3: Clinical outcomes",
+          "titleVi": "Ghép thận 3: Kết quả ghép thận",
+          "titleEn": "Kidney transplantation 3: Clinical outcomes",
+          "titleViShort": "Ghép thận 3: Kết quả ghép thận",
+          "titleEnShort": "Kidney transplantation 3: Clinical outcomes",
+          "type": "session",
+          "category": "scientific",
+          "start": "13:30",
+          "end": "15:00",
+          "chairs": [
+            "TS.BS. Nguyễn Việt Cường",
+            "BSCK2. Phạm Trần Xuân Anh",
+            "BSCK2. Cao Văn Trí",
+            "BSCK2. Nguyễn Xuân Toàn"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "13:30",
+              "end": "13:40",
+              "title": "Đánh giá kết quả ghép thận tại Bệnh viện Đà Nẵng",
+              "speaker": "BSCK2. Cao Văn Trí",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-22-0"
+            },
+            {
+              "start": "13:40",
+              "end": "13:50",
+              "title": "Từ ca ghép thận đầu tiên đến chương trình ghép thận quy mô lớn: Hành trình 34 năm tại Bệnh viện Chợ Rẫy",
+              "speaker": "TS. Nguyễn Trọng Hiền",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-22-1"
+            },
+            {
+              "start": "13:50",
+              "end": "14:00",
+              "title": "Ghép thận đổi chéo người hiến (KPD): Giải pháp vượt qua rào cản bất tương hợp và kinh nghiệm triển khai tại Bệnh viện Chợ Rẫy",
+              "speaker": "BSCK2. Quách Đô La",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-22-2"
+            },
+            {
+              "start": "14:00",
+              "end": "14:10",
+              "title": "Ghép thận từ người hiến sống lớn tuổi: bằng chứng, giới hạn và thực hành hiện nay",
+              "speaker": "ThS. Trương Hồ Trọng Tấn",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-22-3"
+            },
+            {
+              "start": "14:10",
+              "end": "14:20",
+              "title": "Kết quả ngắn hạn sau ghép thận tại Bệnh viện Nhân dân Gia Định: Báo cáo loạt 12 trường hợp",
+              "speaker": "BSCK2. Nguyễn Xuân Toàn",
+              "affiliation": "BV ND Gia Định",
+              "type": "talk",
+              "pid": "2026-10-17-22-4"
+            },
+            {
+              "start": "14:20",
+              "end": "14:30",
+              "title": "Kết quả sau hai năm ghép thận tại Bệnh viện Đa khoa Trung ương Cần Thơ",
+              "speaker": "ThS. Đỗ Thị Yến Nghi",
+              "affiliation": "BV ĐKTW Cần Thơ",
+              "type": "talk",
+              "pid": "2026-10-17-22-5"
+            },
+            {
+              "start": "14:30",
+              "end": "14:40",
+              "title": "Kết quả phẫu thuật và theo dõi dài hạn ghép thận từ người cho sống tại Bệnh viện Trung ương Thái Nguyên: Kinh nghiệm qua 11 năm (2015 – 2026)",
+              "speaker": "BSCK2. Trần Ngọc Tuấn",
+              "affiliation": "BV TW Thái Nguyên",
+              "type": "talk",
+              "pid": "2026-10-17-22-6"
+            },
+            {
+              "start": "14:40",
+              "end": "14:50",
+              "title": "Kết quả bước đầu ghép thận tại bệnh viện đa khoa số 2 tỉnh Lào Cai",
+              "speaker": "BS. Phạm Ngọc Lợi",
+              "affiliation": "BV ĐK số 2 Lào Cai",
+              "type": "talk",
+              "pid": "2026-10-17-22-7"
+            },
+            {
+              "start": "14:50",
+              "end": "15:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-22-8"
+            }
+          ],
+          "sid": "2026-10-17-22"
+        },
+        {
+          "roomId": "hoian",
+          "title": "Nội khoa ghép thận 3 : Một số vấn đề nội khoa khác trong ghép thận\nMedical management in Kidney Transplantation 3: Other Issues in Kidney Transplantation",
+          "titleVi": "Nội khoa ghép thận 3 : Một số vấn đề nội khoa khác trong ghép thận",
+          "titleEn": "Medical management in Kidney Transplantation 3: Other Issues in Kidney Transplantation",
+          "titleViShort": "Nội khoa ghép thận 3 : Một số vấn đề nội khoa khác trong ghép thận",
+          "titleEnShort": "Medical management in Kidney Transplantation 3: Other Issues in Kidney Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "13:30",
+          "end": "15:00",
+          "chairs": [
+            "PGS.TS. Lê Việt Thắng",
+            "TS. Nguyễn Thế Cường",
+            "TS. Huỳnh Ngọc Phương Thảo",
+            "BSCK2. Đặng Ngọc Tuấn Anh"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "13:30",
+              "end": "13:45",
+              "title": "Trì hoãn chức năng thận ghép: Từ lý thuyết tới thực hành lâm sàng",
+              "speaker": "TS. Nguyễn Thị Thu Hà - ThS. Diêm Thị Vân",
+              "affiliation": "BV QY 103",
+              "type": "talk",
+              "pid": "2026-10-17-23-0"
+            },
+            {
+              "start": "13:45",
+              "end": "13:55",
+              "title": "Đặc điểm protein niệu và mối liên quan với kháng thể kháng HLA sau ghép ở người bệnh rối loạn chức năng thận ghép trong 6 tháng đầu theo dõi",
+              "speaker": "TS. Nguyễn Thị Thu Hà - ThS. Diêm Thị Vân",
+              "affiliation": "BV QY 103",
+              "type": "talk",
+              "pid": "2026-10-17-23-1"
+            },
+            {
+              "start": "13:55",
+              "end": "14:05",
+              "title": "Ghép thận thành công ở người bệnh mẫn cảm cao có kháng thể đặc hiệu người hiến (DSA) bằng phác đồ giải mẫn cảm phối hợp tại Bệnh viện Trung ương Quân đội 108: Báo cáo ca lâm sàng",
+              "speaker": "BS. Nguyễn Văn Tuấn",
+              "affiliation": "BV TWQD 108",
+              "type": "case",
+              "pid": "2026-10-17-23-2"
+            },
+            {
+              "start": "14:05",
+              "end": "14:15",
+              "title": "Ghép thận trên bệnh nhân nguy cơ miễn dịch cao",
+              "speaker": "TS. Dương Nguyên Xương",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-23-3"
+            },
+            {
+              "start": "14:15",
+              "end": "14:25",
+              "title": "Kết quả ghép thận cho BN có nguy cơ miễn dịch cao tại BVHN Việt Đức",
+              "speaker": "ThS. BS Phạm Quang Đức",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-23-4"
+            },
+            {
+              "start": "14:25",
+              "end": "14:35",
+              "title": "Tán huyết vi mạch huyết khối sau ghép thận: Từ cơ chế bệnh sinh đến tiếp cận điều trị",
+              "speaker": "TS.BS. Nguyễn Thị Hương",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-23-5"
+            },
+            {
+              "start": "14:35",
+              "end": "14:45",
+              "title": "Khảo sát biến thiên nồng độ tacrolimus trên bệnh nhân ghép thận và mối liên quan với chức năng thận ghép tại Bệnh viện Đại học Y Dược TPHCM",
+              "speaker": "ThS. Lê Chí Công",
+              "affiliation": "BV ĐHYD TPHCM",
+              "type": "talk",
+              "pid": "2026-10-17-23-6"
+            },
+            {
+              "start": "14:45",
+              "end": "14:55",
+              "title": "Cá thể hóa dự phòng nhiễm trùng sau ghép thận: Từ phác đồ dự phòng cố định đến chiến lược định hướng theo miễn dịch và nguy cơ",
+              "speaker": "BSCK2. Võ Ngọc Anh Thơ",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-23-7"
+            },
+            {
+              "start": "14:55",
+              "end": "15:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-23-8"
+            }
+          ],
+          "sid": "2026-10-17-23"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "Ghép thận: Một số vấn đề khác 1\nOther Issues in Kidney Transplantation 1",
+          "titleVi": "Ghép thận: Một số vấn đề khác 1",
+          "titleEn": "Other Issues in Kidney Transplantation 1",
+          "titleViShort": "Ghép thận: Một số vấn đề khác 1",
+          "titleEnShort": "Other Issues in Kidney Transplantation 1",
+          "type": "session",
+          "category": "scientific",
+          "start": "13:30",
+          "end": "15:00",
+          "chairs": [
+            "PGS.TS Trương Hoàng Minh",
+            "BSCK2. Hoàng Khắc Chuẩn",
+            "BSCK2. Tạ Phương Dung",
+            "BSCK2. Lê Thị Tiến"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "13:30",
+              "end": "13:40",
+              "title": "Vượt qua rào cản trong ghép thận dị loài biến đổi gen",
+              "speaker": "BSCK2. Hoàng Khắc Chuẩn",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-24-0"
+            },
+            {
+              "start": "13:40",
+              "end": "13:50",
+              "title": "Hành trình quản lý bệnh thận mạn xuyên suốt: Từ điều trị nội khoa đến lọc máu và ghép thận",
+              "speaker": "BSCK2. Tạ Phương Dung",
+              "affiliation": "BV Tâm Anh HCM",
+              "type": "talk",
+              "pid": "2026-10-17-24-1"
+            },
+            {
+              "start": "13:50",
+              "end": "14:00",
+              "title": "Thận nhân tạo ở bệnh nhân suy chức năng thận ghép: Thời điểm bắt đầu và chiến lược ức chế miễn dịch",
+              "speaker": "BSCK2. Lê Thị Tiến",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-24-2"
+            },
+            {
+              "start": "14:00",
+              "end": "14:10",
+              "title": "Những thách thức khi ghép thận lần 3, nhân một trường hợp tại bệnh viện Nhân Dân 115",
+              "speaker": "PGS.TS. Trương Hoàng Minh",
+              "affiliation": "BV ND 115",
+              "type": "talk",
+              "pid": "2026-10-17-24-3"
+            },
+            {
+              "start": "14:10",
+              "end": "14:20",
+              "title": "Cập nhật chủng ngừa trước và sau ghép thận",
+              "speaker": "BSCK2. Tạ Phương Dung",
+              "affiliation": "BV Tâm Anh HCM",
+              "type": "talk",
+              "pid": "2026-10-17-24-4"
+            },
+            {
+              "start": "14:20",
+              "end": "14:35",
+              "title": "Tối ưu hóa phân tầng nguy cơ và lựa chọn phác đồ dẫn nhập trước ghép thận",
+              "speaker": "BS CK2. Nguyễn Duy Điền",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-24-5"
+            },
+            {
+              "start": "14:35",
+              "end": "14:45",
+              "title": "Ứng dụng chiến lược lấy mẫu giới hạn trong TDM thuốc ức chế miễn dịch",
+              "speaker": "BSCK2. Ngô Trọng Vinh",
+              "affiliation": "BV Quân Y 175",
+              "type": "talk",
+              "pid": "2026-10-17-24-6"
+            },
+            {
+              "start": "14:45",
+              "end": "14:55",
+              "title": "Kết quả bước đầu ghép thận tại bệnh viện Tâm Anh Hà Nội",
+              "speaker": "TS. Mai Thị Hiền",
+              "affiliation": "BV Tâm Anh Hà Nội",
+              "type": "talk",
+              "pid": "2026-10-17-24-7"
+            },
+            {
+              "start": "14:55",
+              "end": "15:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-24-8"
+            }
+          ],
+          "sid": "2026-10-17-24"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Ghép gan 3: Các vấn đề khác trong ghép gan\nOther issues in Liver Transplantation",
+          "titleVi": "Ghép gan 3: Các vấn đề khác trong ghép gan",
+          "titleEn": "Other issues in Liver Transplantation",
+          "titleViShort": "Ghép gan 3: Các vấn đề khác trong ghép gan",
+          "titleEnShort": "Other issues in Liver Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "13:30",
+          "end": "15:00",
+          "chairs": [
+            "PGS. Lê Thanh Sơn",
+            "TS. Hồ Văn Linh",
+            "TS. Lê Trung Hiếu"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "13:30",
+              "end": "13:45",
+              "title": "Tái phát ung thư biểu mô tế bào gan sau ghép gan: Đánh giá và lựa chọn chiến lược điều trị tối ưu",
+              "speaker": "BS Nguyễn Quốc Thanh",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-25-0"
+            },
+            {
+              "start": "13:45",
+              "end": "13:55",
+              "title": "Đánh giá vai trò của cân chỉnh áp lực tĩnh mạch cửa trong phẫu thuật ghép gan",
+              "speaker": "BS Ong Vĩnh Nhật Quang",
+              "affiliation": "BV ĐHYD TP.HCM",
+              "type": "talk",
+              "pid": "2026-10-17-25-1"
+            },
+            {
+              "start": "13:55",
+              "end": "14:05",
+              "title": "Chẩn đoán và can thiệp nội mạch đặt stent điều trị hẹp, tắc tĩnh mạch cửa cấp tính sau phẫu thuật ghép gan từ người hiến sống",
+              "speaker": "Nguyễn Văn Phấn",
+              "affiliation": "BV Vinmec",
+              "type": "talk",
+              "pid": "2026-10-17-25-2"
+            },
+            {
+              "start": "14:05",
+              "end": "14:15",
+              "title": "Báo cáo ca lâm sàng: Ghép gan cấp cứu ở bệnh nhân ACLF trên nền ghép thận",
+              "speaker": "BS Nguyễn Văn Thành",
+              "affiliation": "BV QY 103",
+              "type": "case",
+              "pid": "2026-10-17-25-3"
+            },
+            {
+              "start": "14:15",
+              "end": "14:25",
+              "title": "Suy thận cấp ở bệnh nhân sau ghép gan",
+              "speaker": "BS Hà Quang Huy",
+              "affiliation": "BV Vinmec",
+              "type": "talk",
+              "pid": "2026-10-17-25-4"
+            },
+            {
+              "start": "14:25",
+              "end": "14:35",
+              "title": "Kết quả ghép gan cấp cứu trên bệnh nhân đã ghép thận: Báo cáo ca lâm sàng",
+              "speaker": "ThS. Đỗ Mạnh Hà",
+              "affiliation": "BV Quân Y 103",
+              "type": "talk",
+              "pid": "2026-10-17-25-5"
+            },
+            {
+              "start": "14:35",
+              "end": "14:50",
+              "title": "Kỹ thuật tạo hình tĩnh mạch gan kiểu Piggyback cải biên trong ghép gan từ người hiến chết não",
+              "speaker": "TS Hồ Văn Linh",
+              "affiliation": "Bệnh viện TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-25-6"
+            },
+            {
+              "start": "14:50",
+              "end": "15:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-25-7"
+            }
+          ],
+          "sid": "2026-10-17-25"
+        },
+        {
+          "roomId": "sontra",
+          "title": "Ghép tế bào gốc - Ghép giác mạc - Chi thể\nStem cell transplantation - Corneal transplantation - Extremity transplantation",
+          "titleVi": "Ghép tế bào gốc - Ghép giác mạc - Chi thể",
+          "titleEn": "Stem cell transplantation - Corneal transplantation - Extremity transplantation",
+          "titleViShort": "Ghép tế bào gốc - Ghép giác mạc - Chi thể",
+          "titleEnShort": "Stem cell transplantation - Corneal transplantation - Extremity transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "13:30",
+          "end": "15:00",
+          "chairs": [
+            "TS. Trần Thị Thanh Hương",
+            "TS.BS. Nguyễn Thị Kim Hoa"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "13:30",
+              "end": "13:40",
+              "title": "Ghép tế bào gốc tạo máu tại Bệnh viện Đà Nẵng: Bài học từ loạt ca đầu tiên",
+              "speaker": "TS. Trần Thị Thanh Hương",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-26-0"
+            },
+            {
+              "start": "13:40",
+              "end": "13:50",
+              "title": "Thử nghiệm lâm sàng ghép tế bào gốc từ tủy xương tự thân trong điều trị chấn thương tủy sống: Đánh giá an toàn và hiệu quả",
+              "speaker": "BSCK2. Nguyễn Hữu Lâm",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-26-1"
+            },
+            {
+              "start": "13:50",
+              "end": "14:00",
+              "title": "Ứng dụng biện pháp dung hòa miễn dịch xử trí bất đồng nhóm máu ABO trong ghép tế bào gốc đồng loại ở bệnh nhân Thalassemia thể nặng tại Bệnh viện Trung ương Huế",
+              "speaker": "TS. Nguyễn Thị Kim Hoa",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-26-2"
+            },
+            {
+              "start": "14:00",
+              "end": "14:10",
+              "title": "Launching a Stem Cell Transplantation Unit with a Special Focus on Thalassemia in Vietnam at Hue Central Hospital",
+              "speaker": "TS. Nguyễn Thị Kim Hoa",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-26-3"
+            },
+            {
+              "start": "14:10",
+              "end": "14:20",
+              "title": "Báo cáo ca lâm sàng biến chứng tắc tĩnh mạch gan sau ghép tế bào gốc đồng loài",
+              "speaker": "BSCK2. Vy Thế Hà",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "case",
+              "pid": "2026-10-17-26-4"
+            },
+            {
+              "start": "14:20",
+              "end": "14:30",
+              "title": "Tăng sinh lympho sau ghép tạng",
+              "speaker": "BSCK1. Trương Phạm Hồng Diễm",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-26-5"
+            },
+            {
+              "start": "14:30",
+              "end": "14:40",
+              "title": "Ứng dụng ghép tế bào gốc vùng rìa trong tái tạo bề mặt giác mạc",
+              "speaker": "ThS. Bùi Văn Lưu",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-26-6"
+            },
+            {
+              "start": "14:40",
+              "end": "14:50",
+              "title": "Đánh giá kết quả điều trị ghép giác mạc xuyên tại Bệnh viện Trung ương Huế từ năm 2015 đến năm 2025",
+              "speaker": "BSCK2. Nguyễn Thành Nhân",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-26-7"
+            },
+            {
+              "start": "14:50",
+              "end": "15:00",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-26-8"
+            }
+          ],
+          "sid": "2026-10-17-26"
+        },
+        {
+          "roomId": "bana",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "15:00",
+          "end": "15:15",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-27"
+        },
+        {
+          "roomId": "danang",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "15:00",
+          "end": "15:15",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-28"
+        },
+        {
+          "roomId": "hoian",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "15:00",
+          "end": "15:15",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-29"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "15:00",
+          "end": "15:15",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-30"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "15:00",
+          "end": "15:15",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-31"
+        },
+        {
+          "roomId": "sontra",
+          "title": "Tea break",
+          "titleVi": "Tea break",
+          "titleEn": "",
+          "titleViShort": "Tea break",
+          "titleEnShort": "",
+          "type": "tea_break",
+          "category": "break",
+          "start": "15:00",
+          "end": "15:15",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-32"
+        },
+        {
+          "roomId": "danang",
+          "title": "Ghép thận 4 - Thảo luận ca lâm sàng 3: \nQuản lý biến chứng mạch máu và tiết niệu\nKidney Transplantation 4 - Debate session 3: \n Vascular & Urological Complications Management",
+          "titleVi": "Ghép thận 4 - Thảo luận ca lâm sàng 3:\nQuản lý biến chứng mạch máu và tiết niệu",
+          "titleEn": "Kidney Transplantation 4 - Debate session 3:\nVascular & Urological Complications Management",
+          "titleViShort": "Ghép thận 4 - Thảo luận ca lâm sàng 3: Quản lý biến chứng mạch máu và tiết niệu",
+          "titleEnShort": "Kidney Transplantation 4 - Debate session 3: Vascular & Urological Complications Management",
+          "type": "debate",
+          "category": "scientific",
+          "start": "15:15",
+          "end": "16:55",
+          "chairs": [
+            "PGS.TS Thái Minh Sâm",
+            "PGS.TS. Trương Hoàng Minh",
+            "PGS.TS. Lê Nguyên Vũ",
+            "PGS.TS. Phạm Ngọc Hùng"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "15:15",
+              "end": "15:30",
+              "title": "Ca lâm sàng 1: Ca lâm sàng tắc hoàn toàn động mạch chậu ngoài sau ghép thận từ người hiến sống tại Bệnh viện Quân y 175",
+              "speaker": "ThS. Nguyễn Văn Khẩn",
+              "affiliation": "BV QY 175",
+              "type": "case",
+              "pid": "2026-10-17-33-0"
+            },
+            {
+              "start": "15:30",
+              "end": "15:45",
+              "title": "Ca lâm sàng 2: Biến chứng mạch máu trong ghép thận",
+              "speaker": "BSCK2. Nguyễn Duy Điền",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "case",
+              "pid": "2026-10-17-33-1"
+            },
+            {
+              "start": "15:45",
+              "end": "16:00",
+              "title": "Các biến chứng muộn của niệu quản thận ghép: Nhân một trường hợp lâm sàng",
+              "speaker": "PGS.TS. Trương Hoàng Minh",
+              "affiliation": "BV ND 115",
+              "type": "talk",
+              "pid": "2026-10-17-33-2"
+            },
+            {
+              "start": "16:00",
+              "end": "16:10",
+              "title": "Kinh nghiệm bước đầu trong xử trí mạch máu ở bệnh nhân ghép thận tại Bệnh viện Thống Nhất",
+              "speaker": "BSCK2. Lý Văn Quảng",
+              "affiliation": "BV Thống Nhất",
+              "type": "talk",
+              "pid": "2026-10-17-33-3"
+            },
+            {
+              "start": "16:10",
+              "end": "16:20",
+              "title": "Xử trí biến chứng động mạch thận phụ cực dưới thận ghép chèn ép khúc nối bể thận – niệu quản",
+              "speaker": "ThS.Nguyễn Đức Dũng",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-33-4"
+            },
+            {
+              "start": "16:20",
+              "end": "16:30",
+              "title": "Các biến đổi trong kỹ thuật ghép thận nhân 100 trường hợp tại Bệnh viện Đại học Y Dược TPHCM",
+              "speaker": "TS. Đỗ Anh Toàn",
+              "affiliation": "BV ĐHYD TPHCM",
+              "type": "talk",
+              "pid": "2026-10-17-33-5"
+            },
+            {
+              "start": "16:30",
+              "end": "16:40",
+              "title": "Đánh giá tưới máu thận ghép trong mổ bằng hình ảnh huỳnh quang cận hồng ngoại sử dụng Indocyanine Green",
+              "speaker": "ThS. Phan Đỗ Thanh Trúc",
+              "affiliation": "BV ND Gia Định",
+              "type": "talk",
+              "pid": "2026-10-17-33-6"
+            },
+            {
+              "start": "16:40",
+              "end": "16:55",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-33-7"
+            }
+          ],
+          "sid": "2026-10-17-33"
+        },
+        {
+          "roomId": "hoian",
+          "title": "Nội khoa ghép thận 4: Một số vấn đề nội khoa khác trong ghép thận\nMedical management in Kidney Transplantation 4: Other Issues in Kidney Transplantation",
+          "titleVi": "Nội khoa ghép thận 4: Một số vấn đề nội khoa khác trong ghép thận",
+          "titleEn": "Medical management in Kidney Transplantation 4: Other Issues in Kidney Transplantation",
+          "titleViShort": "Nội khoa ghép thận 4: Một số vấn đề nội khoa khác trong ghép thận",
+          "titleEnShort": "Medical management in Kidney Transplantation 4: Other Issues in Kidney Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "15:15",
+          "end": "16:55",
+          "chairs": [
+            "GS. Võ Tam",
+            "TS. Huỳnh Ngọc Phương Thảo",
+            "TS. Đặng Anh Đào"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "15:15",
+              "end": "15:25",
+              "title": "Tranh luận về Tranh luận vai trò của SGLT2i ở bệnh nhân sau ghép thận",
+              "speaker": "GS.TS. Võ Tam",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-34-0"
+            },
+            {
+              "start": "15:25",
+              "end": "15:35",
+              "title": "Khảo sát kháng insulin và nồng độ glucagon like peptide-1 huyết tương ở người bệnh đái tháo đường mới khởi phát sau ghép thận",
+              "speaker": "TS. Nguyễn Thị Thùy Dung",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-34-1"
+            },
+            {
+              "start": "15:35",
+              "end": "15:45",
+              "title": "Các thách thức trong quản lý đái tháo đường sau ghép thận – Cập nhật khuyến cáo ADA 2026",
+              "speaker": "TS. Đặng Anh Đào",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-34-2"
+            },
+            {
+              "start": "15:45",
+              "end": "15:55",
+              "title": "Thuốc ức chế kênh đồng vận SGLT2 dùng cho bệnh nhân sau ghép thận: Khi nào và như thế nào?",
+              "speaker": "TS. Huỳnh Ngọc Phương Thảo",
+              "affiliation": "BV ĐHYD TPHCM",
+              "type": "talk",
+              "pid": "2026-10-17-34-3"
+            },
+            {
+              "start": "15:55",
+              "end": "16:05",
+              "title": "Tỷ lệ hội chứng chuyển hoá và các mối liên quan ở bệnh nhân sau ghép thận tại khoa Nội Thận, BVTW Huế",
+              "speaker": "BSCK2. Phan Ngọc Tam",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-34-4"
+            },
+            {
+              "start": "16:05",
+              "end": "16:15",
+              "title": "Khảo sát nồng độ cortisol huyết thanh ở bệnh nhân sau ghép thận tại Bệnh viện Đà Nẵng",
+              "speaker": "BS. Phạm Ngọc Sơn",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-34-5"
+            },
+            {
+              "start": "16:15",
+              "end": "16:25",
+              "title": "Nghiên cứu đặc điểm rối loạn lipid máu ở người bệnh ghép thận cao tuổi tại Bệnh viện Quân y 103",
+              "speaker": "ThS. Diêm Thị Vân",
+              "affiliation": "BV QY 103",
+              "type": "talk",
+              "pid": "2026-10-17-34-6"
+            },
+            {
+              "start": "16:25",
+              "end": "16:35",
+              "title": "Kết quả ghép thận trên người bệnh lupus ban đỏ hệ thống: Kinh nghiệm từ Bệnh viện Trung ương Quân đội 108",
+              "speaker": "BS. Nguyễn Xuân Anh",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-34-7"
+            },
+            {
+              "start": "16:35",
+              "end": "16:55",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-34-8"
+            }
+          ],
+          "sid": "2026-10-17-34"
+        },
+        {
+          "roomId": "mykhe",
+          "title": "Ghép thận: Một số vấn đề khác 2\nOther Issues in Kidney Transplantation 2",
+          "titleVi": "Ghép thận: Một số vấn đề khác 2",
+          "titleEn": "Other Issues in Kidney Transplantation 2",
+          "titleViShort": "Ghép thận: Một số vấn đề khác 2",
+          "titleEnShort": "Other Issues in Kidney Transplantation 2",
+          "type": "session",
+          "category": "scientific",
+          "start": "15:15",
+          "end": "16:55",
+          "chairs": [
+            "BSCK2. Hoàng Khắc Chuẩn",
+            "PGS.TS. Phạm Ngọc Hùng",
+            "PGS.TS. Trần Thái Thanh Tâm"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "15:15",
+              "end": "15:25",
+              "title": "Chức năng thận sau hiến thận sống: Từ eGFR đến nguy cơ thận suốt đời",
+              "speaker": "PGS.TS. Trần Thái Thanh Tâm",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-35-0"
+            },
+            {
+              "start": "15:25",
+              "end": "15:35",
+              "title": "Cắt thận đa nang và ghép thận đồng thời trong một thì phẫu thuật: Kinh nghiệm bước đầu tại Bệnh viện Trung ương Huế",
+              "speaker": "PGS.TS. Phạm Ngọc Hùng",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-35-1"
+            },
+            {
+              "start": "15:35",
+              "end": "15:45",
+              "title": "Báo cáo loạt ca bệnh viêm phổi đa tác nhân: Kinh nghiệm từ BVTWQĐ 108",
+              "speaker": "ThS. Trần Hồng Xinh",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-35-2"
+            },
+            {
+              "start": "15:45",
+              "end": "15:55",
+              "title": "Khảo sát nguy cơ tim mạch và bước đầu xây dựng bảng điểm ứng dụng lâm sàng dựa trên thang điểm PREVENT ở người bệnh sau ghép thận",
+              "speaker": "ThS. Phạm Tiến Dũng",
+              "affiliation": "BV Bạch Mai",
+              "type": "talk",
+              "pid": "2026-10-17-35-3"
+            },
+            {
+              "start": "15:55",
+              "end": "16:05",
+              "title": "Thai kỳ ở bệnh nhân ghép thận",
+              "speaker": "ThS. Hoàng Nữ Ngọc Nhung",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-35-4"
+            },
+            {
+              "start": "16:05",
+              "end": "16:15",
+              "title": "Triển vọng và thách thức của ghép thận từ người cho sống tại Bệnh viện Đa khoa Xuyên Á",
+              "speaker": "BSCK2. Nguyễn Vĩnh Bình",
+              "affiliation": "BV Xuyên Á",
+              "type": "talk",
+              "pid": "2026-10-17-35-5"
+            },
+            {
+              "start": "16:15",
+              "end": "16:25",
+              "title": "Hiệu quả phục hồi chức năng kết hợp giám sát từ xa ở người bệnh sau ghép thận: Thử nghiệm lâm sàng ngẫu nhiên",
+              "speaker": "BS. Nguyễn Tuấn Tài",
+              "affiliation": "ĐH Y Hà Nội",
+              "type": "talk",
+              "pid": "2026-10-17-35-6"
+            },
+            {
+              "start": "16:25",
+              "end": "16:35",
+              "title": "Một người bệnh – Một đội ngũ: Định hình lại chăm sóc đa chuyên khoa trong ghép tạng",
+              "speaker": "BSCK2. Võ Ngọc Anh Thơ",
+              "affiliation": "ĐH Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-35-7"
+            },
+            {
+              "start": "16:35",
+              "end": "16:45",
+              "title": "Đặc điểm lâm sàng, miễn dịch và kết quả ghép thận từ người cho sống tại Bệnh viện Trung ương Thái Nguyên",
+              "speaker": "BSCK2. Lý Thị Thoa",
+              "affiliation": "BV TW Thái Nguyên",
+              "type": "talk",
+              "pid": "2026-10-17-35-8"
+            },
+            {
+              "start": "16:45",
+              "end": "16:55",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-35-9"
+            }
+          ],
+          "sid": "2026-10-17-35"
+        },
+        {
+          "roomId": "songhan",
+          "title": "Ghép gan 4: Gây mê hồi sức trong ghép gan\nAnesthesia and critical care in Liver Transplantation",
+          "titleVi": "Ghép gan 4: Gây mê hồi sức trong ghép gan",
+          "titleEn": "Anesthesia and critical care in Liver Transplantation",
+          "titleViShort": "Ghép gan 4: Gây mê hồi sức trong ghép gan",
+          "titleEnShort": "Anesthesia and critical care in Liver Transplantation",
+          "type": "session",
+          "category": "scientific",
+          "start": "15:15",
+          "end": "16:55",
+          "chairs": [
+            "TS.BS Nguyễn Tất Dũng",
+            "TS.BS Ngô Đình Trung",
+            "TS.BS Đinh Thị Thu Trang"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "15:15",
+              "end": "15:25",
+              "title": "Hồi sức tích cực trong kỷ nguyên ghép gan: điều trị hỗ trợ bệnh nhân xơ gan giai đoạn cuối",
+              "speaker": "TS. Nguyễn Tất Dũng",
+              "affiliation": "BV TW Huế",
+              "type": "talk",
+              "pid": "2026-10-17-36-0"
+            },
+            {
+              "start": "15:25",
+              "end": "15:35",
+              "title": "Giai đoạn hồi sức sớm sau ghép gan: Nhận diện và xử trí rối loạn chức năng mảnh ghép",
+              "speaker": "TS Ngô Đình Trung",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-36-1"
+            },
+            {
+              "start": "15:35",
+              "end": "15:45",
+              "title": "Gây mê hồi sức cho bệnh nhân nhận gan có hội chứng gan phổi: từ lý thuyết đến thực hành lâm sàng",
+              "speaker": "BS. Phan Thùy Chi",
+              "affiliation": "BV Vinmec",
+              "type": "talk",
+              "pid": "2026-10-17-36-2"
+            },
+            {
+              "start": "15:45",
+              "end": "15:55",
+              "title": "Kết quả gây mê hồi sức 350 ca ghép gan tại Bệnh viện TWQĐ 108",
+              "speaker": "TS. Đinh Thị Thu Trang",
+              "affiliation": "BV TWQĐ 108",
+              "type": "talk",
+              "pid": "2026-10-17-36-3"
+            },
+            {
+              "start": "15:55",
+              "end": "16:05",
+              "title": "Báo cáo kết quả bước đầu triển khai gây mê phẫu thuật ghép gan tại Bệnh viện Đà Nẵng",
+              "speaker": "BSCKI. Phạm Thành Dũng",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-36-4"
+            },
+            {
+              "start": "16:05",
+              "end": "16:15",
+              "title": "Hồi sức ngoại khoa trong triển khai bước đầu ghép gan từ người hiến sống tại Bệnh viện Đà Nẵng: Kinh nghiệm từ 5 trường hợp đầu tiên",
+              "speaker": "BSCKI. Nguyễn Nhật Tiến",
+              "affiliation": "",
+              "type": "talk",
+              "pid": "2026-10-17-36-5"
+            },
+            {
+              "start": "16:15",
+              "end": "16:55",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-36-6"
+            }
+          ],
+          "sid": "2026-10-17-36"
+        },
+        {
+          "roomId": "sontra",
+          "title": "Gây mê và hồi sức trong ghép tạng\nHồi sức bảo quản mô - tạng hiến\nAnesthesia and critical care in organ transplantation\nDonor resuscitation and organ preservation",
+          "titleVi": "Gây mê và hồi sức trong ghép tạng\nHồi sức bảo quản mô - tạng hiến",
+          "titleEn": "Anesthesia and critical care in organ transplantation\nDonor resuscitation and organ preservation",
+          "titleViShort": "Gây mê và hồi sức trong ghép tạng Hồi sức bảo quản mô - tạng hiến",
+          "titleEnShort": "Anesthesia and critical care in organ transplantation Donor resuscitation and organ preservation",
+          "type": "session",
+          "category": "scientific",
+          "start": "15:15",
+          "end": "16:55",
+          "chairs": [
+            "TS.BS. Phạm Văn Đông",
+            "TS. Đinh Văn Lượng",
+            "TS. BS. Đào Thị Kim Dung",
+            "BS.CK2. Huỳnh Đức Phát"
+          ],
+          "discussants": [],
+          "presentations": [
+            {
+              "start": "15:15",
+              "end": "15:25",
+              "title": "Hồi sức bệnh nhân trước và sau ghép phổi",
+              "speaker": "TS. Đinh Văn Lượng",
+              "affiliation": "BV Phổi TW",
+              "type": "talk",
+              "pid": "2026-10-17-37-0"
+            },
+            {
+              "start": "15:25",
+              "end": "15:35",
+              "title": "Đặc điểm thay đổi huyết động và kết quả hồi sức sớm sau phẫu thuật ghép thận tại Bệnh viện Đà Nẵng",
+              "speaker": "BS.CK2. Huỳnh Đức Phát",
+              "affiliation": "BV Đà Nẵng",
+              "type": "talk",
+              "pid": "2026-10-17-37-1"
+            },
+            {
+              "start": "15:35",
+              "end": "15:45",
+              "title": "Cập nhật những tiêu chí chống chỉ định/chưa sẵn sàng GMHS - Phẫu thuật ghép thận ở người nhận",
+              "speaker": "TS. Phạm Văn Đông",
+              "affiliation": "BV Chợ Rẫy",
+              "type": "talk",
+              "pid": "2026-10-17-37-2"
+            },
+            {
+              "start": "15:45",
+              "end": "15:55",
+              "title": "Ứng dụng Flotrac trong điều trị huyết động theo đích ở bệnh nhân được ghép thận từ người cho chết não tại BV Hữu Nghị Việt Đức",
+              "speaker": "TS. BS. Đào Thị Kim Dung",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-37-3"
+            },
+            {
+              "start": "15:55",
+              "end": "16:05",
+              "title": "Đánh giá kết quả bước đầu thực hiện ERAS trong gây mê hồi sức cho phẫu thuật ghép thận tại Bệnh viện Đa khoa Trung ương Cần Thơ",
+              "speaker": "BSCK1. Nguyễn Hữu Nghiệm / TS. Phạm Văn Đông",
+              "affiliation": "BV TW Cần Thơ",
+              "type": "talk",
+              "pid": "2026-10-17-37-4"
+            },
+            {
+              "start": "16:05",
+              "end": "16:15",
+              "title": "Truyền máu ở BN sau ghép thận: nguy cơ và chỉ định?",
+              "speaker": "ThS BSCK2. Nguyễn Thị Thuỷ",
+              "affiliation": "BV HN Việt Đức",
+              "type": "talk",
+              "pid": "2026-10-17-37-5"
+            },
+            {
+              "start": "16:15",
+              "end": "16:25",
+              "title": "Kinh nghiệm và bài học thực tiễn về hồi sức tạng hiến từ các trường hợp hiến tạng chết não tại Bệnh viện Nhân dân 115",
+              "speaker": "BSCKI. Trần Huy Nhật",
+              "affiliation": "Bệnh viện Nhân dân 115",
+              "type": "talk",
+              "pid": "2026-10-17-37-6"
+            },
+            {
+              "start": "16:25",
+              "end": "16:55",
+              "title": "Thảo luận",
+              "speaker": "",
+              "affiliation": "",
+              "type": "discussion",
+              "pid": "2026-10-17-37-7"
+            }
+          ],
+          "sid": "2026-10-17-37"
+        },
+        {
+          "roomId": "danang",
+          "title": "TỔNG KẾT HỘI NGHỊ VÀ BẾ MẠC\nClosing Remarks",
+          "titleVi": "TỔNG KẾT HỘI NGHỊ VÀ BẾ MẠC",
+          "titleEn": "Closing Remarks",
+          "titleViShort": "TỔNG KẾT HỘI NGHỊ VÀ BẾ MẠC",
+          "titleEnShort": "Closing Remarks",
+          "type": "closing",
+          "category": "ceremony",
+          "start": "17:00",
+          "end": "17:30",
+          "chairs": [],
+          "discussants": [],
+          "presentations": [],
+          "sid": "2026-10-17-38"
+        }
+      ],
+      "label": "Thứ 7, 17/10/2026",
+      "labelShort": "T7 17/10",
+      "start": "07:30",
+      "end": "17:30"
+    }
+  ],
+  "posters": [
+    {
+      "id": "ghep-than",
+      "label": "Poster ghép thận",
+      "title": "CHƯƠNG TRÌNH POSTER GHÉP THẬN",
+      "items": [
+        {
+          "no": 1,
+          "title": "Kỹ thuật ghép thận tự thân không cắt niệu quản trong phình động mạch thận: Nhân 1 trường hợp",
+          "author": "BSCK2. Phó Minh Tín",
+          "affiliation": "BV ĐHYD TPHCM",
+          "pid": "ghep-than-1"
+        },
+        {
+          "no": 2,
+          "title": "Biến chứng lymphocele xuất hiện muộn ở bệnh nhân ghép thận: Báo cáo một trường hợp lâm sàng",
+          "author": "PGS.TS. Trương Hoàng Minh",
+          "affiliation": "BV ND 115",
+          "pid": "ghep-than-2"
+        },
+        {
+          "no": 3,
+          "title": "Ghép thận tự thân điều trị chấn thương thận: Báo cáo loạt ca",
+          "author": "ThS. Võ Đại Hồng Phúc",
+          "affiliation": "BV TW Huế",
+          "pid": "ghep-than-3"
+        },
+        {
+          "no": 4,
+          "title": "Ghép thận đón đầu ở bệnh nhân suy thận mạn chẩn đoán trễ: Báo cáo ca lâm sàng",
+          "author": "PGS.TS. Nguyễn Bách",
+          "affiliation": "BV Thống Nhất",
+          "pid": "ghep-than-4"
+        },
+        {
+          "no": 5,
+          "title": "Thiếu hụt yếu tố đông máu XIII sau ghép thận: Báo cáo ca lâm sàng",
+          "author": "BSCKI. Nguyễn Hoài Nam",
+          "affiliation": "BV Đa khoa Đức Giang",
+          "pid": "ghep-than-5"
+        },
+        {
+          "no": 6,
+          "title": "Chỉ số dinh dưỡng tiên lượng (PNI) và mối liên quan với một số yếu tố ở người bệnh ghép thận cao tuổi theo dõi tại Bệnh viện Quân y 103",
+          "author": "BSCKI. Hoàng Phúc Khăm",
+          "affiliation": "BV QY 103",
+          "pid": "ghep-than-6"
+        },
+        {
+          "no": 7,
+          "title": "Nghiên cứu chỉ số NLR, PLR, PNR, S2 và mối liên quan với một số đặc điểm lâm sàng, cận lâm sàng ở người bệnh ghép thận cao tuổi",
+          "author": "ThS. Diêm Thị Vân",
+          "affiliation": "BV QY 103",
+          "pid": "ghep-than-7"
+        },
+        {
+          "no": 8,
+          "title": "Nghiên cứu sự biến đổi chỉ số hồng cầu lưới ở người bệnh trước và sau ghép thận trong 3 tháng đầu theo dõi",
+          "author": "BS. Nguyễn Thị Trang",
+          "affiliation": "BV QY 103",
+          "pid": "ghep-than-8"
+        },
+        {
+          "no": 9,
+          "title": "Căn nguyên gây rối loạn tiêu hoá ở người bệnh sau ghép thận: kết quả của nghiên cứu tại BVHN Việt Đức",
+          "author": "BS. Man Thị Thu Hương",
+          "affiliation": "BV HN Việt Đức",
+          "pid": "ghep-than-9"
+        },
+        {
+          "no": 10,
+          "title": "Các thách thức trong trong điều trị nhiễm lao sau ghép thận – Trường hợp lâm sàng tổn thương gan ở bệnh nhân lao cột sống sau ghép thận",
+          "author": "ThS. Nguyễn Ngọc Quý",
+          "affiliation": "BV Đà Nẵng",
+          "pid": "ghep-than-10"
+        },
+        {
+          "no": 11,
+          "title": "Xây dựng toán đồ dự đoán chức năng thận ghép sớm dựa trên đặc điểm lâm sàng và cận lâm sàng của cặp người hiến – người nhận",
+          "author": "ThS.Trần Hoài Linh",
+          "affiliation": "BV TW Huế",
+          "pid": "ghep-than-11"
+        },
+        {
+          "no": 12,
+          "title": "Viêm tụy cấp sau ghép thận Báo cáo một trường hợp và kinh nghiệm xử trí",
+          "author": "BSCK2 Phan Thị Thu Hà",
+          "affiliation": "BV QY 175",
+          "pid": "ghep-than-12"
+        },
+        {
+          "no": 13,
+          "title": "Ứng dụng cộng hưởng từ đa thông số trong tối ưu hóa quản lý thận ghép",
+          "author": "TS.BS. Ngô Minh Trí",
+          "affiliation": "BV TW Huế",
+          "pid": "ghep-than-13"
+        },
+        {
+          "no": 14,
+          "title": "Toan ống thận ở BN sau ghép: case LS và tổng kết y văn",
+          "author": "ThS.BS. Nguyễn Thu Trang",
+          "affiliation": "BV HN Việt Đức",
+          "pid": "ghep-than-14"
+        },
+        {
+          "no": 15,
+          "title": "Đánh giá kết quả ghép thận ở bệnh nhân trên 60 tuổi tại BV Trung ương Huế",
+          "author": "ThS.BS. Nguyễn Xuân Hùng",
+          "affiliation": "BV TW Huế",
+          "pid": "ghep-than-15"
+        },
+        {
+          "no": 16,
+          "title": "Thai kỳ ở bệnh nhân ghép thận - báo cáo trường hợp bệnh",
+          "author": "BSCK2. Nguyễn Thị Thanh Thùy",
+          "affiliation": "BVĐK Tâm Anh TP.HCM",
+          "pid": "ghep-than-16"
+        },
+        {
+          "no": 17,
+          "title": "Nhiễm trùng tiểu tái phát nhiều lần sau ghép thận: Chúng ta đã bỏ sót điều gì? Nhân một ca lâm sàng",
+          "author": "BS. Đỗ Đình Khoa",
+          "affiliation": "BV Nhân dân 115",
+          "pid": "ghep-than-17"
+        },
+        {
+          "no": 18,
+          "title": "Nhiễm trùng tiết niệu tái phát liên quan trào ngược bàng quang–niệu quản độ IV sau ghép thận: Báo cáo ca lâm sàng",
+          "author": "BS. Đỗ Đình Khoa",
+          "affiliation": "BV Nhân dân 115",
+          "pid": "ghep-than-18"
+        },
+        {
+          "no": 19,
+          "title": "BK Virus sau ghép thận - Làm thế nào để dự phòng và điều trị hiệu quả",
+          "author": "BSCK2. Lê Thị Hồng Vũ",
+          "affiliation": "BV Nhân dân 115",
+          "pid": "ghep-than-19"
+        },
+        {
+          "no": 20,
+          "title": "Ảnh hưởng của kháng thể đặc hiệu người cho trước ghép lên kết cục bệnh nhân và thận ghép sau ghép thận: Nghiên cứu đoàn hệ ghép cặp tại một trung tâm đơn lẻ ở Việt Nam",
+          "author": "ThS.BS. Nguyễn Hoàng Tường",
+          "affiliation": "BV Chợ Rẫy",
+          "pid": "ghep-than-20"
+        },
+        {
+          "no": 21,
+          "title": "Kết quả ghép thận đón đầu tại Bệnh viện Chợ Rẫy",
+          "author": "ThS.BSCK2 Lê Nho Tình",
+          "affiliation": "BV Chợ Rẫy",
+          "pid": "ghep-than-21"
+        },
+        {
+          "no": 22,
+          "title": "Kidney transplantation without commercial factors: A series of 100 cases at HCMC university of medical center (UMC), Vietnam",
+          "author": "Prof Sinh Tran, MD, PhD",
+          "affiliation": "Ho Chi Minh City University Medical Center (UMC)",
+          "pid": "ghep-than-22"
+        },
+        {
+          "no": 23,
+          "title": "Deceased donor kidney transplantation: a single-center experience from Viet Nam",
+          "author": "Hien Nguyen MD, PhD",
+          "affiliation": "Cho Ray Hospital",
+          "pid": "ghep-than-23"
+        },
+        {
+          "no": 24,
+          "title": "Thirty-four years of kidney transplantation at Cho Ray Hospital, Viet Nam",
+          "author": "Hien Nguyen MD, PhD",
+          "affiliation": "Cho Ray Hospital",
+          "pid": "ghep-than-24"
+        },
+        {
+          "no": 25,
+          "title": "Long-term growth velocity, nutritional rehabilitation, and graft function in paediatric kidney transplant recipients: a single-centre follow-up study at Cho Ray Hospital, Viet Nam",
+          "author": "Hien Nguyen MD, PhD",
+          "affiliation": "Cho Ray Hospital",
+          "pid": "ghep-than-25"
+        },
+        {
+          "no": 26,
+          "title": "Evaluation of Pre-emptive Kidney Transplantation Outcomes at Cho Ray Hospital",
+          "author": "Thuan Le Huu MD, MsC",
+          "affiliation": "Cho Ray Hospital",
+          "pid": "ghep-than-26"
+        },
+        {
+          "no": 27,
+          "title": "Impact of pre-transplant donor-specific antibodies on patient and graft outcomes after kidney transplantation: A matched cohort study from a single center in Vietnam",
+          "author": "Nguyen Xuong Duong MD, PhD",
+          "affiliation": "Cho Ray Hospital",
+          "pid": "ghep-than-27"
+        }
+      ]
+    },
+    {
+      "id": "ghep-gan",
+      "label": "Poster ghép gan",
+      "title": "CHƯƠNG TRÌNH POSTER GHÉP GAN",
+      "items": [
+        {
+          "no": 1,
+          "title": "Phẫu thuật nội soi lấy mảnh ghép gan trái có hai động mạch và tái tạo hai động mạch: Báo cáo ca bệnh và đề xuất cách tiếp cận",
+          "author": "BS Trần Mạnh Thắng",
+          "affiliation": "BV Vinmec",
+          "pid": "ghep-gan-1"
+        },
+        {
+          "no": 2,
+          "title": "Đánh giá tái phát viêm gan B trên người bệnh sau ghép gan tại Việt Nam",
+          "author": "ĐD. Lê Cẩm Linh",
+          "affiliation": "BV TWQĐ 108",
+          "pid": "ghep-gan-2"
+        },
+        {
+          "no": 3,
+          "title": "Cập nhật quản lý aspergillosis xâm lấn sau ghép gan: từ dự phòng nhắm đích đến cá thể hóa điều trị",
+          "author": "BS. Dương Thanh Hải",
+          "affiliation": "BV Vinmec",
+          "pid": "ghep-gan-3"
+        },
+        {
+          "no": 4,
+          "title": "Hiệu quả chương trình can thiệp dinh dưỡng sớm sau ghép gan",
+          "author": "BS. Phùng Thị Lê Phương",
+          "affiliation": "BV Vinmec",
+          "pid": "ghep-gan-4"
+        },
+        {
+          "no": 5,
+          "title": "Từ hôn mê gan đến hồi phục hoàn toàn: giá trị của điều trị đa chuyên khoa sau ghép gan cấp cứu – báo cáo ca lâm sàng",
+          "author": "Nguyễn Văn Lành",
+          "affiliation": "BV Vinmec",
+          "pid": "ghep-gan-5"
+        },
+        {
+          "no": 6,
+          "title": "Tuân thủ dùng thuốc và các yếu tố liên quan ở người bệnh ghép gan",
+          "author": "ThS. Nguyễn Thị Vân Anh",
+          "affiliation": "BV TWQĐ 108",
+          "pid": "ghep-gan-6"
+        },
+        {
+          "no": 7,
+          "title": "Ghép gan ở bệnh nhi teo đường mật: tổng quan ý văn",
+          "author": "TS.BS. Trần Thanh Trí",
+          "affiliation": "BV NĐ2",
+          "pid": "ghep-gan-7"
+        },
+        {
+          "no": 8,
+          "title": "Ghép gan ở bệnh nhi bị PFIC: kết quả tại BV NĐ2",
+          "author": "BS CK1 Trương Thị Yến Nhi",
+          "affiliation": "BV NĐ2",
+          "pid": "ghep-gan-8"
+        },
+        {
+          "no": 9,
+          "title": "Ghép gan từ người hiến sống điều trị suy gan cấp trên nền viêm gan B mạn: nhân 02 trường hợp",
+          "author": "ThS. Phạm Như Thành – Lê Ngọc Thái",
+          "affiliation": "BV Đà Nẵng",
+          "pid": "ghep-gan-9"
+        },
+        {
+          "no": 10,
+          "title": "Ghép gan cho bệnh nhi HCC: nhân 1 trường hợp và tổng quan y văn",
+          "author": "BS Nguyễn Ngọc Uyên Châu",
+          "affiliation": "",
+          "pid": "ghep-gan-10"
+        },
+        {
+          "no": 11,
+          "title": "Hội chứng giảm tưới máu động mạch gan không do tắc nghẽn sau ghép gan: báo cáo hai trường hợp điều trị bằng nút động mạch lách",
+          "author": "BSNT Trần Văn Vi",
+          "affiliation": "VinUniversity",
+          "pid": "ghep-gan-11"
+        },
+        {
+          "no": 12,
+          "title": "ACLF tại trung tâm ghép gan mới: từ nhận diện nguy cơ đến quyết định ghép gan – kinh nghiệm bước đầu từ 2 ca ghép gan ACLF tại Bệnh viện Đà Nẵng",
+          "author": "ThS.BS. Nguyễn Quang Thái",
+          "affiliation": "BV Đà Nẵng",
+          "pid": "ghep-gan-12"
+        },
+        {
+          "no": 13,
+          "title": "Vai trò của rối loạn chức năng gan sớm trong tiên lượng tổn thương thận cấp sau ghép gan",
+          "author": "TS.BS. Nguyễn Tài Thu",
+          "affiliation": "BV TWQĐ 108",
+          "pid": "ghep-gan-13"
+        },
+        {
+          "no": 14,
+          "title": "Vai trò của Cắt Lớp Vi Tính đa pha trong đánh giá người hiến gan sống trước phẫu thuật: từ protocol đến lập kế hoạch phẫu thuật",
+          "author": "CN. Nguyễn Quốc Thịnh",
+          "affiliation": "BV Đà Nẵng",
+          "pid": "ghep-gan-14"
+        }
+      ]
+    }
+  ]
+}

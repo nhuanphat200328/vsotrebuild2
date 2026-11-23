@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VSOT Demo Ver 2 — Kiến trúc hệ thống</title>
+<style>
+  :root {
+    --navy: #282d7d;
+    --navy-dark: #1b1f4f;
+    --gold: #f5b53d;
+    --text: #2b3a4b;
+    --muted: #66758a;
+    --line: #dfe5eb;
+    --bg: #f6f9fc;
+    --green: #2f7d5a;
+    --red: #c93535;
+    --blue: #0b4f84;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+  }
+  header {
+    background: var(--navy-dark);
+    color: #fff;
+    padding: 22px 28px;
+  }
+  header h1 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: #c3cdec; font-size: 13px; }
+  main { max-width: 1280px; margin: 0 auto; padding: 20px 28px 48px; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  button {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--text);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  button:hover { border-color: var(--navy); }
+  button.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 14px; font-size: 12px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 22px; height: 3px; border-radius: 2px; display: inline-block; }
+  .canvas {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: auto;
+    box-shadow: 0 8px 26px rgba(20, 50, 75, 0.07);
+  }
+  svg { display: block; min-width: 1100px; width: 100%; height: auto; }
+  .node rect { fill: #fff; stroke: var(--line); stroke-width: 1.5; }
+  .node.external rect { stroke-dasharray: 6 4; }
+  .node-title { font-size: 15px; font-weight: 800; fill: var(--navy-dark); }
+  .node-sub { font-size: 11px; fill: var(--muted); }
+  .node-badge { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+  .flow { fill: none; stroke-width: 2.5; opacity: 0.25; transition: opacity 180ms ease; }
+  .flow.public { stroke: var(--green); }
+  .flow.admin { stroke: var(--red); }
+  .flow.deploy { stroke: var(--blue); stroke-dasharray: 7 6; }
+  .flow-label { font-size: 11px; font-weight: 700; fill: var(--muted); opacity: 0; transition: opacity 180ms ease; }
+  svg[data-mode="public"] .flow.public,
+  svg[data-mode="admin"] .flow.admin,
+  svg[data-mode="deploy"] .flow.deploy,
+  svg[data-mode="all"] .flow { opacity: 1; }
+  svg[data-mode="public"] .flow-label.public,
+  svg[data-mode="admin"] .flow-label.admin,
+  svg[data-mode="deploy"] .flow-label.deploy,
+  svg[data-mode="all"] .flow-label { opacity: 1; }
+  svg[data-mode="public"] .flow.public,
+  svg[data-mode="admin"] .flow.admin,
+  svg[data-mode="deploy"] .flow.deploy {
+    stroke-dasharray: 10 8;
+    animation: dash 1.1s linear infinite;
+  }
+  @keyframes dash { to { stroke-dashoffset: -18; } }
+  @media (prefers-reduced-motion: reduce) {
+    .flow { animation: none !important; stroke-dasharray: none !important; }
+  }
+  .hint { margin: 10px 0 0; font-size: 12px; color: var(--muted); }
+  .static { margin-top: 26px; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .static h2 { margin: 0 0 10px; font-size: 15px; color: var(--navy-dark); }
+  .static table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .static th, .static td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .static th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>VSOT Demo Ver 2 — Kiến trúc hệ thống</h1>
+  <p>Next.js 16 · Supabase Postgres/Auth/Storage · Vercel · GitHub. Chọn một luồng để xem dữ liệu di chuyển.</p>
+</header>
+<main>
+  <div class="toolbar" role="group" aria-label="Chọn luồng">
+    <button type="button" data-mode="all" class="active">Tổng thể</button>
+    <button type="button" data-mode="public">Public read</button>
+    <button type="button" data-mode="admin">Admin write</button>
+    <button type="button" data-mode="deploy">Deploy</button>
+  </div>
+  <div class="legend" aria-hidden="true">
+    <span><i class="swatch" style="background:var(--green)"></i>Public read</span>
+    <span><i class="swatch" style="background:var(--red)"></i>Admin write</span>
+    <span><i class="swatch" style="background:var(--blue)"></i>Deploy</span>
+    <span>Nét đứt = dịch vụ ngoài</span>
+  </div>
+
+  <div class="canvas">
+    <svg id="diagram" data-mode="all" viewBox="0 0 1200 660" role="img" aria-label="Sơ đồ kiến trúc VSOT">
+      <defs>
+        <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#2f7d5a"></path>
+        </marker>
+        <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#c93535"></path>
+        </marker>
+        <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#0b4f84"></path>
+        </marker>
+      </defs>
+
+      <!-- Nodes -->
+      <g class="node" transform="translate(30,60)">
+        <rect width="150" height="84" rx="10"></rect>
+        <text x="16" y="30" class="node-title">Người dùng</text>
+        <text x="16" y="50" class="node-sub">Trình duyệt</text>
+        <text x="16" y="66" class="node-sub">VI / EN</text>
+      </g>
+
+      <g class="node" transform="translate(30,250)">
+        <rect width="150" height="84" rx="10"></rect>
+        <text x="16" y="30" class="node-title">Admin</text>
+        <text x="16" y="50" class="node-sub">Session + RBAC</text>
+        <text x="16" y="66" class="node-sub">/admin/**</text>
+      </g>
+
+      <g class="node" transform="translate(280,130)">
+        <rect width="250" height="150" rx="12"></rect>
+        <text x="18" y="30" class="node-title">Next.js 16</text>
+        <text x="18" y="50" class="node-sub">Server Components</text>
+        <text x="18" y="66" class="node-sub">Server Actions</text>
+        <text x="18" y="82" class="node-sub">Middleware locale/auth</text>
+        <text x="18" y="104" class="node-sub">lib/programme · faculty · news</text>
+        <text x="18" y="120" class="node-sub">public client (no cookie)</text>
+        <text x="18" y="136" class="node-sub">server client (cookie) · admin client</text>
+      </g>
+
+      <g class="node" transform="translate(650,40)">
+        <rect width="230" height="100" rx="12"></rect>
+        <text x="18" y="30" class="node-title">Supabase Postgres</text>
+        <text x="18" y="50" class="node-sub">35 bảng · 94 RLS policy</text>
+        <text x="18" y="66" class="node-sub">programme · people · CMS</text>
+        <text x="18" y="82" class="node-sub">contact · audit</text>
+      </g>
+
+      <g class="node" transform="translate(650,175)">
+        <rect width="230" height="76" rx="12"></rect>
+        <text x="18" y="30" class="node-title">Supabase Auth</text>
+        <text x="18" y="50" class="node-sub">Cookie session</text>
+        <text x="18" y="66" class="node-sub">Không public signup</text>
+      </g>
+
+      <g class="node" transform="translate(650,290)">
+        <rect width="230" height="76" rx="12"></rect>
+        <text x="18" y="30" class="node-title">Supabase Storage</text>
+        <text x="18" y="50" class="node-sub">Media public/private</text>
+        <text x="18" y="66" class="node-sub">Upload theo permission</text>
+      </g>
+
+      <g class="node external" transform="translate(650,430)">
+        <rect width="230" height="84" rx="12"></rect>
+        <text x="18" y="30" class="node-title">GitHub</text>
+        <text x="18" y="50" class="node-sub">nhuanphat200328/</text>
+        <text x="18" y="66" class="node-sub">vsotrebuild2</text>
+      </g>
+
+      <g class="node external" transform="translate(930,430)">
+        <rect width="230" height="84" rx="12"></rect>
+        <text x="18" y="30" class="node-title">Vercel</text>
+        <text x="18" y="50" class="node-sub">Preview / Production</text>
+        <text x="18" y="66" class="node-sub">Env riêng từng môi trường</text>
+      </g>
+
+      <!-- Public flow -->
+      <path class="flow public" d="M180,102 H280" marker-end="url(#arrow-green)"></path>
+      <path class="flow public" d="M530,160 H650" marker-end="url(#arrow-green)"></path>
+      <path class="flow public" d="M650,120 H600 v120 h-70" marker-end="url(#arrow-green)"></path>
+      <text class="flow-label public" x="196" y="94">HTTPS</text>
+      <text class="flow-label public" x="556" y="152">SELECT published</text>
+      <text class="flow-label public" x="470" y="248">HTML + JSON-LD</text>
+
+      <!-- Admin flow -->
+      <path class="flow admin" d="M180,292 H250 v-40 h30" marker-end="url(#arrow-red)"></path>
+      <path class="flow admin" d="M530,230 H650" marker-end="url(#arrow-red)"></path>
+      <path class="flow admin" d="M765,175 V140" marker-end="url(#arrow-red)"></path>
+      <text class="flow-label admin" x="252" y="284">login + RBAC</text>
+      <text class="flow-label admin" x="556" y="222">write + audit</text>
+      <text class="flow-label admin" x="700" y="196">session</text>
+
+      <!-- Storage -->
+      <path class="flow admin" d="M530,250 H600 v78 h50" marker-end="url(#arrow-red)"></path>
+      <text class="flow-label admin" x="552" y="340">media</text>
+
+      <!-- Deploy -->
+      <path class="flow deploy" d="M880,472 H930" marker-end="url(#arrow-blue)"></path>
+      <path class="flow deploy" d="M405,280 V470 h245" marker-end="url(#arrow-blue)"></path>
+      <text class="flow-label deploy" x="890" y="464">push</text>
+      <text class="flow-label deploy" x="420" y="452">build &amp; deploy</text>
+
+      <!-- Layer band -->
+      <rect x="266" y="580" width="900" height="46" rx="10" fill="#f6f9fc" stroke="#dfe5eb"></rect>
+      <text x="286" y="608" class="node-sub" style="font-weight:700;fill:#282d7d">Dữ liệu thật VSOT 2026: 5 ngày · 6 hội trường · 65 phiên · 255 báo cáo · 245 diễn giả</text>
+    </svg>
+  </div>
+  <p class="hint">Giao diện tĩnh: tất cả thành phần luôn hiển thị; nút chỉ làm nổi bật luồng tương ứng. Không chứa key hay hostname nội bộ.</p>
+
+  <section class="static" aria-label="Mô tả tĩnh">
+    <h2>Mô tả tĩnh các luồng</h2>
+    <table>
+      <thead>
+        <tr><th>Luồng</th><th>Đường đi</th><th>Kiểm soát</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Public read</td><td>Browser → Next.js RSC → Supabase Postgres (anon, cookie-less)</td><td>RLS chỉ trả dữ liệu published; cache an toàn</td></tr>
+        <tr><td>Admin write</td><td>Admin → Next.js Server Action → Postgres (server client) → audit_logs</td><td>Đăng nhập + RBAC ở page và action</td></tr>
+        <tr><td>Media</td><td>Server Action → Supabase Storage</td><td>Giới hạn MIME/size; quyền media.*</td></tr>
+        <tr><td>Deploy</td><td>GitHub → Vercel build → Preview</td><td>Env riêng; không chạy migration tự động</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<script>
+  const svg = document.getElementById("diagram");
+  const buttons = [...document.querySelectorAll("button[data-mode]")];
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      const mode = button.dataset.mode;
+      svg.setAttribute("data-mode", mode);
+      for (const item of buttons) item.classList.toggle("active", item === button);
+    });
+  }
+</script>
+</body>
+</html>
