@@ -47,8 +47,8 @@
 
 - [x] Không commit `.env*`, key file, template.
 - [x] Không force push, không rewrite history.
-- [ ] Push repo `nhuanphat200328/vsotrebuild2` (thực hiện ở bước bàn giao).
-- [ ] Vercel Preview: env riêng, không dùng lẫn key local; chưa thực hiện.
+- [x] Push repo `nhuanphat200328/vsotrebuild2` (branch `main`).
+- [ ] Vercel Preview: env riêng, không dùng lẫn key local; ngoài phạm vi đã chốt.
 - [ ] Production: chưa thay đổi domain/env; chỉ sau phê duyệt.
 
 ## 6. Việc cần làm trước Production

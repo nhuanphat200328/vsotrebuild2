@@ -60,8 +60,8 @@ Ngày lập: 2026-11-23. Trạng thái cập nhật cuối: xem `[x]`.
 - [x] Docs: requirements, template, v1 reuse, plan, architecture, database, sitemap, data flow.
 - [x] `SKILLS_USAGE_REPORT.md`, `TESTING_REPORT.md`, `SECURITY_CHECKLIST.md`.
 - [x] Sơ đồ kiến trúc tương tác `docs/architecture-diagram.html`.
-- [ ] Push GitHub `nhuanphat200328/vsotrebuild2` (theo yêu cầu; xem TESTING_REPORT mục deploy).
-- [ ] Vercel Preview (chưa thực hiện — cần đăng nhập CLI/quyền).
+- [x] Push GitHub `nhuanphat200328/vsotrebuild2` — branch `main`, commit đầu tiên.
+- [ ] Vercel Preview (chưa thực hiện — ngoài phạm vi đã chốt: Build + push GitHub).
 
 ## Backlog gợi ý
 

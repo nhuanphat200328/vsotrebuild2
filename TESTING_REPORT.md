@@ -11,7 +11,8 @@
 | `npm install` | PASS — 373 packages |
 | `npm run typecheck` (`tsc --noEmit`) | PASS |
 | `npm run lint` (`eslint .`) | PASS — 0 error, 0 warning sau khi ignore template |
-| `npm run build` | PASS — 30+ route, sitemap/robots prerender |
+| `npm run build` | PASS — 30+ route, sitemap/robots/icon prerender; chạy lại sau thay đổi UI cuối |
+| `git push -u origin main` | PASS — repo `nhuanphat200328/vsotrebuild2` |
 | `python scripts\apply_migrations.py` (dry-run) | PASS — rollback |
 | `apply_migrations.py --apply` | PASS — committed |
 | `python -u scripts\import_2026.py` | PASS — 65 sessions, 255 presentations, 245 people, 348 assignments |
