@@ -8,6 +8,7 @@ import {
   newsCategoryName,
   publicAttachments,
 } from "@/lib/news/data";
+import { mediaUrl } from "@/lib/utils/storage";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
@@ -80,7 +81,7 @@ export default async function NewsDetailPage({
               {attachments.map((attachment) => (
                 <li key={attachment.file_path}>
                   <a
-                    href={attachment.file_path}
+                    href={mediaUrl(attachment)}
                     className="inline-flex items-center gap-2 border border-line px-3 py-2 text-sm font-semibold text-brand-700 hover:bg-surface"
                     download
                   >

@@ -9,6 +9,7 @@ import {
   publicAttachments,
   type NewsRow,
 } from "@/lib/news/data";
+import { mediaUrl } from "@/lib/utils/storage";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 
 function pick(item: NewsRow, locale: Locale) {
@@ -120,7 +121,7 @@ export default async function NewsPage({
                       {attachments.map((attachment) => (
                         <a
                           key={attachment.file_path}
-                          href={attachment.file_path}
+                          href={mediaUrl(attachment)}
                           className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-600 hover:text-brand-700"
                           download
                         >

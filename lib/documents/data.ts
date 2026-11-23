@@ -9,6 +9,9 @@ export type ConferenceDocument = {
   description_en: string | null;
   file_path: string | null;
   file_format: string | null;
+  storage_bucket: string | null;
+  storage_path: string | null;
+  source_url: string | null;
   sort: number;
 };
 
@@ -20,7 +23,7 @@ export async function getConferenceDocuments(
   let query = supabase
     .from("conference_documents")
     .select(
-      "id, doc_type, title_vi, title_en, description_vi, description_en, file_path, file_format, sort",
+      "id, doc_type, title_vi, title_en, description_vi, description_en, file_path, file_format, storage_bucket, storage_path, source_url, sort",
     )
     .eq("conference_id", conferenceId)
     .eq("is_public", true)

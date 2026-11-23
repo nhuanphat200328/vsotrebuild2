@@ -51,3 +51,12 @@ Các vấn đề phát hiện và đã sửa:
 
 Đã đọc lại 8 skill; chi tiết và bằng chứng mới nhất ở `docs/SKILLS_USAGE_REPORT.md`.
 Không dùng `customize-opencode`. Các skill không áp dụng trực tiếp (.NET, Flutter) được ghi lý do.
+
+## Phase 3 — Storage & nội dung bổ sung
+
+- Tailwind/SEO/Frontend Design: trang chủ thêm logo thật, tin tức 5 mục, Storage URL cho
+  tài liệu; CountUp SSR hiển thị giá trị cuối.
+- Code Review: phát hiện literal `\n` do thay thế PowerShell, sửa import/JSX; sửa alt logo;
+  kiểm lại typecheck.
+- DATABASE/Storage: 14 object upload, metadata 0023/0024, RLS public read.
+- .NET/Flutter vẫn không áp dụng. Chi tiết ở docs/SKILLS_USAGE_REPORT.md.

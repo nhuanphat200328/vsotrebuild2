@@ -19,6 +19,7 @@ import { getPublishedNews, newsCategoryName, publicAttachments } from "@/lib/new
 import { getLatestConferenceYear, getProgrammeData } from "@/lib/programme/data";
 import { conferenceIntro, conferenceName } from "@/lib/programme/conference";
 import { formatDate, formatShortDate, formatWeekday } from "@/lib/utils/dates";
+import { mediaUrl } from "@/lib/utils/storage";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 
@@ -120,9 +121,9 @@ export default async function HomePage({
           className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/30"
         />
         <Container className="relative py-16 sm:py-20 lg:py-24">
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-300">
+          <div className="flex items-center gap-3"><Image src="/media/2026/logo.gif" alt="Logo Hội Ghép tạng Việt Nam" width={56} height={49} className="h-12 w-auto bg-white/95 p-1" /><p className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-300">
             {dict.hero.subtitle}
-          </p>
+          </p></div>
           <h1 className="mt-4 max-w-3xl text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             {dict.hero.title}
           </h1>
@@ -299,7 +300,7 @@ export default async function HomePage({
                       </Link>
                       {featuredAttachments[0] ? (
                         <a
-                          href={featuredAttachments[0].file_path}
+                          href={mediaUrl(featuredAttachments[0])}
                           className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-600 hover:text-brand-700"
                         >
                           <Download className="size-4" aria-hidden />
@@ -338,7 +339,7 @@ export default async function HomePage({
                       ) : null}
                       {attachments[0] ? (
                         <a
-                          href={attachments[0].file_path}
+                          href={mediaUrl(attachments[0])}
                           className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-ink-600 hover:text-brand-700"
                         >
                           <Download className="size-3.5" aria-hidden />
@@ -449,7 +450,7 @@ export default async function HomePage({
                       </div>
                       {doc.file_path ? (
                         <a
-                          href={doc.file_path}
+                          href={mediaUrl(doc)}
                           className="inline-flex shrink-0 items-center gap-1.5 border border-line px-2.5 py-1.5 text-xs font-bold text-brand-700 hover:bg-white"
                           download
                         >
@@ -489,7 +490,7 @@ export default async function HomePage({
                     {doc.file_path ? (
                       <div className="mt-2 flex flex-wrap gap-3">
                         <a
-                          href={doc.file_path}
+                          href={mediaUrl(doc)}
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 hover:underline"
@@ -497,7 +498,7 @@ export default async function HomePage({
                           {locale === "en" ? "View" : "Xem"} {doc.file_format ?? ""}
                         </a>
                         <a
-                          href={doc.file_path}
+                          href={mediaUrl(doc)}
                           download
                           className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-600 hover:text-brand-700"
                         >

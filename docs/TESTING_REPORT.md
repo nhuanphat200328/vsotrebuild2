@@ -98,3 +98,22 @@
   kiểm lại HEAD → 200 `application/pdf`.
 - Crawl sâu toàn bộ archive vượt thời gian CLI (tải ảnh lớn); các trang đại diện
   2025/2023/2022/2021/2019/2018 đã kiểm 200.
+
+## Storage / tin bổ sung (2026-11-23)
+
+- Upload 14 object lên bucket `media-public` (45 MB): branding, templates, invitations,
+  abstracts, news, archive 2023/2025 documents. Script `scripts/upload_media.py`, 14/14 OK.
+- UI tài liệu/tệp đính kèm dùng `mediaUrl()` → Storage public URL, fallback local.
+- Thêm 2 tin: thông báo số 2, thư mời tài trợ (tổng 5 tin) + tệp đính kèm.
+- Migrations 0023/0024; `source_url`, `storage_bucket`, `storage_path` trong metadata.
+- CountUp: SSR hiển thị giá trị cuối; khi vào viewport mới reset 0 và đếm (tốt cho SEO/no-JS).
+- Trang chủ dùng logo VSOT thật trong hero.
+
+## 9. Kiểm tra cuối Phase 3 (port 3111)
+
+- `/vi`: 102.672 bytes; stats SSR 245; logo thật; Storage URL trong HTML.
+- Storage URL PPTX trong HTML → HEAD 200, đúng MIME.
+- `/vi/tin-tuc`: 5 tin; 2 tin mới 200.
+- `/sitemap.xml`: 24 URL.
+- `/legacy/2023/index.html` 200; `/archive/2023/chuong-trinh-vsot-2023.pdf` 200.
+- `typecheck`/`lint`/`build` PASS sau thay đổi cuối.

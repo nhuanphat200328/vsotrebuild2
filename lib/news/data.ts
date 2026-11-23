@@ -9,6 +9,9 @@ export type NewsAttachment = {
   title_en: string | null;
   file_path: string;
   file_format: string | null;
+  storage_bucket: string | null;
+  storage_path: string | null;
+  source_url: string | null;
   sort: number;
   is_public: boolean;
 };
@@ -39,7 +42,7 @@ export type NewsRow = {
 };
 
 const newsSelect =
-  "id, slug, status, published_at, is_featured, category_id, news_translations(locale, title, excerpt, body, status), news_categories(slug, news_category_translations(locale, name)), news_attachments(title_vi, title_en, file_path, file_format, sort, is_public)";
+  "id, slug, status, published_at, is_featured, category_id, news_translations(locale, title, excerpt, body, status), news_categories(slug, news_category_translations(locale, name)), news_attachments(title_vi, title_en, file_path, file_format, storage_bucket, storage_path, source_url, sort, is_public)";
 
 export async function getPublishedNews(locale: Locale, limit = 50) {
   const supabase = createSupabasePublicClient();

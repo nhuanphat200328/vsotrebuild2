@@ -13,7 +13,7 @@ export function CountUp({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
-  const [display, setDisplay] = useState(0);
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     const element = ref.current;

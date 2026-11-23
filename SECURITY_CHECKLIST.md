@@ -59,3 +59,10 @@
 4. Đặt `NEXT_PUBLIC_SITE_URL` = domain thật, cập nhật canonical/sitemap.
 5. Rà soát toàn bộ policy RLS lần cuối; sao lưu DB.
 6. Kiểm tra Supabase Auth: tắt signup nếu dashboard còn mở.
+
+## Storage RLS
+
+- [x] Bucket `media-public` public read; object upload bằng service role (server/script).
+- [x] UI chỉ dùng public URL, không nhúng service key.
+- [x] Metadata `media`, `conference_documents.storage_path`, `news_attachments.storage_path`.
+- [ ] Chưa kiểm dung lượng quota Storage/Billing.

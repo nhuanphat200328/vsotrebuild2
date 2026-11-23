@@ -118,3 +118,9 @@ Kiểm chứng bằng anon key (2026-11-23):
 - `legacy_sites`: 6 dòng archive 2018–2025 (2020/2024 không có nguồn).
 - Migrations `0018`–`0021`; DB 36 bảng, 96 policy, 3 tin, 3 tệp, 6 tài liệu, 6 archive.
 - Tin không có ngày publish dùng `published_at = NULL`; policy cho phép đọc (0020).
+
+## 16. PHASE 3 — Storage metadata
+
+- `media-public` 14 object; cột `storage_bucket/storage_path/source_url` cho tài liệu/tệp tin.
+- Bảng `media` có metadata file (mime, size, visibility).
+- Tin tức tăng lên 5; sitemap 24 URL.

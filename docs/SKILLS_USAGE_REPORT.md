@@ -32,3 +32,9 @@ Ngày: 2026-11-23. Đã đọc lại `SKILL.md` của 8 skill global. Không dù
 
 - Skill Frontend Design chưa thể kiểm bằng mắt trên trình duyệt; cần QA thủ công.
 - Chưa có Playwright/Lighthouse trong môi trường này.
+
+## Phase 3 — Storage & extra news
+
+Đã áp dụng lại 8 skill; bổ sung: Storage metadata (`mediaUrl`), mở rộng query tài liệu/tin,
+tin mới, logo hero, CountUp SSR. Code Review phát hiện lỗi escape import/JSX và đã sửa.
+.NET Core/Flutter không áp dụng. Xem `SKILLS_USAGE_REPORT.md` gốc và các báo cáo trong `docs/`.

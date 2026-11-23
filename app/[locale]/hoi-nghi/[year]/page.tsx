@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowRight, CalendarDays, MapPin, Presentation, Users } from "lucide-react";
@@ -8,6 +8,7 @@ import { getConferenceDocuments } from "@/lib/documents/data";
 import { getProgrammeData } from "@/lib/programme/data";
 import { conferenceIntro, conferenceName, hasEnglishTranslation } from "@/lib/programme/conference";
 import { formatDate } from "@/lib/utils/dates";
+import { mediaUrl } from "@/lib/utils/storage";
 import { absoluteUrl, eventJsonLd } from "@/lib/utils/seo";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 
@@ -246,7 +247,7 @@ export default async function ConferencePage({
                   </div>
                   {doc.file_path ? (
                     <a
-                      href={doc.file_path}
+                      href={mediaUrl(doc)}
                       className="inline-flex shrink-0 items-center gap-1.5 text-xs font-bold text-brand-700 hover:underline"
                       target="_blank"
                       rel="noreferrer"
