@@ -1,0 +1,561 @@
+/* =========================================================
+   Giao diện kiểu EAU Congress — VSOT
+   ========================================================= */
+
+:root {
+    --font-primary: "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-secondary: "League Spartan", "Spartan", "Helvetica Neue", Arial, sans-serif;
+
+    --color-darkest: #152443;
+    --color-lightest: #fff;
+    --color-primary: #fe6b2e;
+    --color-primary-light: #fe8b5b;
+    --color-primary-dark: #e04201;
+    --color-secondary: #65abdc;
+    --color-secondary-light: #ebf6fd;
+
+    --color-gray-100: #fdfdfe;
+    --color-gray-200: #f3f3f6;
+    --color-gray-300: #d6d6d6;
+    --color-gray-500: #707070;
+
+    --radius-sm: .625rem;
+    --radius-md: 1rem;
+    --radius-pill: 50px;
+
+    --shadow-light: 0 0 8px rgba(0, 0, 0, .06);
+    --shadow-medium: 0 0 6px rgba(0, 0, 0, .16);
+
+    --gap-sm: 1.5rem;
+    --gap-md: 3.125rem;
+    --max-page: 80rem;
+    --section-gap: 3rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--color-darkest);
+    font-family: var(--font-primary);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.32;
+    color: var(--color-darkest);
+}
+
+h1 { font-size: clamp(2rem, 1.2rem + 2.5vw, 3rem); }
+h2 { font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.125rem); }
+h3 { font-size: clamp(1.35rem, 1rem + 1vw, 2rem); }
+h4 { font-size: 1.375rem; }
+h5 { font-size: .9375rem; letter-spacing: 0; line-height: 1.4; }
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin: 0 auto 1rem 0;
+}
+
+/* ============ Containers ============ */
+.full-containter {
+    width: 100%;
+}
+
+.inner-container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: var(--gap-sm);
+    padding-right: var(--gap-sm);
+    max-width: calc(var(--max-page) + var(--gap-md) * 2);
+}
+
+@media screen and (min-width: 1105px) {
+    .inner-container {
+        padding-left: var(--gap-md);
+        padding-right: var(--gap-md);
+    }
+}
+
+.section {
+    margin-top: var(--section-gap);
+}
+
+
+/* ============ Buttons ============ */
+.base-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 1.5rem;
+    border-radius: var(--radius-pill);
+    border: 2px solid transparent;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: -.25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.base-button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-lightest);
+}
+
+.base-button--primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.base-button--outline {
+    background: transparent;
+    border-color: currentColor;
+    color: inherit;
+}
+
+.base-button--outline:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+
+/* ============ Header ============ */
+.full-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-lightest);
+    box-shadow: var(--shadow-light);
+}
+
+.inner-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 5rem;
+}
+
+.header-logo img {
+    height: 3.25rem;
+    width: auto;
+}
+
+.header-menu {
+    margin-left: 1rem;
+}
+
+.header-menu nav {
+    display: none;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+@media screen and (min-width: 1105px) {
+    .header-menu nav {
+        display: flex;
+    }
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .375rem;
+    padding: 1.75rem 0;
+    color: var(--color-darkest);
+    font-size: 1.05rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-link i {
+    font-size: .75em;
+    transition: transform .15s ease;
+}
+
+.nav-item:hover > .nav-link,
+.nav-item:focus-within > .nav-link {
+    color: var(--color-primary);
+}
+
+.nav-item:hover > .nav-link i,
+.nav-item:focus-within > .nav-link i {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    display: none;
+    min-width: 18rem;
+    background: var(--color-lightest);
+    box-shadow: var(--shadow-medium);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    padding: 1.5rem;
+    z-index: 110;
+}
+
+.nav-item:hover > .submenu,
+.nav-item:focus-within > .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    padding: .55rem 0;
+    color: var(--color-darkest);
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.submenu a:hover {
+    color: var(--color-primary);
+}
+
+/* Header search box removed — keep the header action group (Liên hệ button,
+   language switch, mobile menu) pushed to the right. On desktop the "Liên hệ"
+   button carries the auto margin; on mobile that button is hidden, so the
+   language switch carries it instead. */
+.select-language {
+    margin-left: auto;
+}
+
+@media screen and (min-width: 1105px) {
+    .select-language {
+        margin-left: 0;
+    }
+}
+
+
+.header-button {
+    display: none;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 1105px) {
+    .header-button {
+        display: block;
+    }
+}
+
+.select-language img {
+    height: 1.5rem;
+    width: auto;
+    border-radius: 2px;
+}
+
+.select-language a {
+    display: inline-flex;
+    padding: .25rem;
+}
+
+.hamburger-menu {
+    display: block;
+}
+
+@media screen and (min-width: 1105px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+.hamburger-menu button {
+    border: 0;
+    background: transparent;
+    font-size: 1.5rem;
+    color: var(--color-darkest);
+    cursor: pointer;
+    padding: .5rem;
+}
+
+/* Mobile menu */
+.mobile-nav {
+    display: none;
+    background: var(--color-lightest);
+    border-top: 1px solid var(--color-gray-200);
+    padding: 1rem 0;
+}
+
+.mobile-nav.open {
+    display: block;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: .75rem 0;
+    color: var(--color-darkest);
+    text-decoration: none;
+    font-size: 1.125rem;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+
+/* ============ Footer ============ */
+.footer {
+    margin-top: 5rem;
+    background: var(--color-darkest);
+    color: var(--color-lightest);
+}
+
+.footer a {
+    color: var(--color-lightest);
+}
+
+.footer__navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--gap-sm);
+    padding: var(--section-gap) 0;
+}
+
+.footer-list h5 {
+    color: var(--color-lightest);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.footer-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: .65rem;
+    color: rgba(255, 255, 255, .85);
+    font-size: .95rem;
+}
+
+.footer-list a {
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.footer-list a:hover {
+    color: var(--color-primary-light);
+}
+
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: var(--section-gap);
+}
+
+.socials__social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 50%;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: background-color .15s ease, border-color .15s ease;
+}
+
+.socials__social:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.footer__sub-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding: 1.5rem 0;
+}
+
+.footer__legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer__legal a {
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.footer__legal a:hover {
+    color: var(--color-primary-light);
+}
+
+.footer-logo {
+    height: 2.5rem;
+    filter: brightness(0) invert(1);
+}
+
+
+
+.full-header *, .footer * { box-sizing: border-box; }
+.full-header { font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+.footer { font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+.nav-item--archive { flex: 0 0 auto; }
+.nav-item--archive .nav-link { font-size: inherit; white-space: nowrap; }
+.header-menu nav { gap: 1.75rem; }
+
+
+/* FOOTER WHITE OVERRIDE – shared standard */
+.footer,
+.footer .footer-list,
+.footer .footer-list a,
+.footer .footer-list li,
+.footer .footer-list h5,
+.footer .footer__sub-footer,
+.footer .footer__legal,
+.footer .footer__legal a,
+.footer .footer-logo,
+.footer p,
+.footer span,
+.footer div {
+    color: #FFFFFF !important;
+}
+.footer a,
+.footer a:visited,
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+    color: #FFFFFF !important;
+}
+.footer a:hover,
+.footer a:focus {
+    text-decoration: underline;
+}
+
+
+/* FOOTER TYPOGRAPHY / HOVER – shared standard */
+.footer { font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important; }
+.footer .footer-list h5 {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: .9375rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    letter-spacing: .5px !important;
+}
+.footer .footer-list a,
+.footer .footer-list li,
+.footer p,
+.footer span {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: .95rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+}
+.footer a { text-decoration: none !important; }
+.footer a:hover, .footer a:focus { text-decoration: underline !important; }
+.footer .socials__social:hover, .footer .socials__social:focus { text-decoration: none !important; }
+.footer .footer-list li { text-decoration: none !important; }
+
+/* Mobile header: keep logo left, hamburger pinned right */
+@media (max-width: 1104px) {
+    .inner-header .hamburger-menu {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+/* Mobile-only header layout */
+@media (max-width: 1104px) {
+    .inner-header { justify-content: space-between; gap: 1rem; }
+    .header-menu, .header-button, .select-language { display: none !important; }
+    .hamburger-menu { margin-left: auto; display: flex; align-items: center; justify-content: flex-end; }
+}
+.mobile-nav details.mobile-nav-archive { border-bottom: 1px solid var(--color-gray-200); }
+.mobile-nav details.mobile-nav-archive > summary {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .75rem 0; color: var(--color-darkest);
+    font-size: 1.125rem; cursor: pointer; list-style: none;
+}
+.mobile-nav details.mobile-nav-archive > summary::-webkit-details-marker { display: none; }
+.mobile-nav details.mobile-nav-archive > summary::after { content: "+"; font-size: 1.25rem; }
+.mobile-nav details.mobile-nav-archive[open] > summary::after { content: "−"; }
+.mobile-nav details.mobile-nav-archive > a { padding-left: 1rem; font-size: 1rem; }
+
+@media (max-width: 1104px) {
+    .inner-header { display: grid !important; grid-template-columns: 1fr auto; align-items: center; justify-content: initial; gap: 1rem; }
+    .header-menu, .header-button, .select-language { display: none !important; }
+    .hamburger-menu { display: flex !important; align-items: center; justify-content: flex-end; justify-self: end; margin: 0; }
+}
+
+/* Shared Header typography isolation from legacy CSS */
+.full-header a,
+.full-header a:visited,
+.full-header .nav-link,
+.full-header .submenu a,
+.mobile-nav > a,
+.mobile-nav details > summary {
+    text-decoration: none !important;
+}
+.full-header .nav-link {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: var(--color-darkest) !important;
+}
+.full-header .submenu a {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: var(--color-darkest) !important;
+}
+.mobile-nav > a,
+.mobile-nav details.mobile-nav-archive > summary {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1.125rem !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    color: var(--color-darkest) !important;
+}
+.mobile-nav details.mobile-nav-archive > a {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+.full-header .nav-link:hover,
+.full-header .nav-link:focus,
+.full-header .submenu a:hover,
+.full-header .submenu a:focus {
+    color: var(--color-primary) !important;
+}
+.full-header .header-logo img { height: 3.25rem !important; width: auto !important; }

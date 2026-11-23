@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils/cn";
+import type { LegacySite } from "@/lib/archive/data";
 import type { Locale } from "@/lib/i18n/config";
 import type { getDictionary } from "@/lib/i18n/dictionary";
 
@@ -26,15 +27,19 @@ export function SiteHeader({
   locale,
   dict,
   latestYear,
+  archiveSites = [],
 }: {
   locale: Locale;
   dict: Dict;
   latestYear?: string | null;
+  archiveSites?: LegacySite[];
 }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [conferenceOpen, setConferenceOpen] = useState(false);
+  const [archiveOpen, setArchiveOpen] = useState(false);
   const [mobileConferenceOpen, setMobileConferenceOpen] = useState(false);
+  const [mobileArchiveOpen, setMobileArchiveOpen] = useState(false);
 
   const programmeHref = latestYear
     ? `/${locale}/hoi-nghi/${latestYear}/chuong-trinh`
@@ -42,15 +47,6 @@ export function SiteHeader({
   const facultyHref = latestYear
     ? `/${locale}/hoi-nghi/${latestYear}/dien-gia`
     : `/${locale}/hoi-nghi`;
-
-  const navItems = [
-    { label: locale === "en" ? "Home" : "Trang chủ", href: `/${locale}` },
-    { label: locale === "en" ? "Congresses" : "Hội nghị", href: `/${locale}/hoi-nghi` },
-    { label: locale === "en" ? "Programme" : "Chương trình", href: programmeHref },
-    { label: locale === "en" ? "Faculty" : "Diễn giả", href: facultyHref },
-    { label: locale === "en" ? "News" : "Tin tức", href: `/${locale}/tin-tuc` },
-    { label: locale === "en" ? "Contact" : "Liên hệ", href: `/${locale}/lien-he` },
-  ];
 
   const conferenceLinks = latestYear
     ? [
@@ -66,7 +62,9 @@ export function SiteHeader({
         },
       ]
     : [];
+
   const conferenceActive = pathname.includes("/chuong-trinh") || pathname.includes("/dien-gia");
+  const archiveActive = pathname.startsWith("/legacy/");
   const otherLocale = locale === "vi" ? "en" : "vi";
   const switchHref = pathname.replace(/^\/(vi|en)(?=\/|$)/, `/${otherLocale}`);
 
@@ -74,6 +72,8 @@ export function SiteHeader({
     if (href === `/${locale}`) return pathname === href;
     return pathname.startsWith(href);
   };
+
+  const currentYear = archiveSites[0]?.year ?? null;
 
   return (
     <>
@@ -114,7 +114,7 @@ export function SiteHeader({
             className="flex min-w-0 items-center gap-3"
             aria-label="VSOT - Hội Ghép tạng Việt Nam"
           >
-            <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-700 text-sm font-extrabold tracking-tight text-white shadow-sm">
+            <span className="grid size-11 shrink-0 place-items-center rounded-md bg-brand-700 text-sm font-extrabold tracking-tight text-white">
               VSOT
             </span>
             <span className="min-w-0 leading-tight">
@@ -128,72 +128,138 @@ export function SiteHeader({
           </Link>
 
           <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Main">
-            {navItems.map((item) =>
-              item.href === `/${locale}/hoi-nghi` ? (
-                <div
-                  key={item.href}
-                  className="relative"
-                  onMouseEnter={() => setConferenceOpen(true)}
-                  onMouseLeave={() => setConferenceOpen(false)}
-                >
+            <Link
+              href={`/${locale}`}
+              className={cn(
+                "rounded px-3 py-2 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700",
+                isActive(`/${locale}`) ? "bg-brand-50 text-brand-700" : "text-ink-700",
+              )}
+            >
+              {locale === "en" ? "Home" : "Trang chủ"}
+            </Link>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setConferenceOpen(true)}
+              onMouseLeave={() => setConferenceOpen(false)}
+            >
+              <Link
+                href={`/${locale}/hoi-nghi`}
+                className={cn(
+                  "inline-flex items-center gap-1 rounded px-3 py-2 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700",
+                  conferenceActive ? "bg-brand-50 text-brand-700" : "text-ink-700",
+                )}
+                aria-expanded={conferenceOpen}
+                aria-haspopup="true"
+                aria-controls="desktop-conference-menu"
+              >
+                {locale === "en" ? "Congresses" : "Hội nghị"}
+                <ChevronDown className="size-4" aria-hidden />
+              </Link>
+              <div
+                id="desktop-conference-menu"
+                className={cn(
+                  "absolute left-0 top-full z-50 min-w-56 rounded-md border border-line bg-white p-1.5 shadow-xl shadow-ink-900/10",
+                  conferenceOpen ? "block" : "hidden",
+                )}
+              >
+                {conferenceLinks.map((link) => (
                   <Link
-                    href={item.href}
-                    className={cn(
-                      "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700",
-                      conferenceActive ? "bg-brand-50 text-brand-700" : "text-ink-700",
-                    )}
-                    aria-expanded={conferenceOpen}
-                    aria-haspopup="true"
-                    aria-controls="desktop-conference-menu"
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setConferenceOpen(false)}
+                    className="block rounded px-3 py-2 text-sm font-semibold text-ink-700 hover:bg-brand-50 hover:text-brand-700"
                   >
-                    {item.label}
-                    <ChevronDown className="size-4" aria-hidden />
+                    {link.label}
                   </Link>
-                  <div
-                    id="desktop-conference-menu"
-                    className={cn(
-                      "absolute left-0 top-full z-50 min-w-56 rounded-xl border border-line bg-white p-1.5 shadow-xl shadow-ink-900/10",
-                      conferenceOpen ? "block" : "hidden",
-                    )}
-                  >
-                    {conferenceLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={() => setConferenceOpen(false)}
-                        className="flex items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm font-semibold text-ink-700 hover:bg-brand-50 hover:text-brand-700"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ) : (
+                ))}
+              </div>
+            </div>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setArchiveOpen(true)}
+              onMouseLeave={() => setArchiveOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setArchiveOpen((value) => !value)}
+                className={cn(
+                  "inline-flex items-center gap-1 rounded px-3 py-2 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700",
+                  archiveActive ? "bg-brand-50 text-brand-700" : "text-ink-700",
+                )}
+                aria-expanded={archiveOpen}
+                aria-haspopup="true"
+                aria-controls="desktop-archive-menu"
+              >
+                {locale === "en" ? "Past congresses" : "Hội nghị các năm"}
+                <ChevronDown className="size-4" aria-hidden />
+              </button>
+              <div
+                id="desktop-archive-menu"
+                className={cn(
+                  "absolute left-0 top-full z-50 min-w-60 rounded-md border border-line bg-white p-1.5 shadow-xl shadow-ink-900/10",
+                  archiveOpen ? "block" : "hidden",
+                )}
+              >
+                {archiveSites.length === 0 ? (
+                  <p className="px-3 py-2 text-sm text-ink-500">
+                    {locale === "en" ? "Being updated." : "Đang được cập nhật."}
+                  </p>
+                ) : (
+                  archiveSites.map((site) => (
+                    <a
+                      key={site.slug}
+                      href={site.entry_path ?? "#"}
+                      className="flex items-center justify-between gap-3 rounded px-3 py-2 text-sm font-semibold text-ink-700 hover:bg-brand-50 hover:text-brand-700"
+                    >
+                      <span>{site.year ?? site.slug}</span>
+                      <span className="max-w-36 truncate text-[11px] font-medium text-ink-500">
+                        {site.title}
+                      </span>
+                    </a>
+                  ))
+                )}
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "rounded-lg px-3 py-2 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700",
-                    isActive(item.href) ? "bg-brand-50 text-brand-700" : "text-ink-700",
-                  )}
+                  href={`/${locale}/hoi-nghi`}
+                  className="mt-1 block border-t border-line px-3 py-2 text-xs font-bold text-brand-700 hover:bg-brand-50"
                 >
-                  {item.label}
+                  {locale === "en" ? "All congresses" : "Tất cả hội nghị"}
                 </Link>
-              ),
-            )}
+              </div>
+            </div>
+
+            <Link
+              href={`/${locale}/tin-tuc`}
+              className={cn(
+                "rounded px-3 py-2 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700",
+                isActive(`/${locale}/tin-tuc`) ? "bg-brand-50 text-brand-700" : "text-ink-700",
+              )}
+            >
+              {locale === "en" ? "News" : "Tin tức"}
+            </Link>
+            <Link
+              href={`/${locale}/lien-he`}
+              className={cn(
+                "rounded px-3 py-2 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700",
+                isActive(`/${locale}/lien-he`) ? "bg-brand-50 text-brand-700" : "text-ink-700",
+              )}
+            >
+              {locale === "en" ? "Contact" : "Liên hệ"}
+            </Link>
           </nav>
 
           <div className="flex items-center gap-2">
             <Link
               href={`/${locale}/lien-he`}
-              className="hidden rounded-lg bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-800 sm:inline-flex"
+              className="hidden rounded bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-800 sm:inline-flex"
             >
               {locale === "en" ? "Contact" : "Liên hệ"}
             </Link>
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
-              className="inline-flex size-10 items-center justify-center rounded-lg border border-line text-ink-700 xl:hidden"
+              className="inline-flex size-10 items-center justify-center rounded border border-line text-ink-700 xl:hidden"
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Đóng menu" : "Mở menu"}
@@ -208,55 +274,96 @@ export function SiteHeader({
           className={cn("border-t border-line bg-white xl:hidden", open ? "block" : "hidden")}
         >
           <Container className="grid gap-1 py-3">
-            {navItems.map((item) =>
-              item.href === `/${locale}/hoi-nghi` ? (
-                <div key={item.href}>
-                  <button
-                    type="button"
-                    onClick={() => setMobileConferenceOpen((value) => !value)}
-                    className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold text-ink-700 hover:bg-brand-50"
-                    aria-expanded={mobileConferenceOpen}
-                    aria-controls="mobile-conference-menu"
+            <Link
+              href={`/${locale}`}
+              onClick={() => setOpen(false)}
+              className="rounded px-3 py-2.5 text-sm font-semibold text-ink-700 hover:bg-brand-50"
+            >
+              {locale === "en" ? "Home" : "Trang chủ"}
+            </Link>
+            <Link
+              href={`/${locale}/hoi-nghi`}
+              onClick={() => setOpen(false)}
+              className="rounded px-3 py-2.5 text-sm font-semibold text-ink-700 hover:bg-brand-50"
+            >
+              {locale === "en" ? "Congresses" : "Hội nghị"}
+            </Link>
+            <button
+              type="button"
+              onClick={() => setMobileConferenceOpen((value) => !value)}
+              className="flex w-full items-center justify-between rounded px-3 py-2.5 text-left text-sm font-semibold text-ink-700 hover:bg-brand-50"
+              aria-expanded={mobileConferenceOpen}
+              aria-controls="mobile-conference-menu"
+            >
+              {locale === "en" ? `Congress ${currentYear ?? ""}` : `Hội nghị ${currentYear ?? ""}`}
+              <ChevronDown
+                className={cn("size-4 transition", mobileConferenceOpen ? "rotate-180" : "")}
+                aria-hidden
+              />
+            </button>
+            {mobileConferenceOpen ? (
+              <div
+                id="mobile-conference-menu"
+                className="ml-3 grid gap-1 border-l border-line pl-3"
+              >
+                {conferenceLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="rounded px-3 py-2 text-sm font-medium text-ink-600 hover:bg-brand-50"
                   >
-                    {item.label}
-                    <ChevronDown
-                      className={cn("size-4 transition", mobileConferenceOpen ? "rotate-180" : "")}
-                      aria-hidden
-                    />
-                  </button>
-                  {mobileConferenceOpen ? (
-                    <div
-                      id="mobile-conference-menu"
-                      className="ml-3 grid gap-1 border-l border-line pl-3"
-                    >
-                      {conferenceLinks.map((link) => (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          onClick={() => setOpen(false)}
-                          className="rounded-lg px-3 py-2 text-sm font-medium text-ink-600 hover:bg-brand-50"
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-              ) : (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-semibold text-ink-700 hover:bg-brand-50"
-                >
-                  {item.label}
-                </Link>
-              ),
-            )}
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+            <button
+              type="button"
+              onClick={() => setMobileArchiveOpen((value) => !value)}
+              className="flex w-full items-center justify-between rounded px-3 py-2.5 text-left text-sm font-semibold text-ink-700 hover:bg-brand-50"
+              aria-expanded={mobileArchiveOpen}
+              aria-controls="mobile-archive-menu"
+            >
+              {locale === "en" ? "Past congresses" : "Hội nghị các năm"}
+              <ChevronDown
+                className={cn("size-4 transition", mobileArchiveOpen ? "rotate-180" : "")}
+                aria-hidden
+              />
+            </button>
+            {mobileArchiveOpen ? (
+              <div id="mobile-archive-menu" className="ml-3 grid gap-1 border-l border-line pl-3">
+                {archiveSites.map((site) => (
+                  <a
+                    key={site.slug}
+                    href={site.entry_path ?? "#"}
+                    onClick={() => setOpen(false)}
+                    className="rounded px-3 py-2 text-sm font-medium text-ink-600 hover:bg-brand-50"
+                  >
+                    {site.year ?? site.slug}
+                    {site.title ? ` · ${site.title}` : ""}
+                  </a>
+                ))}
+              </div>
+            ) : null}
+            <Link
+              href={`/${locale}/tin-tuc`}
+              onClick={() => setOpen(false)}
+              className="rounded px-3 py-2.5 text-sm font-semibold text-ink-700 hover:bg-brand-50"
+            >
+              {locale === "en" ? "News" : "Tin tức"}
+            </Link>
+            <Link
+              href={`/${locale}/lien-he`}
+              onClick={() => setOpen(false)}
+              className="rounded px-3 py-2.5 text-sm font-semibold text-ink-700 hover:bg-brand-50"
+            >
+              {locale === "en" ? "Contact" : "Liên hệ"}
+            </Link>
             <Link
               href={switchHref}
               onClick={() => setOpen(false)}
-              className="rounded-lg border border-line px-3 py-2.5 text-sm font-semibold text-brand-700"
+              className="rounded border border-line px-3 py-2.5 text-sm font-semibold text-brand-700"
               hrefLang={otherLocale}
             >
               {otherLocale === "en" ? "English" : "Tiếng Việt"}

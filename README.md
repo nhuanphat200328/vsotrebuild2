@@ -83,7 +83,9 @@ Import ghi đè giờ/phòng/tiêu đề nếu chạy lại trên DB đã chỉn
 | `.../phien/[id]` | Chi tiết phiên, canonical/share |
 | `.../dien-gia?q=&role=` | Directory diễn giả (C/D/P), lọc client-side |
 | `.../dien-gia/[slug]` | Hồ sơ diễn giả + các phân công theo ngày |
-| `/[locale]/tin-tuc`, `/[slug]` | Tin tức từ CMS |
+| `/[locale]/tin-tuc`, `/[slug]` | Tin tức từ CMS + tệp đính kèm |
+| `/[locale]/hoi-nghi/cac-nam-truoc` | Kho lưu trữ hội nghị 2018–2025 |
+| `/legacy/<year>/...` | Website hội nghị các năm (bản bảo toàn, link đã trỏ về site mới) |
 | `/[locale]/lien-he` | Form liên hệ lưu DB, honeypot + rate limit |
 | `/admin/**` | CMS: dashboard, conferences/programme, pages, news, media, contacts, users |
 | `/api/health` | Health check |
@@ -104,4 +106,14 @@ Admin yêu cầu đăng nhập Supabase và quyền RBAC; kiểm quyền ở pag
 `TTS2026_REQUIREMENTS_ANALYSIS.md`, `TEMPLATE_CATALOG.md`, `V1_REUSE_ANALYSIS.md`,
 `IMPLEMENTATION_PLAN.md`, `SYSTEM_ARCHITECTURE.md`, `DATABASE_DESIGN.md`, `SITEMAP.md`,
 `DATA_FLOW.md`, `SKILLS_USAGE_REPORT.md`, `TESTING_REPORT.md`, `SECURITY_CHECKLIST.md`,
-`docs/architecture-diagram.html`.
+`docs/architecture-diagram.html`, cùng bộ tài liệu audit/plan/report trong `docs/`:
+`SOURCE_CONTENT_AUDIT.md`, `HOMEPAGE_CONTENT_PLAN.md`, `NEWS_CONTENT_AUDIT.md`,
+`CONFERENCE_ARCHIVE_PLAN.md`, `ASSET_MIGRATION_PLAN.md`, `DATABASE_UPDATE_PLAN.md`,
+`UI_UX_DESIGN_PLAN.md`, `IMPLEMENTATION_REPORT.md`, `TESTING_REPORT.md`,
+`ASSET_MIGRATION_REPORT.md`, `SKILLS_USAGE_REPORT.md`.
+
+## Tài nguyên tĩnh
+
+- `public/media/2026/`: KV, logo, template PPTX, thư mời, abstract, tệp tin.
+- `public/legacy/<year>/`: 6 kỳ hội nghị 2018–2025 (39,6 MB), bảo toàn nội dung gốc;
+  header/footer của bản copy đã được trỏ về route mới để không 404.

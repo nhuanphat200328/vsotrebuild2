@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { JsonLd } from "@/components/ui/json-ld";
 import { organizationJsonLd } from "@/lib/utils/seo";
+import { getPublishedLegacySites } from "@/lib/archive/data";
 import { getLatestConferenceYear } from "@/lib/programme/data";
 import { getDictionary } from "@/lib/i18n/dictionary";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -49,7 +50,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!isLocale(locale)) notFound();
   const typedLocale = locale as Locale;
   const dict = getDictionary(typedLocale);
-  const latestYear = await getLatestConferenceYear();
+  const [latestYear, archiveSites] = await Promise.all([
+    getLatestConferenceYear(),
+    getPublishedLegacySites(),
+  ]);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -60,11 +64,21 @@ export default async function LocaleLayout({ children, params }: Props) {
       >
         {typedLocale === "en" ? "Skip to content" : "Bỏ qua điều hướng"}
       </a>
-      <SiteHeader locale={typedLocale} dict={dict} latestYear={latestYear} />
+      <SiteHeader
+        locale={typedLocale}
+        dict={dict}
+        latestYear={latestYear}
+        archiveSites={archiveSites}
+      />
       <main id="main-content" className="flex-1">
         {children}
       </main>
-      <SiteFooter locale={typedLocale} dict={dict} latestYear={latestYear} />
+      <SiteFooter
+        locale={typedLocale}
+        dict={dict}
+        latestYear={latestYear}
+        archiveSites={archiveSites}
+      />
     </div>
   );
 }

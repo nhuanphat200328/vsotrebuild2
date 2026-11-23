@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ArrowRight, CalendarDays, MapPin, Presentation, Users } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { JsonLd } from "@/components/ui/json-ld";
+import { getConferenceDocuments } from "@/lib/documents/data";
 import { getProgrammeData } from "@/lib/programme/data";
 import { conferenceIntro, conferenceName, hasEnglishTranslation } from "@/lib/programme/conference";
 import { formatDate } from "@/lib/utils/dates";
@@ -58,6 +59,11 @@ export default async function ConferencePage({
     ]),
   ).size;
   const fallback = locale === "en" && !hasEnglishTranslation(data.conference);
+  const documents = await getConferenceDocuments(data.conference.id, [
+    "abstract",
+    "programme",
+    "invitation",
+  ]);
 
   return (
     <div className="bg-white pb-20">
@@ -214,6 +220,46 @@ export default async function ConferencePage({
             </div>
           </aside>
         </div>
+
+        {documents.length ? (
+          <section className="mt-12" aria-labelledby="congress-documents">
+            <h2 id="congress-documents" className="text-2xl font-extrabold text-ink-900">
+              {locale === "en" ? "Congress documents" : "Tài liệu hội nghị"}
+            </h2>
+            <div className="mt-4 border-t-2 border-brand-700">
+              {documents.map((doc) => (
+                <div
+                  key={doc.id}
+                  className="flex flex-col gap-2 border-b border-line py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
+                >
+                  <div>
+                    <p className="text-sm font-bold text-ink-900">
+                      {locale === "en"
+                        ? doc.title_en || doc.title_vi
+                        : doc.title_vi || doc.title_en}
+                    </p>
+                    <p className="mt-1 text-xs text-ink-500">
+                      {locale === "en"
+                        ? doc.description_en || doc.description_vi
+                        : doc.description_vi || doc.description_en}
+                    </p>
+                  </div>
+                  {doc.file_path ? (
+                    <a
+                      href={doc.file_path}
+                      className="inline-flex shrink-0 items-center gap-1.5 text-xs font-bold text-brand-700 hover:underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <ArrowRight className="size-3.5" aria-hidden />
+                      {doc.file_format ?? "PDF"}
+                    </a>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
       </Container>
     </div>
   );

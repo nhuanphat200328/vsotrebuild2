@@ -3,12 +3,20 @@ import { createSupabasePublicClient } from "@/lib/supabase/public";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteUrl.replace(/\/$/, "");
   const entries: MetadataRoute.Sitemap = [
     { url: `${base}/vi`, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/en`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/vi/hoi-nghi`, changeFrequency: "weekly", priority: 0.9 },
+    {
+      url: `${base}/vi/hoi-nghi/cac-nam-truoc`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     { url: `${base}/vi/tin-tuc`, changeFrequency: "daily", priority: 0.7 },
     { url: `${base}/vi/lien-he`, changeFrequency: "yearly", priority: 0.4 },
   ];
@@ -42,6 +50,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
           },
         );
+      }
+    }
+    const { data: newsRows } = await supabase
+      .from("news")
+      .select("slug")
+      .eq("status", "published")
+      .is("deleted_at", null)
+      .order("created_at", { ascending: false });
+
+    for (const row of newsRows ?? []) {
+      for (const locale of ["vi", "en"] as const) {
+        entries.push({
+          url: `${base}/${locale}/tin-tuc/${row.slug}`,
+          changeFrequency: "monthly",
+          priority: 0.5,
+        });
       }
     }
   } catch {

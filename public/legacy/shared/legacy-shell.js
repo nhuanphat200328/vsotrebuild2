@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.ls-toggle'),n=document.querySelector('.ls-nav');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('is-open');b.setAttribute('aria-expanded',n.classList.contains('is-open')?'true':'false');});}});
