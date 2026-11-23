@@ -63,7 +63,7 @@ export async function getProgrammeData(year: string): Promise<ProgrammeData | nu
          session_types(code, name_vi, name_en, color),
          session_people(role, sort, people(id, slug, full_name, display_name, title, institution, country)),
          presentations(
-           id, start_time, end_time, sort, presentation_type,
+           id, start_time, end_time, sort, presentation_type, abstract_file_path, abstract_storage_bucket, abstract_storage_path, abstract_format,
            presentation_translations(locale, title, status),
            presentation_people(role, sort, people(id, slug, full_name, display_name, title, institution, country))
          )`,
@@ -107,7 +107,7 @@ export async function getSessionById(id: string) {
        session_types(code, name_vi, name_en, color),
        session_people(role, sort, people(id, slug, full_name, display_name, title, institution, country)),
        presentations(
-         id, start_time, end_time, sort, presentation_type,
+         id, start_time, end_time, sort, presentation_type, abstract_file_path, abstract_storage_bucket, abstract_storage_path, abstract_format,
          presentation_translations(locale, title, status),
          presentation_people(role, sort, people(id, slug, full_name, display_name, title, institution, country))
        )`,
@@ -131,4 +131,42 @@ export async function getLatestConferenceYear(): Promise<string | null> {
     .maybeSingle();
   if (error) return null;
   return data?.slug ?? null;
+}
+
+export type PresentationAbstract = {
+  id: string;
+  legacy_pid: string | null;
+  abstract_file_path: string | null;
+  abstract_storage_bucket: string | null;
+  abstract_storage_path: string | null;
+  abstract_format: string | null;
+  presentation_translations: { locale: string; title: string | null; status: string }[];
+  sessions: {
+    id: string;
+    conference_id: string;
+    start_time: string;
+    end_time: string;
+    conference_dates: { date: string } | null;
+    rooms: { name_vi: string; name_en: string | null } | null;
+    session_translations: { locale: string; title: string | null; status: string }[];
+  } | null;
+};
+
+export async function getPresentationAbstract(id: string) {
+  const supabase = createSupabasePublicClient();
+  const { data, error } = await supabase
+    .from("presentations")
+    .select(
+      `id, legacy_pid, abstract_file_path, abstract_storage_bucket, abstract_storage_path, abstract_format,
+       presentation_translations(locale, title, status),
+       sessions(id, conference_id, start_time, end_time,
+         conference_dates(date),
+         rooms(name_vi, name_en),
+         session_translations(locale, title, status))`,
+    )
+    .eq("id", id)
+    .eq("status", "published")
+    .maybeSingle();
+  if (error) throw new Error(`Abstract query failed: ${error.message}`);
+  return data as unknown as PresentationAbstract | null;
 }

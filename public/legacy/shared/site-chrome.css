@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --vsot-navy: #282d7d;
+  --vsot-navy-dark: #1b1f4f;
+  --vsot-gold: #f5b53d;
+  --vsot-text: #2b3a4b;
+  --vsot-muted: #66758a;
+  --vsot-line: #dfe5eb;
+  --vsot-surface: #f6f9fc;
+}
+
+.vsot-archive-header,
+.vsot-archive-footer,
+.vsot-archive-main,
+.vsot-archive-note {
+  font-family: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  box-sizing: border-box;
+}
+
+.vsot-archive-header *,
+.vsot-archive-footer * { box-sizing: border-box; }
+
+.vsot-archive-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid var(--vsot-line);
+}
+
+.vsot-archive-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.vsot-archive-bar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vsot-archive-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.vsot-archive-brand img {
+  width: 44px;
+  height: auto;
+  display: block;
+}
+
+.vsot-archive-brand strong {
+  display: block;
+  color: #1a2233;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.vsot-archive-brand small {
+  display: block;
+  color: var(--vsot-muted);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.vsot-archive-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+.vsot-archive-nav a {
+  display: inline-block;
+  padding: 7px 9px;
+  color: var(--vsot-text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.vsot-archive-nav a:hover,
+.vsot-archive-nav a:focus-visible {
+  color: var(--vsot-navy);
+  border-bottom-color: var(--vsot-gold);
+  outline: none;
+}
+
+.vsot-archive-note {
+  background: var(--vsot-navy-dark);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vsot-archive-note .vsot-archive-container {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.vsot-archive-footer {
+  margin-top: 48px;
+  background: var(--vsot-navy-dark);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.vsot-archive-footer .vsot-archive-container {
+  padding-top: 36px;
+  padding-bottom: 20px;
+}
+
+.vsot-archive-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 28px;
+}
+
+.vsot-archive-footer h2 {
+  margin: 0 0 12px;
+  color: var(--vsot-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vsot-archive-footer p,
+.vsot-archive-footer li,
+.vsot-archive-footer a {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.vsot-archive-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vsot-archive-footer a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+
+.vsot-archive-footer a:hover { color: #fff; text-decoration: underline; }
+
+.vsot-archive-copy {
+  margin-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 14px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.vsot-archive-main {
+  background: #fff;
+  color: var(--vsot-text);
+  min-height: 50vh;
+  padding: 36px 0 20px;
+}
+
+.vsot-archive-main h1 {
+  margin: 0 0 10px;
+  color: #1a2233;
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1.2;
+}
+
+.vsot-archive-main p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--vsot-text);
+}
+
+.vsot-archive-kicker {
+  margin: 0 0 6px;
+  color: var(--vsot-navy);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.vsot-archive-button {
+  display: inline-block;
+  padding: 11px 18px;
+  background: var(--vsot-navy);
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.vsot-archive-button:hover { background: var(--vsot-navy-dark); }
+
+.vsot-archive-pdf {
+  margin-top: 24px;
+  border: 1px solid var(--vsot-line);
+  background: var(--vsot-surface);
+}
+
+.vsot-archive-pdf iframe {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .vsot-archive-bar { flex-direction: column; align-items: flex-start; padding: 14px 0; gap: 10px; }
+  .vsot-archive-nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; }
+  .vsot-archive-nav a { white-space: nowrap; }
+  .vsot-archive-footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .vsot-archive-footer-grid { grid-template-columns: 1fr; }
+  .vsot-archive-brand strong { font-size: 14px; }
+  .vsot-archive-main { padding-top: 26px; }
+}
+.vsot-archive-nav a[href="/vi/hoi-nghi/cac-nam-truoc"] {
+  color: var(--vsot-navy);
+  border-bottom-color: var(--vsot-gold);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page a img {
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+  .page a:hover img {
+    transform: scale(1.01);
+    opacity: 0.96;
+  }
+}

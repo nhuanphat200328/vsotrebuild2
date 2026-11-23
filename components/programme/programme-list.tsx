@@ -1,8 +1,10 @@
 ﻿import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, FileText } from "lucide-react";
 import { RoleBadge } from "@/components/programme/role-badge";
 import type { Locale } from "@/lib/i18n/config";
 import {
+  abstractHref,
+  hasAbstract,
   presentationTitle,
   sessionTitle,
   typeName,
@@ -131,6 +133,15 @@ export function ProgrammeList({
                                     </Link>
                                   ) : null,
                                 )}
+                                {hasAbstract(presentation) ? (
+                                  <Link
+                                    href={abstractHref(locale, year, presentation.id)}
+                                    className="inline-flex items-center gap-1 text-xs font-semibold text-brand-700 hover:underline"
+                                  >
+                                    <FileText className="size-3.5" aria-hidden />
+                                    Abstract
+                                  </Link>
+                                ) : null}
                               </div>
                             </div>
                             <span className="shrink-0 text-[11px] font-semibold text-ink-500">

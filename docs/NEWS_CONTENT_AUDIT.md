@@ -54,3 +54,14 @@
 1. Có bổ sung thông báo 2 / thư mời tài trợ / thông báo BCH vào tin công khai không?
 2. Có cần ngày đăng chính xác cho 3 tin hiện tại không (nguồn không nêu)?
 3. Có cần public từng abstract cá nhân thay vì chỉ PDF tổng hợp không (liên quan PII)?
+
+## 6. Audit 4 trang nguồn (Phase UI)
+
+| Trang | Nội dung xác nhận | Xử lý |
+|---|---|---|
+| `tin-tuc.html` | Danh sách tin: Tuần lễ hiến ghép, thông báo số 2, chương trình khung; link PDF | 3 tin đầu đã có; bổ sung 2 tin |
+| `thong-bao-1.html` | Thông báo số 1 Tuần lễ Hiến và Ghép mô tạng 2026 (13–17/10, Đà Nẵng) | Tin 2 |
+| `thong-bao-2.html` | Thông báo số 2 cập nhật hội nghị, file PDF | Tin thông báo số 2 |
+| `thong-bao-hop-ban-chap-hanh.html` | Thông báo họp Ban Chấp hành (PDF/DOCX) | Không public vì nội bộ |
+
+Không có ngày đăng trong các trang → `published_at = NULL`. Nguồn lưu ở `news.source_url`.

@@ -27,6 +27,10 @@ export type Presentation = {
   end_time: string | null;
   sort: number;
   presentation_type: string | null;
+  abstract_file_path?: string | null;
+  abstract_storage_bucket?: string | null;
+  abstract_storage_path?: string | null;
+  abstract_format?: string | null;
   presentation_translations: Translation[];
   presentation_people: SessionPerson[];
 };
@@ -121,4 +125,12 @@ export function typeName(session: ProgrammeSession, locale: Locale) {
   const type = session.session_types;
   if (!type) return null;
   return locale === "en" ? type.name_en || type.name_vi : type.name_vi || type.name_en;
+}
+
+export function hasAbstract(presentation: Presentation) {
+  return Boolean(presentation.abstract_file_path || presentation.abstract_storage_path);
+}
+
+export function abstractHref(locale: Locale, year: string, presentationId: string) {
+  return `/${locale}/hoi-nghi/${year}/bao-cao/${presentationId}/abstract`;
 }

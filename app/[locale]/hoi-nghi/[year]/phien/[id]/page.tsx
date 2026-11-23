@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CalendarDays, MapPin, Users } from "lucide-react";
+import { ArrowLeft, CalendarDays, FileText, MapPin, Users } from "lucide-react";
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { JsonLd } from "@/components/ui/json-ld";
@@ -12,6 +12,7 @@ import {
   sessionTitle,
   typeName,
 } from "@/lib/programme/data";
+import { abstractHref, hasAbstract } from "@/lib/programme/model";
 import { formatDate } from "@/lib/utils/dates";
 import { absoluteUrl, eventJsonLd } from "@/lib/utils/seo";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -178,6 +179,15 @@ export default async function SessionPage({
                                 {presentation.start_time.slice(0, 5)}
                                 {presentation.end_time ? `–${presentation.end_time.slice(0, 5)}` : ""}
                               </span>
+                            ) : null}
+                            {hasAbstract(presentation) ? (
+                              <Link
+                                href={abstractHref(locale, year, presentation.id)}
+                                className="inline-flex items-center gap-1 text-xs font-semibold text-brand-700 hover:underline"
+                              >
+                                <FileText className="size-3.5" aria-hidden />
+                                Abstract
+                              </Link>
                             ) : null}
                           </div>
                         </div>

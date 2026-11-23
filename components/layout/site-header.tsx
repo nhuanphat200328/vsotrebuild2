@@ -64,7 +64,8 @@ export function SiteHeader({
     : [];
 
   const conferenceActive = pathname.includes("/chuong-trinh") || pathname.includes("/dien-gia");
-  const archiveActive = pathname.startsWith("/legacy/");
+  const archiveActive =
+    pathname.startsWith("/legacy/") || pathname.includes("/hoi-nghi/cac-nam-truoc");
   const otherLocale = locale === "vi" ? "en" : "vi";
   const switchHref = pathname.replace(/^\/(vi|en)(?=\/|$)/, `/${otherLocale}`);
 

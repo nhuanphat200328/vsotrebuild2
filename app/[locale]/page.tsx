@@ -60,7 +60,7 @@ export default async function HomePage({
   const latestYear = await getLatestConferenceYear();
   const [data, news, archiveSites] = await Promise.all([
     latestYear ? getProgrammeData(latestYear) : Promise.resolve(null),
-    getPublishedNews(locale, 3),
+    getPublishedNews(locale, 5),
     getPublishedLegacySites(),
   ]);
   const documents = data
@@ -107,66 +107,87 @@ export default async function HomePage({
 
   return (
     <div className="bg-white">
-      <section className="relative isolate overflow-hidden bg-brand-900 text-white">
+      <section className="overflow-hidden border-b border-line bg-brand-900">
         <Image
           src="/media/2026/kv.png"
           alt="Key visual Hội nghị khoa học thường niên VSOT 2026"
-          fill
+          width={1921}
+          height={1081}
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-60"
+          className="block h-auto w-full"
         />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/30"
-        />
-        <Container className="relative py-16 sm:py-20 lg:py-24">
-          <div className="flex items-center gap-3"><Image src="/media/2026/logo.gif" alt="Logo Hội Ghép tạng Việt Nam" width={56} height={49} className="h-12 w-auto bg-white/95 p-1" /><p className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-300">
-            {dict.hero.subtitle}
-          </p></div>
-          <h1 className="mt-4 max-w-3xl text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-            {dict.hero.title}
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base">
-            {dict.hero.description}
-          </p>
+      </section>
+
+      <section className="border-b border-line bg-white">
+        <Container className="grid gap-10 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:py-16">
+          <div>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/media/2026/logo.gif"
+                alt="Logo Hội Ghép tạng Việt Nam"
+                width={64}
+                height={56}
+                className="h-14 w-auto"
+              />
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-600">
+                {dict.hero.subtitle}
+              </p>
+            </div>
+            <h1 className="mt-5 max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-ink-900 sm:text-4xl lg:text-[3.25rem]">
+              {dict.hero.title}
+            </h1>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-600 sm:text-base">
+              {dict.hero.description}
+            </p>
+          </div>
 
           {data ? (
-            <div className="mt-8 border-t border-white/20 pt-5">
-              <p className="text-base font-bold text-white">{name}</p>
-              <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/75">
+            <aside className="border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">
+                {locale === "en" ? "VSOT 2026 Congress" : "Hội nghị VSOT 2026"}
+              </p>
+              <h2 className="mt-2 text-xl font-extrabold leading-snug text-ink-900">{name}</h2>
+              <dl className="mt-5 grid gap-3 text-sm text-ink-700">
                 {data.conference.start_date && data.conference.end_date ? (
-                  <span className="inline-flex items-center gap-2">
-                    <CalendarDays className="size-4 text-gold-300" aria-hidden />
-                    {formatDate(data.conference.start_date, locale)} –{" "}
-                    {formatDate(data.conference.end_date, locale)}
-                  </span>
+                  <div className="flex items-start gap-2.5">
+                    <CalendarDays className="mt-0.5 size-4 shrink-0 text-brand-600" aria-hidden />
+                    <div>
+                      <dt className="sr-only">{locale === "en" ? "Dates" : "Thời gian"}</dt>
+                      <dd>
+                        {formatDate(data.conference.start_date, locale)} –{" "}
+                        {formatDate(data.conference.end_date, locale)}
+                      </dd>
+                    </div>
+                  </div>
                 ) : null}
                 {data.conference.city ? (
-                  <span className="inline-flex items-center gap-2">
-                    <MapPin className="size-4 text-gold-300" aria-hidden />
-                    {data.conference.city}
-                  </span>
+                  <div className="flex items-start gap-2.5">
+                    <MapPin className="mt-0.5 size-4 shrink-0 text-brand-600" aria-hidden />
+                    <div>
+                      <dt className="sr-only">{locale === "en" ? "Venue" : "Địa điểm"}</dt>
+                      <dd>{data.conference.city}</dd>
+                    </div>
+                  </div>
                 ) : null}
+              </dl>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  href={programmeHref}
+                  className="inline-flex items-center gap-2 bg-brand-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-brand-800"
+                >
+                  {locale === "en" ? "Scientific programme" : "Chương trình khoa học"}
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                </Link>
+                <Link
+                  href={facultyHref}
+                  className="inline-flex items-center gap-2 border border-line px-4 py-2.5 text-sm font-semibold text-ink-700 transition hover:border-brand-300 hover:text-brand-700"
+                >
+                  {locale === "en" ? "Faculty" : "Diễn giả"}
+                </Link>
               </div>
-            </div>
+            </aside>
           ) : null}
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href={programmeHref}
-              className="inline-flex items-center gap-2 bg-gold-500 px-5 py-3 text-sm font-bold text-brand-900 transition hover:bg-gold-300"
-            >
-              {locale === "en" ? "Scientific programme" : "Chương trình khoa học"}
-              <ArrowRight className="size-4" aria-hidden />
-            </Link>
-            <Link
-              href={facultyHref}
-              className="inline-flex items-center gap-2 border border-white/30 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              {locale === "en" ? "Faculty" : "Diễn giả"}
-            </Link>
-          </div>
         </Container>
       </section>
 
@@ -240,7 +261,7 @@ export default async function HomePage({
         </div>
       </Container>
 
-      <section className="border-y border-line bg-surface">
+      <section className="reveal-section border-y border-line bg-surface">
         <Container className="py-14">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -421,7 +442,7 @@ export default async function HomePage({
         </div>
       </Container>
 
-      <section className="border-y border-line bg-surface">
+      <section className="reveal-section border-y border-line bg-surface">
         <Container className="py-14">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
             <div>

@@ -36,13 +36,14 @@ export type NewsRow = {
   published_at: string | null;
   is_featured: boolean;
   category_id: string | null;
+  source_url: string | null;
   news_translations: NewsTranslation[];
   news_categories?: NewsCategory | null;
   news_attachments?: NewsAttachment[];
 };
 
 const newsSelect =
-  "id, slug, status, published_at, is_featured, category_id, news_translations(locale, title, excerpt, body, status), news_categories(slug, news_category_translations(locale, name)), news_attachments(title_vi, title_en, file_path, file_format, storage_bucket, storage_path, source_url, sort, is_public)";
+  "id, slug, status, published_at, is_featured, category_id, source_url, news_translations(locale, title, excerpt, body, status), news_categories(slug, news_category_translations(locale, name)), news_attachments(title_vi, title_en, file_path, file_format, storage_bucket, storage_path, source_url, sort, is_public)";
 
 export async function getPublishedNews(locale: Locale, limit = 50) {
   const supabase = createSupabasePublicClient();
@@ -83,7 +84,7 @@ export async function getAdminNews() {
   const admin = createSupabaseAdminClient();
   const { data, error } = await admin
     .from("news")
-    .select("id, slug, status, published_at, is_featured, category_id, news_translations(locale, title, status)")
+    .select("id, slug, status, published_at, is_featured, category_id, source_url, news_translations(locale, title, status)")
     .is("deleted_at", null)
     .order("created_at", { ascending: false });
   if (error) throw new Error(error.message);
@@ -94,7 +95,7 @@ export async function getAdminNewsItem(id: string) {
   const admin = createSupabaseAdminClient();
   const { data, error } = await admin
     .from("news")
-    .select("id, slug, status, published_at, is_featured, category_id, news_translations(locale, title, excerpt, body, status)")
+    .select("id, slug, status, published_at, is_featured, category_id, source_url, news_translations(locale, title, excerpt, body, status)")
     .eq("id", id)
     .is("deleted_at", null)
     .maybeSingle();

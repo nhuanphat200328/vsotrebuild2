@@ -72,6 +72,19 @@ export default async function NewsDetailPage({
           )) : <p className="text-ink-500">Nội dung đang được cập nhật.</p>}
         </div>
 
+        {news.source_url ? (
+          <p className="mt-4 text-xs text-ink-500">
+            {locale === "en" ? "Source: " : "Nguồn: "}
+            <a
+              href={news.source_url}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-brand-700 hover:underline"
+            >
+              {news.source_url}
+            </a>
+          </p>
+        ) : null}
         {attachments.length ? (
           <div className="mt-8 border-t border-line pt-5">
             <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-ink-500">
