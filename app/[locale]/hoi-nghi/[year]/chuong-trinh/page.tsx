@@ -125,7 +125,7 @@ export default async function ProgrammePage({
         </Container>
       </div>
 
-      <Container className="pt-6">
+      <Container className={view === "table" ? "programme-wide-table pt-6" : "pt-6"}>
         {enFallback ? (
           <p className="mb-4 rounded-lg border border-gold-300 bg-gold-100 px-4 py-2.5 text-sm text-ink-700">
             English translation is being updated. Showing Vietnamese content.

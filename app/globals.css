@@ -427,3 +427,10 @@ body {
     transform: none;
   }
 }
+
+/* Table view can use the desktop viewport width without affecting other views. */
+@media (min-width: 1280px) {
+  .programme-wide-table {
+    max-width: min(1600px, calc(100vw - 24px));
+  }
+}
