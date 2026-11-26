@@ -44,9 +44,9 @@ Profile mới: Bùi Đức An Vinh, Nguyễn Hữu Nghiệm, Đặng Thế Uyên
 
 ## 4. Trường hợp không tách / cần kiểm tra
 
-- `Dr Nguyen Thi Hoai An, Da Nang Hospital`: **một người + tên đơn vị**, dấu phẩy không
-  theo sau học hàm → giữ nguyên một profile, không tách. Nên chuẩn hóa `institution`
-  thủ công nếu muốn.
+- `Dr Nguyen Thi Hoai An, Da Nang Hospital`: **một người + tên đơn vị**, không phải hai
+  người. Migration `0029` đã sửa `full_name = Nguyen Thi Hoai An`, `title = Dr`,
+  `institution = Da Nang Hospital`; giữ slug cũ để không gãy URL.
 - `Young Hoon Kim, Prof. Young Hoon Kim`: hai cách ghi của cùng một người → gộp một
   profile, không tạo hai hồ sơ.
 - Các profile trùng tên **đã tồn tại trước** (ví dụ `phung-duy-hong-son` và `-2`,
@@ -75,7 +75,7 @@ Profile mới: Bùi Đức An Vinh, Nguyễn Hữu Nghiệm, Đặng Thế Uyên
 ## 7. Tồn tại
 
 - Duplicate profile cũ (không do lần này tạo) chưa gộp; cần quyết định thủ công.
-- `Dr Nguyen Thi Hoai An, Da Nang Hospital` còn tên đơn vị trong `full_name`.
+- `Dr Nguyen Thi Hoai An` đã tách đơn vị khỏi tên; slug/URL cũ vẫn giữ để bảo toàn liên kết.
 - DB đã thay đổi; nếu chạy lại `import_2026.py`, cần chạy lại 2 script split/repair
   hoặc bổ sung normalize vào import.
 - Live Vercel chưa deploy commit UI mới.
