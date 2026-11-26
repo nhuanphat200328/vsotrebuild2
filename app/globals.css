@@ -434,3 +434,29 @@ body {
     max-width: min(1600px, calc(100vw - 24px));
   }
 }
+
+/* Desktop header dropdown: slide/fade, continuous hover area. */
+.header-dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transform-origin: top center;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.3s ease;
+}
+
+.header-dropdown.is-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-dropdown {
+    transition: none;
+  }
+}

@@ -32,7 +32,7 @@ export function CountUp({
         if (!entries[0]?.isIntersecting || started.current) return;
         started.current = true;
         setDisplay(0);
-        const duration = 1800;
+        const duration = 3600;
         const start = performance.now();
 
         const step = (now: number) => {

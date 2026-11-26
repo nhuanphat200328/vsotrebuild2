@@ -159,8 +159,17 @@ export function SiteHeader({
 
             <div
               className="relative"
-              onMouseEnter={() => setConferenceOpen(true)}
+              onMouseEnter={() => {
+                setArchiveOpen(false);
+                setConferenceOpen(true);
+              }}
               onMouseLeave={() => setConferenceOpen(false)}
+              onFocus={() => setConferenceOpen(true)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                  setConferenceOpen(false);
+                }
+              }}
             >
               <Link
                 href={`/${locale}/hoi-nghi`}
@@ -178,8 +187,8 @@ export function SiteHeader({
               <div
                 id="desktop-conference-menu"
                 className={cn(
-                  "absolute left-0 top-full z-50 min-w-56 rounded-md border border-line bg-white p-1.5 shadow-xl shadow-ink-900/10",
-                  conferenceOpen ? "block" : "hidden",
+                  "header-dropdown absolute left-0 top-full z-50 min-w-56 rounded-md border border-line bg-white p-1.5 shadow-xl shadow-ink-900/10",
+                  conferenceOpen ? "is-open" : "",
                 )}
               >
                 {conferenceLinks.map((link) => (
@@ -187,9 +196,9 @@ export function SiteHeader({
                     key={link.href}
                     href={link.href}
                     onClick={() => setConferenceOpen(false)}
-                    className="block rounded px-3 py-2 text-sm font-semibold text-ink-700 hover:bg-brand-50 hover:text-brand-700"
+                    className="hover-slide block rounded px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-700"
                   >
-                    {link.label}
+                    <span>{link.label}</span>
                   </Link>
                 ))}
               </div>
@@ -197,8 +206,17 @@ export function SiteHeader({
 
             <div
               className="relative"
-              onMouseEnter={() => setArchiveOpen(true)}
+              onMouseEnter={() => {
+                setConferenceOpen(false);
+                setArchiveOpen(true);
+              }}
               onMouseLeave={() => setArchiveOpen(false)}
+              onFocus={() => setArchiveOpen(true)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                  setArchiveOpen(false);
+                }
+              }}
             >
               <button
                 type="button"
@@ -217,8 +235,8 @@ export function SiteHeader({
               <div
                 id="desktop-archive-menu"
                 className={cn(
-                  "absolute left-0 top-full z-50 min-w-60 rounded-md border border-line bg-white p-1.5 shadow-xl shadow-ink-900/10",
-                  archiveOpen ? "block" : "hidden",
+                  "header-dropdown absolute left-0 top-full z-50 min-w-60 rounded-md border border-line bg-white p-1.5 shadow-xl shadow-ink-900/10",
+                  archiveOpen ? "is-open" : "",
                 )}
               >
                 {archiveSites.length === 0 ? (
@@ -230,7 +248,7 @@ export function SiteHeader({
                     <a
                       key={site.slug}
                       href={site.entry_path ?? "#"}
-                      className="flex items-center justify-between gap-3 rounded px-3 py-2 text-sm font-semibold text-ink-700 hover:bg-brand-50 hover:text-brand-700"
+                      className="hover-slide flex items-center justify-between gap-3 rounded px-3 py-2 text-sm font-semibold text-ink-700 hover:text-brand-700"
                     >
                       <span>{site.year ?? site.slug}</span>
                       <span className="max-w-36 truncate text-[11px] font-medium text-ink-500">
@@ -241,9 +259,9 @@ export function SiteHeader({
                 )}
                 <Link
                   href={`/${locale}/hoi-nghi`}
-                  className="mt-1 block border-t border-line px-3 py-2 text-xs font-bold text-brand-700 hover:bg-brand-50"
+                  className="hover-slide mt-1 block border-t border-line px-3 py-2 text-xs font-bold text-brand-700"
                 >
-                  {locale === "en" ? "All congresses" : "Tất cả hội nghị"}
+                  <span>{locale === "en" ? "All congresses" : "Tất cả hội nghị"}</span>
                 </Link>
               </div>
             </div>
