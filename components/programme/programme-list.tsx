@@ -180,7 +180,7 @@ export function ProgrammeList({
                                       </Link>
                                     ) : null,
                                   )}
-                                  <span className="text-[11px] font-semibold text-ink-500">
+                                  <span className="max-sm:basis-full max-sm:mt-0.5 text-[11px] font-semibold text-ink-500">
                                     {presentation.start_time?.slice(0, 5)}
                                     {presentation.end_time
                                       ? `–${presentation.end_time.slice(0, 5)}`

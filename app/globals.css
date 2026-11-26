@@ -374,7 +374,7 @@ body {
 }
 @media (max-width: 640px) {
   .profile-name {
-    font-size: clamp(0.625rem, 2.8vw, 1.4rem);
+    font-size: var(--profile-name-size, 14px);
     line-height: 1.2;
     letter-spacing: -0.02em;
     white-space: nowrap;

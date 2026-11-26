@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -49,6 +50,9 @@ export default async function FacultyProfilePage({
   if (!profile) notFound();
 
   const { person } = profile;
+  const displayName = person.display_name || person.full_name;
+  const profileNameSize =
+    displayName.length > 44 ? "10px" : displayName.length > 36 ? "11.5px" : "14px";
   const base = `/${locale}/hoi-nghi/${year}/dien-gia`;
 
   const rows = [
@@ -105,8 +109,11 @@ export default async function FacultyProfilePage({
 
         <div className="mt-4 overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
           <header className="border-b-2 border-gold-500 p-3 sm:p-8">
-            <h1 className="profile-name text-3xl font-extrabold tracking-tight text-ink-900">
-              {person.display_name || person.full_name}
+            <h1
+              className="profile-name text-3xl font-extrabold tracking-tight text-ink-900"
+              style={{ "--profile-name-size": profileNameSize } as CSSProperties}
+            >
+              {displayName}
             </h1>
             <div className="mt-3 flex flex-wrap gap-2">
               {profile.roles.map((role) => (

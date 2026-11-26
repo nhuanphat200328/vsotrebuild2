@@ -143,14 +143,14 @@ export function FacultyDirectory({
                   </div>
                 </div>
                 <div className="order-2 flex w-full shrink-0 flex-wrap items-center gap-3 pl-0 sm:order-none sm:w-auto">
-                  <span className="text-xs text-ink-500">
+                  <span className="max-sm:order-2 text-xs text-ink-500">
                     {person.presentationCount > 0
                       ? `${person.presentationCount} ${locale === "en" ? "abstracts" : "báo cáo"}`
                       : ""}
                   </span>
                   <Link
                     href={`${base}/${person.slug}`}
-                    className="rounded-md bg-brand-600 px-3 py-1.5 text-xs font-bold text-white hover:bg-brand-700"
+                    className="max-sm:order-1 rounded-md bg-brand-600 px-3 py-1.5 text-xs font-bold text-white hover:bg-brand-700 max-sm:px-4 max-sm:py-2"
                   >
                     {locale === "en" ? "Profile" : "Hồ sơ"}
                   </Link>
