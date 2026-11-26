@@ -54,6 +54,7 @@ export async function getPublishedNews(locale: Locale, limit = 50) {
     .eq("status", "published")
     .is("deleted_at", null)
     .or(`published_at.is.null,published_at.lte.${now}`)
+    .order("sort_order", { ascending: true })
     .order("published_at", { ascending: false, nullsFirst: false })
     .limit(limit);
   if (error) throw new Error(error.message);

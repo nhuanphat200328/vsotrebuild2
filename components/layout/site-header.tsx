@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -115,9 +116,14 @@ export function SiteHeader({
             className="flex min-w-0 items-center gap-3"
             aria-label="VSOT - Hội Ghép tạng Việt Nam"
           >
-            <span className="grid size-11 shrink-0 place-items-center rounded-md bg-brand-700 text-sm font-extrabold tracking-tight text-white">
-              VSOT
-            </span>
+            <Image
+              src="/media/2026/logo.gif"
+              alt="Logo Hội Ghép tạng Việt Nam"
+              width={48}
+              height={42}
+              className="h-11 w-auto shrink-0"
+              priority
+            />
             <span className="min-w-0 leading-tight">
               <span className="block truncate text-[15px] font-bold text-ink-900 sm:text-base">
                 Hội Ghép tạng Việt Nam

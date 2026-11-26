@@ -83,3 +83,28 @@ body {
     }
   }
 }
+.kv-hero-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+  max-height: calc(100vh - 76px);
+}
+
+@supports (height: 100svh) {
+  .kv-hero-image {
+    max-height: calc(100svh - 76px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .kv-hero-image {
+    max-height: calc(100vh - 112px);
+  }
+  @supports (height: 100svh) {
+    .kv-hero-image {
+      max-height: calc(100svh - 112px);
+    }
+  }
+}

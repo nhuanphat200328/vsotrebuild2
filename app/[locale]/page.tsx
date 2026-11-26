@@ -18,6 +18,7 @@ import { getConferenceDocuments } from "@/lib/documents/data";
 import { getPublishedNews, newsCategoryName, publicAttachments } from "@/lib/news/data";
 import { getLatestConferenceYear, getProgrammeData } from "@/lib/programme/data";
 import { conferenceIntro, conferenceName } from "@/lib/programme/conference";
+import { sessionHeading } from "@/lib/programme/model";
 import { formatDate, formatShortDate, formatWeekday } from "@/lib/utils/dates";
 import { mediaUrl } from "@/lib/utils/storage";
 import { getDictionary } from "@/lib/i18n/dictionary";
@@ -115,7 +116,7 @@ export default async function HomePage({
           height={1081}
           priority
           sizes="100vw"
-          className="block h-auto w-full"
+          className="kv-hero-image"
         />
       </section>
 
@@ -191,7 +192,7 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <section aria-label={locale === "en" ? "Congress statistics" : "Số liệu hội nghị"}>
+      <section className="reveal-section" aria-label={locale === "en" ? "Congress statistics" : "Số liệu hội nghị"}>
         <Container>
           <dl className="grid grid-cols-2 border-b border-line lg:grid-cols-4">
             {stats.map((stat, index) => (
@@ -213,7 +214,7 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <Container className="py-14">
+      <Container className="reveal-section py-14">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">
@@ -236,9 +237,99 @@ export default async function HomePage({
               {locale === "en" ? "Congress overview" : "Tổng quan hội nghị"}
               <ArrowRight className="size-4" aria-hidden />
             </Link>
+
+            <div className="mt-10 border-t-2 border-brand-700 pt-5">
+              <div className="flex flex-wrap items-end justify-between gap-3">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">
+                    {locale === "en" ? "Newsroom" : "Tin tức & thông báo"}
+                  </p>
+                  <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-ink-900">
+                    {locale === "en" ? "Latest news" : "Tin tức mới nhất"}
+                  </h2>
+                </div>
+                <Link
+                  href={`/${locale}/tin-tuc`}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-brand-700 hover:underline"
+                >
+                  {locale === "en" ? "View all" : "Xem tất cả"}
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+              </div>
+
+              {news.length === 0 ? (
+                <p className="mt-5 border-t border-line pt-4 text-sm text-ink-500">
+                  {locale === "en" ? "News is being updated." : "Tin tức đang được cập nhật."}
+                </p>
+              ) : (
+                <div className="mt-3 border-t border-line">
+                  {news.map((item, index) => {
+                    const translation =
+                      item.news_translations.find(
+                        (entry) => entry.locale === locale && entry.status === "published",
+                      ) ?? item.news_translations.find((entry) => entry.locale === "vi");
+                    const category = newsCategoryName(item, locale);
+                    const attachments = publicAttachments(item);
+                    return (
+                      <article
+                        key={item.id}
+                        className={`border-b border-line ${index === 0 ? "py-4" : "py-3"}`}
+                      >
+                        <div className="flex flex-wrap items-center gap-2">
+                          {category ? (
+                            <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-600">
+                              {category}
+                            </span>
+                          ) : null}
+                          {index < 2 ? (
+                            <span className="text-[10px] font-semibold text-gold-600">
+                              {locale === "en" ? "Priority" : "Ưu tiên"}
+                            </span>
+                          ) : null}
+                        </div>
+                        <h3
+                          className={`mt-1 font-bold leading-snug text-ink-900 ${
+                            index === 0 ? "text-lg sm:text-xl" : "text-sm"
+                          }`}
+                        >
+                          <Link
+                            href={`/${locale}/tin-tuc/${item.slug}`}
+                            className="hover:text-brand-700"
+                          >
+                            {translation?.title}
+                          </Link>
+                        </h3>
+                        {translation?.excerpt ? (
+                          <p className="mt-1 text-sm leading-relaxed text-ink-500">
+                            {translation.excerpt}
+                          </p>
+                        ) : null}
+                        <div className="mt-2 flex flex-wrap gap-3">
+                          <Link
+                            href={`/${locale}/tin-tuc/${item.slug}`}
+                            className="text-xs font-bold text-brand-700 hover:underline"
+                          >
+                            {locale === "en" ? "Read more" : "Xem chi tiết"}
+                          </Link>
+                          {attachments[0] ? (
+                            <a
+                              href={mediaUrl(attachments[0])}
+                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-600 hover:text-brand-700"
+                            >
+                              <Download className="size-3.5" aria-hidden />
+                              {attachments[0].title_vi ?? attachments[0].file_format ?? "PDF"}
+                            </a>
+                          ) : null}
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
 
-          <div className="border-t border-line">
+          <aside className="border-t border-line lg:border-t-0">
             <h2 className="py-3 text-xs font-bold uppercase tracking-[0.18em] text-ink-500">
               {locale === "en" ? "Congress days" : "Các ngày hội nghị"}
             </h2>
@@ -257,126 +348,40 @@ export default async function HomePage({
                 </span>
               </Link>
             ))}
-          </div>
+
+            <div className="mt-8 border-t border-line pt-5">
+              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-ink-500">
+                {locale === "en" ? "Programme & faculty" : "Chương trình & diễn giả"}
+              </h2>
+              <div className="mt-2 grid">
+                <Link
+                  href={programmeHref}
+                  className="flex items-center justify-between border-b border-line py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
+                >
+                  {locale === "en" ? "Scientific programme" : "Chương trình khoa học"}
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+                <Link
+                  href={facultyHref}
+                  className="flex items-center justify-between border-b border-line py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
+                >
+                  {locale === "en" ? "Faculty" : "Diễn giả"}
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+                <Link
+                  href={`/${locale}/hoi-nghi/${latestYear}/chuong-trinh/tong-quan`}
+                  className="flex items-center justify-between border-b border-line py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
+                >
+                  {locale === "en" ? "At a glance" : "Tổng quan chương trình"}
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+              </div>
+            </div>
+          </aside>
         </div>
       </Container>
 
-      <section className="reveal-section border-y border-line bg-surface">
-        <Container className="py-14">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">
-                {locale === "en" ? "Newsroom" : "Tin tức & thông báo"}
-              </p>
-              <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-ink-900 sm:text-3xl">
-                {locale === "en" ? "Latest news" : "Tin tức mới nhất"}
-              </h2>
-            </div>
-            <Link
-              href={`/${locale}/tin-tuc`}
-              className="inline-flex items-center gap-2 text-sm font-bold text-brand-700 hover:underline"
-            >
-              {locale === "en" ? "View all" : "Xem tất cả"}
-              <ArrowRight className="size-4" aria-hidden />
-            </Link>
-          </div>
-
-          {news.length === 0 ? (
-            <p className="mt-6 border-t border-line pt-5 text-sm text-ink-500">
-              {locale === "en" ? "News is being updated." : "Tin tức đang được cập nhật."}
-            </p>
-          ) : (
-            <div className="mt-7 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
-              {(() => {
-                const featured = news[0];
-                const featuredAttachments = publicAttachments(featured);
-                const translation =
-                  featured.news_translations.find(
-                    (item) => item.locale === locale && item.status === "published",
-                  ) ?? featured.news_translations.find((item) => item.locale === "vi");
-                const category = newsCategoryName(featured, locale);
-                return (
-                  <article className="border-t-2 border-brand-700 pt-4">
-                    {category ? (
-                      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-brand-600">
-                        {category}
-                      </p>
-                    ) : null}
-                    <h3 className="mt-2 text-xl font-extrabold leading-snug text-ink-900 sm:text-2xl">
-                      <Link href={`/${locale}/tin-tuc/${featured.slug}`} className="hover:text-brand-700">
-                        {translation?.title}
-                      </Link>
-                    </h3>
-                    {translation?.excerpt ? (
-                      <p className="mt-2 text-sm leading-relaxed text-ink-600">
-                        {translation.excerpt}
-                      </p>
-                    ) : null}
-                    <div className="mt-3 flex flex-wrap gap-4">
-                      <Link
-                        href={`/${locale}/tin-tuc/${featured.slug}`}
-                        className="text-sm font-bold text-brand-700 hover:underline"
-                      >
-                        {locale === "en" ? "Read more" : "Xem chi tiết"}
-                      </Link>
-                      {featuredAttachments[0] ? (
-                        <a
-                          href={mediaUrl(featuredAttachments[0])}
-                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-600 hover:text-brand-700"
-                        >
-                          <Download className="size-4" aria-hidden />
-                          {featuredAttachments[0].file_format ?? "PDF"}
-                        </a>
-                      ) : null}
-                    </div>
-                  </article>
-                );
-              })()}
-
-              <div className="border-t border-line">
-                {news.slice(1).map((item) => {
-                  const translation =
-                    item.news_translations.find(
-                      (entry) => entry.locale === locale && entry.status === "published",
-                    ) ?? item.news_translations.find((entry) => entry.locale === "vi");
-                  const category = newsCategoryName(item, locale);
-                  const attachments = publicAttachments(item);
-                  return (
-                    <article key={item.id} className="border-b border-line py-4">
-                      {category ? (
-                        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-600">
-                          {category}
-                        </p>
-                      ) : null}
-                      <h3 className="mt-1 text-base font-bold leading-snug text-ink-900">
-                        <Link href={`/${locale}/tin-tuc/${item.slug}`} className="hover:text-brand-700">
-                          {translation?.title}
-                        </Link>
-                      </h3>
-                      {translation?.excerpt ? (
-                        <p className="mt-1 text-sm leading-relaxed text-ink-500">
-                          {translation.excerpt}
-                        </p>
-                      ) : null}
-                      {attachments[0] ? (
-                        <a
-                          href={mediaUrl(attachments[0])}
-                          className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-ink-600 hover:text-brand-700"
-                        >
-                          <Download className="size-3.5" aria-hidden />
-                          {attachments[0].title_vi ?? attachments[0].file_format ?? "PDF"}
-                        </a>
-                      ) : null}
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-        </Container>
-      </section>
-
-      <Container className="py-14">
+      <Container className="reveal-section py-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">
@@ -402,10 +407,7 @@ export default async function HomePage({
             </p>
           ) : (
             openingSessions.map((session) => {
-              const title =
-                session.session_translations.find(
-                  (entry) => entry.locale === locale && entry.status === "published",
-                )?.title ?? session.session_translations[0]?.title;
+              const title = sessionHeading(session, locale);
               return (
                 <Link
                   key={session.id}
@@ -443,7 +445,7 @@ export default async function HomePage({
       </Container>
 
       <section className="reveal-section border-y border-line bg-surface">
-        <Container className="py-14">
+        <Container className="reveal-section py-14">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
             <div>
               <h2 className="text-xl font-extrabold tracking-tight text-ink-900">
@@ -537,7 +539,7 @@ export default async function HomePage({
       </section>
 
       {archiveSites.length > 0 ? (
-        <Container className="py-14">
+        <Container className="reveal-section py-14">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">
@@ -577,7 +579,7 @@ export default async function HomePage({
         </Container>
       ) : null}
 
-      <section className="border-t border-line bg-brand-900 text-white">
+      <section className="reveal-section border-t border-line bg-brand-900 text-white">
         <Container className="flex flex-col gap-5 py-10 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-lg font-extrabold">

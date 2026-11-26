@@ -1,6 +1,6 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
-import { sessionTitle, typeName, type ProgrammeSession } from "@/lib/programme/model";
+import { sessionHeading, typeName, type ProgrammeSession } from "@/lib/programme/model";
 
 export function ProgrammeTable({
   sessions,
@@ -60,7 +60,7 @@ export function ProgrammeTable({
                           {typeName(session, locale)}
                         </span>
                         <span className="mt-2 block font-bold text-ink-900">
-                          {sessionTitle(session, locale)}
+                          {sessionHeading(session, locale)}
                         </span>
                         <span className="mt-1 block text-ink-500">
                           {session.start_time.slice(0, 5)}–{session.end_time.slice(0, 5)}

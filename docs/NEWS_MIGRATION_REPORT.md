@@ -36,3 +36,12 @@ Không sửa file nguồn.
 - Trang chủ: featured + 4 tin danh sách (5 tin).
 - `/tin-tuc`: 5 tin, editorial, link nguồn/tệp.
 - `/tin-tuc/[slug]`: nội dung, nguồn, tệp đính kèm.
+
+## Phase refinement (2026-11-23)
+
+- TB1 title/file updated, sort_order 10; TB2 20; news order verified.
+- Homepage news moved to left column under About; KV max-height viewport.
+- Header uses official logo GIF.
+- Abstract link before presenter; 105 mapped.
+- ProgrammeText renders numbered items as ol/li.
+- UI reports: HOMEPAGE_REFINEMENT_REPORT, docs/ABSTRACT_MAPPING_REPORT.

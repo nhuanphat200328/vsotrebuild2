@@ -1,6 +1,6 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
-import { sessionTitle, typeName, type ProgrammeSession } from "@/lib/programme/model";
+import { sessionHeading, typeName, type ProgrammeSession } from "@/lib/programme/model";
 
 export function ProgrammeGrid({
   sessions,
@@ -42,7 +42,7 @@ export function ProgrammeGrid({
                     <span>{typeName(session, locale)}</span>
                   </div>
                   <h3 className="mt-2 line-clamp-3 text-sm font-bold leading-snug text-ink-900">
-                    {sessionTitle(session, locale)}
+                    {sessionHeading(session, locale)}
                   </h3>
                   {chairs.length ? (
                     <p className="mt-2 line-clamp-2 text-[11px] text-ink-500">

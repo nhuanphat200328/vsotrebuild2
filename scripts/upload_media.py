@@ -30,6 +30,7 @@ FILES = {
     "public/media/2026/documents/abs-tong-hop.pdf": "conference-2026/abstracts/abs-tong-hop.pdf",
     "public/media/2026/news/tuan-le-hien-ghep-mo-tang-2026.pdf": "conference-2026/news/tuan-le-hien-ghep-mo-tang-2026.pdf",
     "public/media/2026/news/thong-bao-ho-so-record-vn.pdf": "conference-2026/news/thong-bao-ho-so-record-vn.pdf",
+    "public/media/2026/news/thong-bao-1.pdf": "conference-2026/news/thong-bao-1.pdf",
     "public/media/2026/news/thong-bao-2.pdf": "conference-2026/news/thong-bao-2.pdf",
     "public/media/2026/news/thu-moi-tai-tro.pdf": "conference-2026/news/thu-moi-tai-tro.pdf",
     "public/archive/2023/chuong-trinh-vsot-2023.pdf": "conference-2023/documents/chuong-trinh-vsot-2023.pdf",

@@ -4,6 +4,7 @@ import { ArrowLeft, CalendarDays, FileText, MapPin, Users } from "lucide-react";
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { JsonLd } from "@/components/ui/json-ld";
+import { ProgrammeText } from "@/components/programme/programme-text";
 import { RoleBadge, roleLabel } from "@/components/programme/role-badge";
 import {
   getConferenceByYear,
@@ -12,7 +13,13 @@ import {
   sessionTitle,
   typeName,
 } from "@/lib/programme/data";
-import { abstractHref, hasAbstract } from "@/lib/programme/model";
+import {
+  abstractHref,
+  hasAbstract,
+  presentationHeading,
+  sessionHeading,
+} from "@/lib/programme/model";
+import { textBody } from "@/lib/utils/text";
 import { formatDate } from "@/lib/utils/dates";
 import { absoluteUrl, eventJsonLd } from "@/lib/utils/seo";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -51,6 +58,9 @@ export default async function SessionPage({
   ]);
   if (!session || !conference || session.conference_id !== conference.id) notFound();
 
+  const fullSessionTitle = sessionTitle(session, locale);
+  const sessionHeadingText = sessionHeading(session, locale);
+  const sessionTitleBody = textBody(fullSessionTitle);
   const chairs = session.session_people.filter((p) =>
     ["chair", "co_chair", "discussant", "moderator"].includes(p.role),
   );
@@ -86,8 +96,14 @@ export default async function SessionPage({
               {typeName(session, locale) ?? (locale === "en" ? "Session" : "Phiên")}
             </p>
             <h1 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight text-ink-900 sm:text-3xl">
-              {sessionTitle(session, locale)}
+              {sessionHeadingText}
             </h1>
+            {sessionTitleBody ? (
+              <ProgrammeText
+                text={sessionTitleBody}
+                className="mt-3 text-sm leading-relaxed text-ink-700"
+              />
+            ) : null}
             <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-500">
               <span className="inline-flex items-center gap-1.5">
                 <CalendarDays className="size-4 text-brand-500" aria-hidden />
@@ -160,9 +176,29 @@ export default async function SessionPage({
                         </span>
                         <div className="min-w-0">
                           <p className="text-sm font-bold leading-snug text-ink-900">
-                            {presentationTitle(presentation, locale)}
+                            {presentationHeading(presentation, locale)}
                           </p>
-                          <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+                          {textBody(presentationTitle(presentation, locale)) ? (
+                            <ProgrammeText
+                              text={textBody(presentationTitle(presentation, locale))}
+                              className="mt-1 text-xs leading-relaxed text-ink-600"
+                            />
+                          ) : null}
+                          <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+                            {hasAbstract(presentation) ? (
+                              <Link
+                                href={abstractHref(locale, year, presentation.id)}
+                                className="inline-flex items-center gap-1 text-xs font-semibold text-brand-700 hover:underline"
+                              >
+                                <FileText className="size-3.5" aria-hidden />
+                                Abstract
+                              </Link>
+                            ) : null}
+                            {presentation.presentation_people.length ? (
+                              <span className="text-[11px] text-ink-500">
+                                {locale === "en" ? "Presenter:" : "Báo cáo viên:"}
+                              </span>
+                            ) : null}
                             {presentation.presentation_people.map((person) =>
                               person.people ? (
                                 <Link
@@ -179,15 +215,6 @@ export default async function SessionPage({
                                 {presentation.start_time.slice(0, 5)}
                                 {presentation.end_time ? `–${presentation.end_time.slice(0, 5)}` : ""}
                               </span>
-                            ) : null}
-                            {hasAbstract(presentation) ? (
-                              <Link
-                                href={abstractHref(locale, year, presentation.id)}
-                                className="inline-flex items-center gap-1 text-xs font-semibold text-brand-700 hover:underline"
-                              >
-                                <FileText className="size-3.5" aria-hidden />
-                                Abstract
-                              </Link>
                             ) : null}
                           </div>
                         </div>

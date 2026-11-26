@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
+import { firstLine } from "@/lib/utils/text";
 
 export type Translation = {
   locale: Locale;
@@ -133,4 +134,11 @@ export function hasAbstract(presentation: Presentation) {
 
 export function abstractHref(locale: Locale, year: string, presentationId: string) {
   return `/${locale}/hoi-nghi/${year}/bao-cao/${presentationId}/abstract`;
+}
+export function sessionHeading(session: ProgrammeSession, locale: Locale) {
+  return firstLine(sessionTitle(session, locale));
+}
+
+export function presentationHeading(presentation: Presentation, locale: Locale) {
+  return firstLine(presentationTitle(presentation, locale));
 }
