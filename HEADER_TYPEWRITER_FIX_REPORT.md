@@ -2,70 +2,70 @@
 
 Ngày: 2026-11-23. Workspace: `D:\Philao\code project\VSOT\demo ver2`.
 
-## 1. Nguyên nhân Typewriter chạy sau khi cuộn
+## 1. Typewriter kích hoạt theo viewport
 
-- Đã kiểm tra `components/home/typewriter-slogan.tsx`: component **không** dùng
-  `IntersectionObserver` hay scroll event. Hiệu ứng bắt đầu bằng `useEffect` + timer 0 ms
-  ngay sau khi component mount.
-- Nguyên nhân cảm giác “chỉ chạy sau khi cuộn” trên bản deploy cũ là code cũ/ảnh hưởng
-  vị trí slogan; code hiện tại không phụ thuộc scroll và chạy ngay khi trang hydrate.
-- Không thêm cơ chế chờ viewport mới; chạy một lần, không lặp khi cuộn.
-- Vùng slogan đã có chiều rộng/chiều cao cố định từ trước (`width:100%`, `min-height:2.3em`,
-  grid `minmax(0,…)`) để không dịch line/aside.
+- Đã chuyển sang `IntersectionObserver`, cùng cơ chế CountUp:
+  - threshold `0.35`;
+  - chỉ bắt đầu khi H1 slogan vào viewport;
+  - chạy một lần, `observer.disconnect()`;
+  - không chạy lại khi cuộn lên/xuống.
+- SSR giữ đầy đủ 2 dòng trong DOM/`aria-label`; sau hydrate vùng gõ được reserve trước.
+- Tốc độ: **75 ms/ký tự**; nghỉ giữa hai dòng **320 ms**; giữ cursor nhấp nháy;
+  ẩn cursor **1000 ms** sau ký tự cuối.
+- Thứ tự: `Kết nối tri thức` → `Nâng tầm ghép tạng Việt Nam`.
+- Reduced-motion / không có IntersectionObserver: giữ nguyên slogan đầy đủ, không animate.
 
-## 2. Sửa con trỏ Typewriter
+Đo 1366:
+- Trước khi cuộn: H1 y=907 (ngoài viewport), hai dòng rỗng, aside X=784.
+- Cuộn vào H1: bắt đầu “Kết nối” → “Kết nối tri thức”, sau đó “Nân” → đầy đủ.
+- Sau khi xong: đủ 2 dòng, cursor còn hiện; aside X vẫn 784.
+- Cursor: chữ cuối `x=568`, cursor bắt đầu `x=575` → gap 7 px, không che `m`.
 
-- Cursor tách thành `span.type-cursor` sau nội dung dòng, không dùng khoảng trắng trong text.
-- Tăng khoảng cách cursor: `margin-left: 7px`; cursor rộng 2px.
-- Đo khi dòng 2 hoàn tất tại 1366:
-  - chữ cuối `m` kết thúc `x=568`
-  - cursor bắt đầu `x=575`, gap 7px, không chồng chữ.
-- Line 1/line 2 có `scrollWidth == clientWidth` ở 1920/1366/768/390/360; không tràn.
+## 2. Footer 2018/2019/2021
 
-## 3. File đã thay đổi
+- Địa chỉ và link Liên hệ cùng token `--vsot-footer-text: rgba(255,255,255,.78)`.
+- Đo cả 3 năm: cùng màu, 14px, không underline; logo Footer vẫn có.
 
-| File | Nội dung |
+## 3. Khôi phục Header các năm cũ
+
+- Xác định commit header sync: `e2da2b2` (`git show --stat e2da2b2`).
+- Khôi phục có chọn lọc trạng thái trước sync:
+  - `git restore --source=e2da2b2^ --worktree -- public/legacy` cho 62 HTML.
+  - Xóa `public/legacy/shared/site-chrome.js` (file mới của lần sync).
+  - Xóa `scripts/sync_legacy_header.py` (script mới của lần sync).
+  - `site-chrome.css` trở về bản trước header sync; Footer giữ nguyên.
+- Không dùng reset/revert toàn dự án; không đụng Header React 2026.
+- Header archive trở lại trạng thái trước: logo + nav 5 mục đơn giản, **không** topbar,
+  **không** dropdown toggle, **không** hamburger, **không** script header mới.
+- Kiểm tra 2018/2019/2021/2022/2023/2025: `topbar=False`, `toggle=False`, `script=0`,
+  Footer logo còn; 2018 header cao ~107px, 5 nav link.
+
+## 4. File đã thay đổi lần này
+
+| File | Thay đổi |
 |---|---|
-| `components/home/typewriter-slogan.tsx` | Giữ trình tự gõ, cursor tách khỏi text |
-| `app/globals.css` | `type-cursor` margin 7px; giới hạn font slogan để vừa 2 dòng |
-| `scripts/sync_legacy_header.py` (mới) | Sinh header năm-aware cho archive |
-| `public/legacy/shared/site-chrome.js` | Hamburger, dropdown, mobile accordion, Escape/outside close |
-| `public/legacy/shared/site-chrome.css` | Topbar, nav, dropdown, mobile menu, focus/hover |
-| 62 trang `public/legacy/**/*.html` | Header mới, giữ Footer/nội dung |
-| `HEADER_TYPEWRITER_FIX_REPORT.md` | Báo cáo |
+| `components/home/typewriter-slogan.tsx` | IntersectionObserver, tốc độ 75ms, pause 320ms |
+| `public/legacy/**/*.html` (62 file) | Khôi phục Header trước sync |
+| `public/legacy/shared/site-chrome.css` | Khôi phục CSS trước header sync |
+| `public/legacy/shared/site-chrome.js` | Xóa file header sync |
+| `scripts/sync_legacy_header.py` | Xóa script header sync |
+| `HEADER_TYPEWRITER_FIX_REPORT.md` | Cập nhật báo cáo |
 
-## 4. Header các trang hội nghị cũ
-
-Đã áp dụng cho **62 HTML** của 2018/2019/2021/2022/2023/2025 (gồm trang con):
-- Topbar: địa chỉ, điện thoại, email.
-- Header 72px sticky + logo 48×42 + tên Hội hai dòng.
-- Desktop nav: Trang chủ, Hội nghị (dropdown kho lưu trữ đúng năm), Hội nghị các năm
-  (dropdown 2025/2023/2022/2021/2019/2018), Tin tức, Liên hệ.
-- Nút Liên hệ, hamburger mobile; mobile menu accordion hai nhóm.
-- Link không trỏ 2026; “Hội nghị” trỏ `/legacy/<year>/index.html`.
-- JavaScript: mở/đóng dropdown bằng click, mobile menu, accordion, Escape/click ngoài.
-- Sticky, focus-visible, hover; responsive 1280/1023/560.
-- Header đo 109px (topbar 36 + bar 72 + border), 2 dropdown, 6 link năm; mobile
-  topbar/nav ẩn, hamburger hiện; mobile menu mở được; không tràn ngang.
-- Kiểm tra 2018, 2025, 2022/full-programme.htm, 2023: đều có header mới, 1 script,
-  không còn header v1.
+`app/globals.css` giữ cursor margin 7px và font slogan đã tinh chỉnh; không đổi CountUp.
 
 ## 5. Kiểm thử
 
 - `typecheck`, `lint`, `build` PASS.
 - Chrome headless/CDP:
-  - 2018 desktop: header 109px, sticky, nav flex, 2 menu, current link.
-  - Click dropdown: `aria-expanded=true`, menu `display:block`.
-  - Mobile 390: nav/topbar ẩn, hamburger flex; menu mở, group 6 link.
-  - 2025/2022/2023: header mới.
-  - Typewriter: dòng cuối đủ “Nâng tầm ghép tạng Việt Nam”, cursor gap 7px.
-- Footer 2018/2019/2021: địa chỉ/link cùng `rgba(255,255,255,.78)`, 14px, no underline.
+  - Typewriter không chạy ở đầu trang (y 907 ngoài viewport); bắt đầu khi cuộn tới.
+  - Chạy một lần; cursor gap 7px; aside X không đổi 784.
+  - Header 2018/2019/2021/2022/2023/2025 đã về trạng thái đơn giản trước sync.
+  - Footer 2018/2019/2021 vẫn đúng màu.
+- Không đổi CountUp.
 
 ## 6. Tồn tại
 
-- Header archive là HTML/CSS/JS tĩnh (không phải React component) do trang legacy;
-  cấu trúc/hành vi được mô phỏng theo Header chuẩn.
-- Chưa deploy Vercel commit mới; live có thể chưa có code này.
+- Vercel live chưa có commit mới; cần deploy commit này.
 - Chưa test Safari/iOS, touch thật, screen reader.
-- Slogan nằm dưới KV nên trên màn hình thấp người dùng có thể phải cuộn mới thấy;
-  animation đã chạy ngay từ khi mount, không chờ scroll.
+- Header archive khôi phục là header tĩnh cũ (đúng trạng thái trước sync), không có
+  dropdown/hamburger mới.
