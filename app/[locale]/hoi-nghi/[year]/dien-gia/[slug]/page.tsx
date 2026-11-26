@@ -104,8 +104,8 @@ export default async function FacultyProfilePage({
         </Link>
 
         <div className="mt-4 overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
-          <header className="border-b-2 border-gold-500 p-6 sm:p-8">
-            <h1 className="text-3xl font-extrabold tracking-tight text-ink-900">
+          <header className="border-b-2 border-gold-500 p-3 sm:p-8">
+            <h1 className="profile-name text-3xl font-extrabold tracking-tight text-ink-900">
               {person.display_name || person.full_name}
             </h1>
             <div className="mt-3 flex flex-wrap gap-2">

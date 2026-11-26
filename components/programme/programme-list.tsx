@@ -153,40 +153,42 @@ export function ProgrammeList({
                                   className="mt-1 text-xs leading-relaxed text-ink-600"
                                 />
                               ) : null}
-                              <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+                              <div className="mt-1 flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3">
                                 {hasAbstract(presentation) ? (
                                   <Link
                                     href={abstractHref(locale, year, presentation.id)}
-                                    className="inline-flex items-center gap-1 text-xs font-semibold text-brand-700 hover:underline"
+                                    className="inline-flex w-fit items-center gap-1 text-xs font-semibold text-brand-700 hover:underline"
                                   >
                                     <FileText className="size-3.5" aria-hidden />
                                     Abstract
                                   </Link>
                                 ) : null}
-                                {speakers.length ? (
-                                  <span className="text-[11px] text-ink-500">
-                                    {locale === "en" ? "Presenter:" : "Báo cáo viên:"}
+                                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                                  {speakers.length ? (
+                                    <span className="text-[11px] text-ink-500">
+                                      {locale === "en" ? "Presenter:" : "Báo cáo viên:"}
+                                    </span>
+                                  ) : null}
+                                  {speakers.map((person) =>
+                                    person.people ? (
+                                      <Link
+                                        key={person.people.id}
+                                        href={`/${locale}/hoi-nghi/${year}/dien-gia/${person.people.slug}`}
+                                        className="text-xs text-ink-500 hover:text-brand-700"
+                                      >
+                                        {person.people.display_name || person.people.full_name}
+                                      </Link>
+                                    ) : null,
+                                  )}
+                                  <span className="text-[11px] font-semibold text-ink-500">
+                                    {presentation.start_time?.slice(0, 5)}
+                                    {presentation.end_time
+                                      ? `–${presentation.end_time.slice(0, 5)}`
+                                      : ""}
                                   </span>
-                                ) : null}
-                                {speakers.map((person) =>
-                                  person.people ? (
-                                    <Link
-                                      key={person.people.id}
-                                      href={`/${locale}/hoi-nghi/${year}/dien-gia/${person.people.slug}`}
-                                      className="text-xs text-ink-500 hover:text-brand-700"
-                                    >
-                                      {person.people.display_name || person.people.full_name}
-                                    </Link>
-                                  ) : null,
-                                )}
+                                </div>
                               </div>
                             </div>
-                            <span className="shrink-0 text-[11px] font-semibold text-ink-500">
-                              {presentation.start_time?.slice(0, 5)}
-                              {presentation.end_time
-                                ? `–${presentation.end_time.slice(0, 5)}`
-                                : ""}
-                            </span>
                           </div>
                         </li>
                       );

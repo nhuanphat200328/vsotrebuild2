@@ -123,13 +123,13 @@ export function FacultyDirectory({
                 key={person.id}
                 className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between"
               >
-                <div className="flex min-w-0 items-start gap-3">
-                  <div className="flex w-14 shrink-0 flex-wrap gap-1">
+                <div className="order-1 flex min-w-0 flex-col gap-2 sm:order-none sm:flex-row sm:items-start sm:gap-3">
+                  <div className="order-2 flex w-14 shrink-0 flex-wrap gap-1 sm:order-1">
                     {person.roles.map((role) => (
                       <RoleBadge key={role} role={role} locale={locale} />
                     ))}
                   </div>
-                  <div className="min-w-0">
+                  <div className="order-1 min-w-0 sm:order-2">
                     <Link
                       href={`${base}/${person.slug}`}
                       className="text-sm font-bold text-ink-900 hover:text-brand-700"
@@ -142,7 +142,7 @@ export function FacultyDirectory({
                     </p>
                   </div>
                 </div>
-                <div className="flex shrink-0 items-center gap-3 pl-17 sm:pl-0">
+                <div className="order-2 flex w-full shrink-0 flex-wrap items-center gap-3 pl-0 sm:order-none sm:w-auto">
                   <span className="text-xs text-ink-500">
                     {person.presentationCount > 0
                       ? `${person.presentationCount} ${locale === "en" ? "abstracts" : "báo cáo"}`
