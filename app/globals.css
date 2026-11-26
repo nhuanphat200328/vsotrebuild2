@@ -111,7 +111,7 @@ body {
 .hero-slogan {
   width: 100%;
   min-height: 2.3em;
-  font-size: clamp(1.25rem, 3.4vw, 2.9rem);
+  font-size: clamp(1.05rem, 2.2vw, 2.1rem);
   line-height: 1.15;
   text-align: left;
 }
@@ -127,7 +127,7 @@ body {
   display: inline-block;
   width: 2px;
   height: 1em;
-  margin-left: 3px;
+  margin-left: 7px;
   background: currentColor;
   vertical-align: -0.12em;
   animation: caret-blink 1s steps(2, start) infinite;
@@ -139,7 +139,7 @@ body {
 
 @media (max-width: 640px) {
   .hero-slogan {
-    font-size: clamp(1.25rem, 5.8vw, 1.8rem);
+    font-size: clamp(1rem, 4.6vw, 1.5rem);
   }
 }
 
