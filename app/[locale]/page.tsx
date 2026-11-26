@@ -135,15 +135,16 @@ export default async function HomePage({
           className="pointer-events-none absolute -right-20 bottom-0 size-64 rounded-full bg-gold-100/60 blur-3xl"
         />
         <div className="relative mx-auto w-full max-w-[1600px] px-3 py-4 sm:px-5 sm:py-6">
-          <Image
-            src="/media/2026/kv.png"
-            alt="Key visual Hội nghị khoa học thường niên VSOT 2026"
-            width={1921}
-            height={1081}
-            priority
-            sizes="100vw"
-            className="kv-hero-image"
-          />
+          <div className="kv-hero-frame">
+            <Image
+              src="/media/2026/kv.png"
+              alt="Key visual Hội nghị khoa học thường niên VSOT 2026"
+              fill
+              priority
+              sizes="(min-width: 1600px) 1560px, 100vw"
+              className="object-contain"
+            />
+          </div>
         </div>
       </section>
 

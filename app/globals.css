@@ -460,3 +460,29 @@ body {
     transition: none;
   }
 }
+
+/* Reserve the KV box before the image loads to prevent homepage layout shift. */
+.kv-hero-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1921 / 1081;
+  max-height: calc(100vh - 76px);
+  overflow: hidden;
+}
+
+@supports (height: 100svh) {
+  .kv-hero-frame {
+    max-height: calc(100svh - 76px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .kv-hero-frame {
+    max-height: calc(100vh - 160px);
+  }
+  @supports (height: 100svh) {
+    .kv-hero-frame {
+      max-height: calc(100svh - 160px);
+    }
+  }
+}

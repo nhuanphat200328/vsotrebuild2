@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { afterLayoutStable } from "@/lib/utils/animation";
 
 export function TypewriterSlogan({
   line1,
@@ -69,25 +70,30 @@ export function TypewriterSlogan({
       }
     };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!entries[0]?.isIntersecting || started) return;
-        started = true;
-        observer.disconnect();
-        setFirst("");
-        setSecond("");
-        setDone(false);
-        setCursorLine(1);
-        index = 0;
-        typeFirst();
-      },
-      { threshold: 0.35 },
-    );
-    observer.observe(element);
+    let observer: IntersectionObserver | undefined;
+    const cancelStable = afterLayoutStable(() => {
+      if (cancelled || started) return;
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries[0]?.isIntersecting || started) return;
+          started = true;
+          observer?.disconnect();
+          setFirst("");
+          setSecond("");
+          setDone(false);
+          setCursorLine(1);
+          index = 0;
+          typeFirst();
+        },
+        { threshold: 0.3, rootMargin: "0px 0px -10% 0px" },
+      );
+      observer.observe(element);
+    });
 
     return () => {
       cancelled = true;
-      observer.disconnect();
+      cancelStable();
+      observer?.disconnect();
       timers.forEach(clearTimeout);
     };
   }, [line1, line2]);

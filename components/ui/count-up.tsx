@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { afterLayoutStable } from "@/lib/utils/animation";
 
 export function CountUp({
   value,
@@ -27,35 +28,41 @@ export function CountUp({
 
     let frame = 0;
     let completeTimer: ReturnType<typeof setTimeout> | undefined;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!entries[0]?.isIntersecting || started.current) return;
-        started.current = true;
-        setDisplay(0);
-        const duration = 3600;
-        const start = performance.now();
+    let observer: IntersectionObserver | undefined;
 
-        const step = (now: number) => {
-          const progress = Math.min(1, (now - start) / duration);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          setDisplay(Math.round(eased * value));
-          if (progress < 1) {
-            frame = requestAnimationFrame(step);
-          } else {
-            setDisplay(value);
-            setEmphasis(true);
-            completeTimer = setTimeout(() => setEmphasis(false), 800);
-          }
-        };
-        frame = requestAnimationFrame(step);
-        observer.disconnect();
-      },
-      { threshold: 0.35 },
-    );
+    const cancelStable = afterLayoutStable(() => {
+      if (started.current) return;
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (!entries[0]?.isIntersecting || started.current) return;
+          started.current = true;
+          setDisplay(0);
+          const duration = 3600;
+          const start = performance.now();
 
-    observer.observe(element);
+          const step = (now: number) => {
+            const progress = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setDisplay(Math.round(eased * value));
+            if (progress < 1) {
+              frame = requestAnimationFrame(step);
+            } else {
+              setDisplay(value);
+              setEmphasis(true);
+              completeTimer = setTimeout(() => setEmphasis(false), 800);
+            }
+          };
+          frame = requestAnimationFrame(step);
+          observer?.disconnect();
+        },
+        { threshold: 0.3, rootMargin: "0px 0px -10% 0px" },
+      );
+      observer.observe(element);
+    });
+
     return () => {
-      observer.disconnect();
+      cancelStable();
+      observer?.disconnect();
       cancelAnimationFrame(frame);
       if (completeTimer) clearTimeout(completeTimer);
     };
