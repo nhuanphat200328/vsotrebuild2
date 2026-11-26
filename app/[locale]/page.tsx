@@ -12,6 +12,8 @@ import {
   Presentation,
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { ConferenceTimeline } from "@/components/home/conference-timeline";
+import { TypewriterSlogan } from "@/components/home/typewriter-slogan";
 import { CountUp } from "@/components/ui/count-up";
 import { getPublishedLegacySites } from "@/lib/archive/data";
 import { getConferenceDocuments } from "@/lib/documents/data";
@@ -57,6 +59,12 @@ export default async function HomePage({
   if (!isLocale(rawLocale)) notFound();
   const locale = rawLocale as Locale;
   const dict = getDictionary(locale);
+  const sloganParts = dict.hero.title.split(/,\s*/);
+  const sloganLine1 = sloganParts[0] ?? dict.hero.title;
+  const secondLineRaw = sloganParts.slice(1).join(", ");
+  const sloganLine2 = secondLineRaw
+    ? secondLineRaw.charAt(0).toUpperCase() + secondLineRaw.slice(1)
+    : secondLineRaw;
 
   const latestYear = await getLatestConferenceYear();
   const [data, news, archiveSites] = await Promise.all([
@@ -108,7 +116,16 @@ export default async function HomePage({
 
   return (
     <div className="bg-white">
-      <section className="relative overflow-hidden border-b border-line bg-gradient-to-b from-brand-50 via-white to-surface">
+      <section className="relative overflow-hidden border-b border-line bg-brand-50">
+        <Image
+          src="/media/2026/kv.png"
+          alt=""
+          aria-hidden
+          fill
+          sizes="100vw"
+          className="object-cover scale-110 blur-xl opacity-40"
+        />
+        <div aria-hidden className="absolute inset-0 bg-brand-50/35" />
         <div
           aria-hidden
           className="pointer-events-none absolute -left-24 top-8 size-72 rounded-full bg-brand-100/70 blur-3xl"
@@ -145,9 +162,7 @@ export default async function HomePage({
                 {dict.hero.subtitle}
               </p>
             </div>
-            <h1 className="hero-slogan mt-5 font-extrabold tracking-tight text-ink-900">
-              {dict.hero.title}
-            </h1>
+            <TypewriterSlogan line1={sloganLine1} line2={sloganLine2} />
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-600 sm:text-base">
               {dict.hero.description}
             </p>
@@ -563,19 +578,8 @@ export default async function HomePage({
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
-          <div className="mt-6 grid grid-cols-2 border-t border-line sm:grid-cols-3 lg:grid-cols-6">
-            {archiveSites.map((site) => (
-              <a
-                key={site.slug}
-                href={site.entry_path ?? "#"}
-                className="border-b border-line px-2 py-5 text-center transition hover:bg-surface sm:border-r"
-              >
-                <span className="block text-2xl font-extrabold text-brand-800">{site.year}</span>
-                <span className="mt-1 block text-[11px] font-semibold uppercase tracking-wider text-ink-500">
-                  {locale === "en" ? "Congress" : "Hội nghị"}
-                </span>
-              </a>
-            ))}
+          <div className="mt-8">
+            <ConferenceTimeline sites={archiveSites} locale={locale} />
           </div>
         </Container>
       ) : null}

@@ -297,3 +297,107 @@
   line-height: 1.4;
   letter-spacing: 0.12em;
 }
+
+/* Static archive footer mirrors the React footer. */
+.vsot-archive-footer .vsot-archive-footer-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  padding: 56px 0 20px;
+}
+
+.vsot-archive-footer .vsot-archive-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.vsot-archive-footer .vsot-archive-footer-brand .vsot-archive-footer-logo {
+  width: 44px;
+  height: auto;
+  margin: 0;
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2px;
+}
+
+.vsot-archive-footer .vsot-archive-footer-brandtext {
+  display: block;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.vsot-archive-footer .vsot-archive-footer-brandtext strong {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.vsot-archive-footer .vsot-archive-footer-brandtext span {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.vsot-archive-footer .vsot-archive-footer-intro {
+  max-width: 20rem;
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.vsot-archive-footer .vsot-archive-footer-grid h2 {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.vsot-archive-footer .vsot-archive-footer-grid ul {
+  display: grid;
+  gap: 8px;
+}
+
+.vsot-archive-footer .vsot-archive-footer-grid p,
+.vsot-archive-footer .vsot-archive-footer-grid li,
+.vsot-archive-footer .vsot-archive-footer-grid a {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.vsot-archive-footer .vsot-archive-copy {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+.vsot-archive-footer .vsot-archive-copy a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.vsot-archive-footer .vsot-archive-copy a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .vsot-archive-footer .vsot-archive-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .vsot-archive-footer .vsot-archive-footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 36px 0 20px;
+  }
+}

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPinned, Phone } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import type { LegacySite } from "@/lib/archive/data";
 import type { Locale } from "@/lib/i18n/config";
 import type { getDictionary } from "@/lib/i18n/dictionary";
 
@@ -12,12 +11,10 @@ export function SiteFooter({
   locale,
   dict,
   latestYear,
-  archiveSites = [],
 }: {
   locale: Locale;
   dict: Dict;
   latestYear?: string | null;
-  archiveSites?: LegacySite[];
 }) {
   const programmeHref = latestYear
     ? `/${locale}/hoi-nghi/${latestYear}/chuong-trinh`
@@ -92,13 +89,6 @@ export function SiteFooter({
                 {locale === "en" ? "All congresses" : "Danh sách hội nghị"}
               </Link>
             </li>
-            {archiveSites.slice(0, 4).map((site) => (
-              <li key={site.slug}>
-                <a className="hover:text-white" href={site.entry_path ?? "#"}>
-                  {locale === "en" ? `Congress ${site.year}` : `Hội nghị ${site.year}`}
-                </a>
-              </li>
-            ))}
             <li>
               <Link
                 className="hover:text-white"

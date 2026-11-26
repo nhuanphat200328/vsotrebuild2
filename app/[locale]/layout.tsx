@@ -73,12 +73,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <main id="main-content" className="flex-1">
         {children}
       </main>
-      <SiteFooter
-        locale={typedLocale}
-        dict={dict}
-        latestYear={latestYear}
-        archiveSites={archiveSites}
-      />
+      <SiteFooter locale={typedLocale} dict={dict} latestYear={latestYear} />
     </div>
   );
 }

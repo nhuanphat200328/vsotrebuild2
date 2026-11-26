@@ -32,9 +32,11 @@ FOOTER = """<footer class="vsot-archive-footer">
   <div class="vsot-archive-container">
     <div class="vsot-archive-footer-grid">
       <div>
-        <img class="vsot-archive-footer-logo" src="/media/2026/logo.gif" alt="Logo Hội Ghép tạng Việt Nam" width="56" height="49">
-        <h2>Hội Ghép tạng Việt Nam</h2>
-        <p>Hội Ghép tạng Việt Nam (VSOT) là tổ chức xã hội nghề nghiệp của những người làm công tác ghép tạng tại Việt Nam.</p>
+        <a class="vsot-archive-footer-brand" href="/vi" aria-label="VSOT - Hội Ghép tạng Việt Nam">
+          <img class="vsot-archive-footer-logo" src="/media/2026/logo.gif" alt="Logo Hội Ghép tạng Việt Nam" width="44" height="38">
+          <span class="vsot-archive-footer-brandtext"><strong>Hội Ghép tạng Việt Nam</strong><span>Vietnam Society of Organ Transplantation</span></span>
+        </a>
+        <p class="vsot-archive-footer-intro">Hội Ghép tạng Việt Nam (VSOT) là tổ chức xã hội nghề nghiệp của những người làm công tác ghép tạng tại Việt Nam.</p>
       </div>
       <div>
         <h2>Về VSOT</h2>
@@ -47,8 +49,10 @@ FOOTER = """<footer class="vsot-archive-footer">
       <div>
         <h2>Hội nghị</h2>
         <ul>
-          <li><a href="/vi/hoi-nghi/2026">Hội nghị 2026</a></li>
-          <li><a href="/vi/hoi-nghi/cac-nam-truoc">Kho lưu trữ</a></li>
+          <li><a href="/vi/hoi-nghi/2026/chuong-trinh">Chương trình khoa học</a></li>
+          <li><a href="/vi/hoi-nghi/2026/chuong-trinh">Phiên họp</a></li>
+          <li><a href="/vi/hoi-nghi">Danh sách hội nghị</a></li>
+          <li><a href="/vi/hoi-nghi/cac-nam-truoc">Kho lưu trữ hội nghị</a></li>
         </ul>
       </div>
       <div>
@@ -58,7 +62,7 @@ FOOTER = """<footer class="vsot-archive-footer">
         <a href="mailto:vsot@outlook.com.vn">vsot@outlook.com.vn</a></p>
       </div>
     </div>
-    <div class="vsot-archive-copy">© Hội Ghép tạng Việt Nam. Kho lưu trữ hội nghị được bảo toàn.</div>
+    <div class="vsot-archive-copy">© Hội Ghép tạng Việt Nam. Kho lưu trữ hội nghị được bảo toàn. <a href="/vi/lien-he">Liên hệ</a></div>
   </div>
 </footer>
 """
@@ -81,6 +85,7 @@ def clean_page(text):
         a, b = remove_balanced_div(text, start)
         text = text[:a] + text[b:]
     text = re.sub(r'<footer class="full-containter footer">.*?</footer>', "", text, flags=re.S | re.I)
+    text = re.sub(r'<footer class="vsot-archive-footer">.*?</footer>', FOOTER, text, flags=re.S | re.I)
     text = re.sub(r'<link[^>]+header-footer-2026\.css[^>]*>', "", text, flags=re.I)
     text = re.sub(r'<link[^>]+legacy-shell\.css[^>]*>', "", text, flags=re.I)
     return text
