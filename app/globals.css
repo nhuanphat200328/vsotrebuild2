@@ -507,6 +507,6 @@ body {
 /* Give the long English Typewriter line room before the divider on desktop. */
 @media (min-width: 1024px) {
   .home-intro-wide {
-    max-width: 1440px;
+    max-width: min(1440px, calc(100vw - 96px));
   }
 }
