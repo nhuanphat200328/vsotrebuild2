@@ -401,3 +401,18 @@
     padding: 36px 0 20px;
   }
 }
+
+/* Footer contact text uses the same token for address and links. */
+.vsot-archive-footer {
+  --vsot-footer-text: rgba(255, 255, 255, 0.78);
+  color: var(--vsot-footer-text);
+}
+
+.vsot-archive-footer .vsot-archive-footer-grid p,
+.vsot-archive-footer .vsot-archive-footer-grid li {
+  color: var(--vsot-footer-text);
+}
+
+.vsot-archive-footer .vsot-archive-footer-grid p a {
+  color: var(--vsot-footer-text);
+}

@@ -148,8 +148,8 @@ export default async function HomePage({
       </section>
 
       <section className="border-b border-line bg-white">
-        <Container className="grid gap-10 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:py-16">
-          <div>
+        <Container className="grid gap-10 py-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16 lg:py-16">
+          <div className="min-w-0">
             <div className="flex items-center gap-3">
               <Image
                 src="/media/2026/logo.gif"
@@ -169,7 +169,7 @@ export default async function HomePage({
           </div>
 
           {data ? (
-            <aside className="border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+            <aside className="min-w-0 border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">
                 {locale === "en" ? "VSOT 2026 Congress" : "Hội nghị VSOT 2026"}
               </p>

@@ -57,7 +57,9 @@ export function ConferenceTimeline({
               className="timeline-link"
               aria-label={`${site.year} — ${site.title ?? "VSOT"}`}
             >
-              <span className="timeline-year">{site.year}</span>
+              <span className="timeline-card">
+                <span className="timeline-year">{site.year}</span>
+              </span>
               <span className="timeline-dot" aria-hidden />
             </a>
           </li>
