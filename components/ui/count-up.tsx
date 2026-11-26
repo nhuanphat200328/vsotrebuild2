@@ -14,6 +14,7 @@ export function CountUp({
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
   const [display, setDisplay] = useState(value);
+  const [emphasis, setEmphasis] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
@@ -25,11 +26,13 @@ export function CountUp({
     }
 
     let frame = 0;
+    let completeTimer: ReturnType<typeof setTimeout> | undefined;
     const observer = new IntersectionObserver(
       (entries) => {
         if (!entries[0]?.isIntersecting || started.current) return;
         started.current = true;
-        const duration = 1300;
+        setDisplay(0);
+        const duration = 1800;
         const start = performance.now();
 
         const step = (now: number) => {
@@ -40,6 +43,8 @@ export function CountUp({
             frame = requestAnimationFrame(step);
           } else {
             setDisplay(value);
+            setEmphasis(true);
+            completeTimer = setTimeout(() => setEmphasis(false), 800);
           }
         };
         frame = requestAnimationFrame(step);
@@ -52,11 +57,22 @@ export function CountUp({
     return () => {
       observer.disconnect();
       cancelAnimationFrame(frame);
+      if (completeTimer) clearTimeout(completeTimer);
     };
   }, [value]);
 
   return (
-    <span ref={ref} aria-label={`${value}${suffix} ${label}`} className="tabular-nums">
+    <span
+      ref={ref}
+      aria-label={`${value}${suffix} ${label}`}
+      className="inline-block tabular-nums transition-[transform,color] duration-700 ease-out"
+      style={{
+        transform: emphasis ? "scale(1.08)" : "scale(1)",
+        color: emphasis ? "#d9480f" : undefined,
+        transformOrigin: "center",
+        willChange: "transform",
+      }}
+    >
       {display}
       {suffix}
     </span>

@@ -83,7 +83,7 @@ export default async function NewsPage({
               return (
                 <article
                   key={item.id}
-                  className="grid gap-3 border-b border-line py-6 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8"
+                  className="hover-slide grid gap-3 border-b border-line px-2 py-6 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8"
                 >
                   <div className="text-xs text-ink-500">
                     {category ? (

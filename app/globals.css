@@ -100,11 +100,65 @@ body {
 
 @media (min-width: 1024px) {
   .kv-hero-image {
-    max-height: calc(100vh - 112px);
+    max-height: calc(100vh - 160px);
   }
   @supports (height: 100svh) {
     .kv-hero-image {
-      max-height: calc(100svh - 112px);
+      max-height: calc(100svh - 160px);
     }
+  }
+}
+.hero-slogan {
+  max-width: 26ch;
+  font-size: clamp(1.5rem, 3.2vw, 3rem);
+  line-height: 1.15;
+  text-align: justify;
+  text-justify: inter-word;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .hero-slogan {
+    max-width: 100%;
+    font-size: clamp(1.4rem, 6vw, 1.9rem);
+  }
+}
+
+.hover-slide {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hover-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(100, 116, 139, 0.09);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s ease;
+  pointer-events: none;
+}
+
+.hover-slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .hover-slide:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.hover-slide:focus-visible::before {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-slide::before {
+    transition: none;
   }
 }

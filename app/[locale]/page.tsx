@@ -108,16 +108,26 @@ export default async function HomePage({
 
   return (
     <div className="bg-white">
-      <section className="overflow-hidden border-b border-line bg-brand-900">
-        <Image
-          src="/media/2026/kv.png"
-          alt="Key visual Hội nghị khoa học thường niên VSOT 2026"
-          width={1921}
-          height={1081}
-          priority
-          sizes="100vw"
-          className="kv-hero-image"
+      <section className="relative overflow-hidden border-b border-line bg-gradient-to-b from-brand-50 via-white to-surface">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-24 top-8 size-72 rounded-full bg-brand-100/70 blur-3xl"
         />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-20 bottom-0 size-64 rounded-full bg-gold-100/60 blur-3xl"
+        />
+        <div className="relative mx-auto w-full max-w-[1600px] px-3 py-4 sm:px-5 sm:py-6">
+          <Image
+            src="/media/2026/kv.png"
+            alt="Key visual Hội nghị khoa học thường niên VSOT 2026"
+            width={1921}
+            height={1081}
+            priority
+            sizes="100vw"
+            className="kv-hero-image"
+          />
+        </div>
       </section>
 
       <section className="border-b border-line bg-white">
@@ -135,7 +145,7 @@ export default async function HomePage({
                 {dict.hero.subtitle}
               </p>
             </div>
-            <h1 className="mt-5 max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-ink-900 sm:text-4xl lg:text-[3.25rem]">
+            <h1 className="hero-slogan mt-5 font-extrabold tracking-tight text-ink-900">
               {dict.hero.title}
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-600 sm:text-base">
@@ -263,7 +273,7 @@ export default async function HomePage({
                 </p>
               ) : (
                 <div className="mt-3 border-t border-line">
-                  {news.map((item, index) => {
+                  {news.map((item) => {
                     const translation =
                       item.news_translations.find(
                         (entry) => entry.locale === locale && entry.status === "published",
@@ -273,7 +283,7 @@ export default async function HomePage({
                     return (
                       <article
                         key={item.id}
-                        className={`border-b border-line ${index === 0 ? "py-4" : "py-3"}`}
+                        className="hover-slide border-b border-line py-3"
                       >
                         <div className="flex flex-wrap items-center gap-2">
                           {category ? (
@@ -281,17 +291,8 @@ export default async function HomePage({
                               {category}
                             </span>
                           ) : null}
-                          {index < 2 ? (
-                            <span className="text-[10px] font-semibold text-gold-600">
-                              {locale === "en" ? "Priority" : "Ưu tiên"}
-                            </span>
-                          ) : null}
                         </div>
-                        <h3
-                          className={`mt-1 font-bold leading-snug text-ink-900 ${
-                            index === 0 ? "text-lg sm:text-xl" : "text-sm"
-                          }`}
-                        >
+                        <h3 className="mt-1 text-base font-bold leading-snug text-ink-900">
                           <Link
                             href={`/${locale}/tin-tuc/${item.slug}`}
                             className="hover:text-brand-700"
@@ -337,7 +338,7 @@ export default async function HomePage({
               <Link
                 key={date.id}
                 href={`${programmeHref}?date=${date.date}`}
-                className="flex items-center justify-between gap-4 border-t border-line py-3 text-sm transition hover:text-brand-700"
+                className="hover-slide flex items-center justify-between gap-4 border-t border-line px-2 py-3 text-sm transition hover:text-brand-700"
               >
                 <span className="font-semibold text-ink-900">
                   {formatWeekday(date.date, locale)}, {formatShortDate(date.date, locale)}
@@ -356,21 +357,21 @@ export default async function HomePage({
               <div className="mt-2 grid">
                 <Link
                   href={programmeHref}
-                  className="flex items-center justify-between border-b border-line py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
+                  className="hover-slide flex items-center justify-between border-b border-line px-2 py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
                 >
                   {locale === "en" ? "Scientific programme" : "Chương trình khoa học"}
                   <ArrowRight className="size-4" aria-hidden />
                 </Link>
                 <Link
                   href={facultyHref}
-                  className="flex items-center justify-between border-b border-line py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
+                  className="hover-slide flex items-center justify-between border-b border-line px-2 py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
                 >
                   {locale === "en" ? "Faculty" : "Diễn giả"}
                   <ArrowRight className="size-4" aria-hidden />
                 </Link>
                 <Link
                   href={`/${locale}/hoi-nghi/${latestYear}/chuong-trinh/tong-quan`}
-                  className="flex items-center justify-between border-b border-line py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
+                  className="hover-slide flex items-center justify-between border-b border-line px-2 py-2.5 text-sm font-semibold text-ink-900 hover:text-brand-700"
                 >
                   {locale === "en" ? "At a glance" : "Tổng quan chương trình"}
                   <ArrowRight className="size-4" aria-hidden />
@@ -412,7 +413,7 @@ export default async function HomePage({
                 <Link
                   key={session.id}
                   href={`/${locale}/hoi-nghi/${latestYear}/phien/${session.id}`}
-                  className="grid gap-3 border-b border-line py-4 transition hover:bg-surface sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:items-center sm:gap-6"
+                  className="hover-slide grid gap-3 border-b border-line px-2 py-4 transition hover:text-brand-700 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:items-center sm:gap-6"
                 >
                   <span className="flex items-center gap-2 text-xs font-extrabold text-brand-700">
                     <Clock className="size-3.5" aria-hidden />
