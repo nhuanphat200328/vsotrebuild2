@@ -380,3 +380,50 @@ body {
     white-space: nowrap;
   }
 }
+
+.mobile-menu-panel {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.97);
+  transform-origin: top center;
+  transition:
+    max-height 0.22s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.mobile-menu-panel.is-open {
+  max-height: calc(100svh - 72px);
+  overflow-y: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (hover: none) {
+  .mobile-menu-panel a,
+  .mobile-menu-panel button {
+    transition: transform 0.18s ease, background-color 0.18s ease;
+    transform-origin: center;
+  }
+  .mobile-menu-panel a:active,
+  .mobile-menu-panel button:active {
+    transform: scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-panel {
+    transition: none;
+  }
+  .mobile-menu-panel a,
+  .mobile-menu-panel button,
+  .mobile-menu-panel a:active,
+  .mobile-menu-panel button:active {
+    transition: none;
+    transform: none;
+  }
+}

@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   CalendarDays,
   ChevronDown,
@@ -36,6 +36,7 @@ export function SiteHeader({
   archiveSites?: LegacySite[];
 }) {
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(false);
   const [conferenceOpen, setConferenceOpen] = useState(false);
   const [archiveOpen, setArchiveOpen] = useState(false);
@@ -75,11 +76,22 @@ export function SiteHeader({
     return pathname.startsWith(href);
   };
 
-  const currentYear = archiveSites[0]?.year ?? null;
+  useEffect(() => {
+    if (!open) return;
+    const closeOutside = (event: PointerEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setOpen(false);
+        setMobileConferenceOpen(false);
+        setMobileArchiveOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", closeOutside);
+    return () => document.removeEventListener("pointerdown", closeOutside);
+  }, [open]);
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur">
+      <header ref={headerRef} className="sticky top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur">
         <div className="hidden border-b border-line/60 bg-brand-900 text-xs text-white/75 lg:block">
           <Container className="flex h-9 items-center justify-between gap-6">
             <p className="flex items-center gap-2">
@@ -278,7 +290,11 @@ export function SiteHeader({
 
         <div
           id="mobile-menu"
-          className={cn("border-t border-line bg-white xl:hidden", open ? "block" : "hidden")}
+          className={cn(
+            "mobile-menu-panel border-t border-line bg-white xl:hidden",
+            open ? "is-open" : "is-closed",
+          )}
+          aria-hidden={!open}
         >
           <Container className="grid gap-1 py-3">
             <Link
@@ -288,13 +304,6 @@ export function SiteHeader({
             >
               {locale === "en" ? "Home" : "Trang chủ"}
             </Link>
-            <Link
-              href={`/${locale}/hoi-nghi`}
-              onClick={() => setOpen(false)}
-              className="rounded px-3 py-2.5 text-sm font-semibold text-ink-700 hover:bg-brand-50"
-            >
-              {locale === "en" ? "Congresses" : "Hội nghị"}
-            </Link>
             <button
               type="button"
               onClick={() => setMobileConferenceOpen((value) => !value)}
@@ -302,7 +311,7 @@ export function SiteHeader({
               aria-expanded={mobileConferenceOpen}
               aria-controls="mobile-conference-menu"
             >
-              {locale === "en" ? `Congress ${currentYear ?? ""}` : `Hội nghị ${currentYear ?? ""}`}
+              {locale === "en" ? "Congresses" : "Hội nghị"}
               <ChevronDown
                 className={cn("size-4 transition", mobileConferenceOpen ? "rotate-180" : "")}
                 aria-hidden
