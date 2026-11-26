@@ -486,3 +486,27 @@ body {
     }
   }
 }
+
+/* Keep the desktop divider clear of the longest Typewriter line. */
+@media (min-width: 1024px) {
+  .hero-divider {
+    border-left-width: 0;
+  }
+
+  .hero-divider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.75rem;
+    width: 1px;
+    background: var(--color-line);
+  }
+}
+
+/* Give the long English Typewriter line room before the divider on desktop. */
+@media (min-width: 1024px) {
+  .home-intro-wide {
+    max-width: 1440px;
+  }
+}
