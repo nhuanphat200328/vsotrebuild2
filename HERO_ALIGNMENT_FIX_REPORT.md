@@ -2,48 +2,49 @@
 
 Ngày: 2026-11-23. Workspace: `D:\Philao\code project\VSOT\demo ver2`.
 
-## 1. Nguyên nhân lệch
+## 1. Nguyên nhân thực tế
 
-- Container nội dung Hero từng đặt `max-width: 1440px` cố định.
-- Ở 1366/1440, `1440px` lớn hơn vùng nội dung hiện dụng, nên container phủ sát hai mép
-  và chỉ còn padding trong; mép trái nội dung gần như sát mép KV/không cân với mép phải,
-  tạo cảm giác khối slogan/info bị đẩy trái.
-- Đường phân cách dọc trước đó cũng đã được đặt trong padding của cột phải để tránh cắt
-  chữ `Vietnam`; cần giữ vị trí này.
+- Desktop Chromium dùng scrollbar dọc cổ điển (~15px). Layout area là **viewport - 15px**
+  (ví dụ 1905px ở màn 1920), trong khi `mx-auto` chỉ căn giữa trong layout area đó.
+- Vì vậy container Hero và KV đều lệch trái **~7,5px** so với tâm viewport thực tế;
+  ở 1920 lề trái 233px / lề phải 247px, tạo cảm giác cả khối 2 cột bị đẩy trái.
+- `max-width:1440px` trước đó chỉ giải quyết chữ `Vietnam` chạm divider, không bù
+  scrollbar nên vẫn còn lệch.
 
-## 2. Cách xử lý
+## 2. Cách sửa
 
-- `.home-intro-wide` (Container Hero) đổi:
-  `max-width: min(1440px, calc(100vw - 96px));`
-- Container vẫn dùng `mx-auto`; tạo lề ngoài **48px mỗi bên** ở desktop hẹp và vẫn
-  tối đa 1440px ở màn hình lớn.
-- Không dùng `translateX`, margin bù, hay căn giữa từng dòng.
-- Giữ nguyên grid 2 cột, slogan/description/info/CTA, KV frame và divider pseudo.
-- Mobile/tablet dưới 1024 giữ nguyên container cũ.
+- `.home-intro-wide`: giữ `max-width: min(1440px, calc(100vw - 96px))`.
+- Thêm bù scrollbar cho đúng tâm viewport, không dùng margin âm:
+  - `.home-intro-wide` và wrapper KV `.kv-hero-shift`:
+    `position: relative; left: calc((100vw - 100%) / 2);`
+  - `100vw - 100%` chính là bề rộng scrollbar; chỉ áp dụng `@media (min-width:1024px)`.
+- KV frame vẫn giữ `position:relative` riêng; không còn bị cộng dồn offset.
+- Không đổi grid 2 cột, divider, typography, KV ratio, hiệu ứng.
 
 ## 3. Kết quả đo (Chrome CDP)
 
-| Viewport | Container | Container center | KV center | Lề trái/phải trong KV |
+| Viewport | Container | Tâm container | Tâm KV | Lề trái/phải |
 |---|---:|---:|---:|---:|
-| 1366 | 1270px @ x=41 | 676 | 676 | 21 / 20 px |
-| 1440 | 1344px @ x=41 | 713 | 713 | 21 / 20 px |
-| 1920 | 1440px @ x=233 | 953 | 953 | 60 / 60 px |
+| 1366 | 1270px @ x=48 | 683 | 683 | 48 / 48 |
+| 1440 | 1344px @ x=48 | 720 | 720 | 48 / 48 |
+| 1920 | 1440px @ x=240 | 960 | 960 | 240 / 240 |
 
-- Container Hero và KV cùng tâm ở cả 3 độ phân giải.
-- `/vi` và `/en` cùng kích thước/vị trí container.
-- Khoảng cách chữ cuối slogan Anh → divider:
-  - 1366: 100px; 1440: 108px; 1920: 121px.
-- Không tràn ngang: `scrollWidth - innerWidth = 0` (trừ scrollbar 15px của layout).
-- Mobile 768/390: container full width như cũ, không đổi bố cục.
+- `/vi` và `/en` cho cùng kết quả.
+- Divider vẫn nằm trong cột phải; khoảng cách chữ cuối slogan Anh:
+  1366 **100px**, 1440 **107px**, 1920 **121px**.
+- Không tràn ngang; `scrollWidth - innerWidth = 0` (scrollbar 15px của layout).
+- Mobile 768/390: không áp dụng shift, container/KV vẫn tâm 384/195, không tràn.
 
 ## 4. File đã sửa
 
 | File | Thay đổi |
 |---|---|
-| `app/globals.css` | `max-width: min(1440px, calc(100vw - 96px))` cho `.home-intro-wide` |
+| `app/[locale]/page.tsx` | Wrapper KV thêm class `.kv-hero-shift` |
+| `app/globals.css` | Bù scrollbar cho intro + KV wrapper; max-width intro |
 | `HERO_ALIGNMENT_FIX_REPORT.md` | Báo cáo |
 
-## 5. Tồn tại
+## 5. Ngoài phạm vi
 
-- Chưa test Safari/Firefox, screen reader; kiểm bằng Chrome CDP.
-- Vercel sẽ cập nhật sau khi deploy commit này.
+- Không sửa Header/Footer/statistics/trang con.
+- Không đổi nội dung, font, màu, Typewriter, CountUp, divider, KV.
+- Chưa test Safari/Firefox/screen reader; kiểm bằng Chrome CDP.

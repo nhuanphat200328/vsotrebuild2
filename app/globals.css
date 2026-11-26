@@ -510,3 +510,13 @@ body {
     max-width: min(1440px, calc(100vw - 96px));
   }
 }
+
+/* Compensate the classic desktop scrollbar so Hero content/KV centres in the
+   actual viewport, not only in the scrollbar-reduced layout area. */
+@media (min-width: 1024px) {
+  .home-intro-wide,
+  .kv-hero-shift {
+    position: relative;
+    left: calc((100vw - 100%) / 2);
+  }
+}
