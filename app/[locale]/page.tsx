@@ -174,7 +174,7 @@ export default async function HomePage({
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-600">
                 {locale === "en" ? "VSOT 2026 Congress" : "Hội nghị VSOT 2026"}
               </p>
-              <h2 className="mt-2 text-xl font-extrabold leading-snug text-ink-900">{name}</h2>
+              <h2 className="hero-conference-name mt-2 text-xl font-extrabold leading-snug text-ink-900">{name}</h2>
               <dl className="mt-5 grid gap-3 text-sm text-ink-700">
                 {data.conference.start_date && data.conference.end_date ? (
                   <div className="flex items-start gap-2.5">

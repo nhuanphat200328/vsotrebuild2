@@ -518,3 +518,9 @@ body {
     scrollbar-gutter: stable both-edges;
   }
 }
+
+@media (min-width: 1024px) {
+  .hero-conference-name {
+    text-align: right;
+  }
+}
