@@ -2,44 +2,51 @@
 
 Ngày: 2026-11-23. Workspace: `D:\Philao\code project\VSOT\demo ver2`.
 
-## 1. Nguyên nhân thực tế
+## 1. Kết luận kiểm tra
 
-- Container `home-intro-wide` đã được căn giữa theo viewport (scrollbar gutter hai bên).
-- Nhưng tiêu đề `VSOT 2026` là một block rộng bằng cả cột phải, chữ lại **căn trái**,
-  nên mép phải thực tế của chữ `2026` không chạm mép phải vùng nội dung.
-- Vì vậy trung điểm giữa **mép trái logo** và **mép phải chữ 2026** nằm lệch trái so với
-  tâm ảnh KV, dù container và cột đều đúng tỷ lệ.
+Ba trục giữa đang **trùng nhau** trên PC ở cả `/vi` và `/en`:
 
-## 2. Cách sửa
+1. Tâm container `home-intro-wide`.
+2. Tâm ảnh KV (`.kv-hero-frame`).
+3. Đường phân cách dọc giữa ô **6 hội trường** và **246 diễn giả**
+   (`border-left` của ô thứ 3 trong `dl` thống kê).
 
-- Thêm class `.hero-conference-name` cho H2 `VSOT 2026`.
-- Desktop ≥1024: `text-align: right` cho H2 này.
-- Không đổi container, grid 1.15fr/0.85fr, gap, divider, logo, KV, stats hay nội dung.
-- Mobile/tablet giữ H2 căn trái như cũ.
+Không phát hiện lệch trái trong mã hiện tại; không cần dịch chuyển container.
 
-## 3. Toạ độ trước/sau (Chrome CDP)
+## 2. Số đo thực tế
 
-| Viewport | Trước: logo left | Trước: 2026 right | Trước: mid / KV | Sau: logo left | Sau: 2026 right | Sau: mid / KV | Lệch sau |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| 1366 | 95 | 957 | 526 / 683 | 95 | 1271 | 683 / 683 | **0** |
-| 1440 | 95 | 999 | 547 / 720 | 95 | 1345 | 720 / 720 | **0** |
-| 1920 | 272 | 1249 | 760 / 960 | 272 | 1648 | 960 / 960 | **0** |
+Đo bằng Chrome CDP, viewport layout thật:
 
-- Trung điểm tính bằng `(logo.left + rightEdge(2026)) / 2`.
-- `/vi` và `/en` cho cùng toạ độ.
-- `scrollWidth - innerWidth = -30` (scrollbar/gutter), không tràn ngang.
-- H2 right edge = mép phải vùng nội dung container; logo left = mép trái nội dung.
-- Typewriter/CountUp/KV layout không đổi; không layout shift.
+| Viewport | Tâm intro | Tâm KV | Divider thống kê | Lề intro trái/phải |
+|---|---:|---:|---:|---:|
+| 1366 | 683 | 683 | 683 | 63 / 63 |
+| 1440 | 720 | 720 | 720 | 63 / 63 |
+| 1920 | 960 | 960 | 960 | 240 / 240 |
 
-## 4. File đã sửa
+- `html` có `scrollbar-gutter: stable both-edges` trên homepage desktop.
+- `scrollWidth - innerWidth = -30`: hai gutter bằng nhau, không tràn.
+- Container KV: x=35,w=1296 (1366); x=35,w=1370 (1440); x=180,w=1560 (1920).
+- Stats `dl` center = intro center; border giữa halls/faculty = center.
+- `/vi` và `/en` cùng số đo.
 
-| File | Thay đổi |
-|---|---|
-| `app/[locale]/page.tsx` | Thêm class `hero-conference-name` cho H2 |
-| `app/globals.css` | Desktop: H2 căn phải |
-| `HERO_CENTER_ALIGNMENT_REPORT.md` | Báo cáo |
+## 3. Nguyên nhân cảm giác lệch trước đây
 
-## 5. Responsive
+- Scrollbar dọc desktop từng làm `mx-auto` căn trong vùng layout hẹp hơn viewport
+  (~7,5px trái). Lần sửa trước đã thêm `scrollbar-gutter: stable both-edges`
+  cho homepage desktop; hiện tại Vercel đã có thay đổi này.
+- Nếu vẫn thấy lệch trên trình duyệt, cần hard refresh (cache CSS cũ) hoặc kiểm tra
+  screenshot có bị cắt/DevTools/sidebar làm thay đổi viewport hay không.
 
-- Desktop 1366/1440/1920: boundary mid = KV center, delta 0.
-- Tablet/mobile: H2 không bị căn phải; bố cục hiện tại giữ nguyên.
+## 4. File đã sửa lần này
+
+- Không sửa CSS/TSX; chỉ thêm báo cáo này.
+- CSS hiện tại liên quan:
+  - `app/globals.css`: `.home-intro-wide { max-width: min(1440px, calc(100vw - 96px)); }`
+  - `app/globals.css`: `html:has(.home-intro-wide) { scrollbar-gutter: stable both-edges; }`
+  - `app/[locale]/page.tsx`: wrapper KV không còn `left` thủ công.
+
+## 5. Xác nhận phạm vi
+
+- Không đổi grid 1.15fr/0.85fr, gap, divider, KV size, stats, font, hiệu ứng.
+- Tablet/mobile không có gutter, giữ bố cục hiện tại.
+- Không có layout shift mới; CountUp/Typewriter không đổi.
