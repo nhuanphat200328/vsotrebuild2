@@ -511,6 +511,27 @@ body {
   }
 }
 
+/* The visible Hero block ends before the right edge of its grid column, so a
+   geometrically centred container still leaves the logo-to-date block left of
+   the page centre. Shift the whole container by half that measured residual on
+   PC only; column ratios, gap, divider and typography stay untouched. */
+@media (min-width: 1280px) {
+  .home-intro-wide {
+    --hero-half-width: min(720px, calc(50vw - 48px));
+    --hero-visual-shift: clamp(0px, calc(21.25vw - 226.68px), 99.72px);
+    margin-left: calc(50% - var(--hero-half-width) + var(--hero-visual-shift));
+    margin-right: auto;
+  }
+
+  html[lang="en"] .home-intro-wide {
+    --hero-visual-shift: clamp(0px, calc(21.25vw - 235.12px), 91.28px);
+  }
+
+  section:has(> .home-intro-wide) {
+    overflow-x: clip;
+  }
+}
+
 /* Reserve equal gutters on desktop so mx-auto centres the Hero in the viewport,
    not only in the scrollbar-reduced layout area. */
 @media (min-width: 1024px) {
