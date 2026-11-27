@@ -134,7 +134,7 @@ export default async function HomePage({
           aria-hidden
           className="pointer-events-none absolute -right-20 bottom-0 size-64 rounded-full bg-gold-100/60 blur-3xl"
         />
-        <div className="kv-hero-shift relative mx-auto w-full max-w-[1600px] px-3 py-4 sm:px-5 sm:py-6">
+        <div className="relative mx-auto w-full max-w-[1600px] px-3 py-4 sm:px-5 sm:py-6">
           <div className="kv-hero-frame">
             <Image
               src="/media/2026/kv.png"
